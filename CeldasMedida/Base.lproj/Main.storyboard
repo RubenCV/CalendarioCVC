@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -82,7 +82,7 @@
                                             <segue destination="E6A-po-MDp" kind="push" identifier="Noticias" id="1Xc-Mx-wja"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contacto" rowHeight="171" id="X7p-p9-FZO" customClass="CustomTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contacto" rowHeight="171" id="X7p-p9-FZO" customClass="CustomTableViewCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X7p-p9-FZO" id="UJF-4f-UDz">
@@ -104,7 +104,7 @@
                                         <color key="backgroundColor" red="0.0092990933361674407" green="0.79274895090611996" blue="0.56803276749479537" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="xwr-Tu-MMK" kind="push" identifier="Contacto" id="Yv0-xj-5SX"/>
+                                            <segue destination="xwr-Tu-MMK" kind="push" id="Cus-yg-J73"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -131,7 +131,7 @@
                         <color key="backgroundColor" red="0.15331941239999999" green="0.78947679920000002" blue="0.57895944440000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.12156862745098039" green="0.62745098039215685" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="0DW-5Z-Fhw" style="IBUITableViewCellStyleDefault" id="eJ4-1V-071">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="0DW-5Z-Fhw" style="IBUITableViewCellStyleDefault" id="eJ4-1V-071">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJ4-1V-071" id="M5r-Sv-J6V">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -146,7 +146,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.15331941240801217" green="0.78947679924242431" blue="0.57895944443868474" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="SmN-Ql-Sft" kind="show" trigger="accessoryAction" id="Qer-k8-Ec9"/>
+                                    <segue destination="SmN-Ql-Sft" kind="show" id="Dbb-cv-qkE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -162,7 +162,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDE-kf-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="579"/>
+            <point key="canvasLocation" x="908" y="519"/>
         </scene>
         <!--Informacion-->
         <scene sceneID="V4m-Tm-TML">
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypR-jA-GKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="846"/>
+            <point key="canvasLocation" x="1317" y="760"/>
         </scene>
         <!--Calendario CVC-->
         <scene sceneID="aFz-8S-FoC">
@@ -262,10 +262,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.4392156862745098" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-IG-wYg" customClass="DSLCalendarView">
-                                <rect key="frame" x="0.0" y="106" width="320" height="327"/>
-                                <color key="backgroundColor" red="0.090196078431372548" green="0.52941176470588236" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de eventos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxM-t3-6CW">
                                 <rect key="frame" x="47" y="440" width="227" height="30"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
@@ -278,6 +274,10 @@
                                 <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-IG-wYg" customClass="DSLCalendarView">
+                                <rect key="frame" x="0.0" y="106" width="320" height="327"/>
+                                <color key="backgroundColor" red="0.090196078431372548" green="0.52941176470588236" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcB-3J-SSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1299" y="57"/>
+            <point key="canvasLocation" x="1317" y="64"/>
         </scene>
     </scenes>
     <resources>

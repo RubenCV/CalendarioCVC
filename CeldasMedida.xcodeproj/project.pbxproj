@@ -225,11 +225,11 @@
 				B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */,
 				B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */,
 				B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */,
+				FB91AE8F1AA8D4A600BA5A35 /* CustomTableViewCell.h */,
+				FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */,
 				8DEF901B1AC78B4A00CA2E78 /* Property List.plist */,
 				8DEF90191AC78A7D00CA2E78 /* Property List Exatec.plist */,
 				8DEF90171AC788D800CA2E78 /* Property List Asesoramiento.plist */,
-				FB91AE8F1AA8D4A600BA5A35 /* CustomTableViewCell.h */,
-				FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */,
 			);
 			path = CeldasMedida;
 			sourceTree = "<group>";
