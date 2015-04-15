@@ -67,3 +67,7 @@
 
 @end
 
+/*
+ [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://cvc.mty.itesm.mx/go.php?page=https://www.google.com/calendar/embed?height=530&wkst=1&hl=es&bgcolor=%23FFFFFF&src=b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com&color=%23182C57&ctz=America%2FMexico_City"]];
+ */
+

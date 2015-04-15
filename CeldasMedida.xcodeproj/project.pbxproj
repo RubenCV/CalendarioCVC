@@ -38,6 +38,7 @@
 		B808E3531AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E33B1AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png */; };
 		B808E3541AC4EC09003872A2 /* NSDate+DSLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */; };
 		B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */; };
+		FB24B9EA1ADDEF8800D5431A /* ContactoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */; };
 		FB91AE691AA8D46E00BA5A35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE681AA8D46E00BA5A35 /* main.m */; };
 		FB91AE6C1AA8D46E00BA5A35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE6B1AA8D46E00BA5A35 /* AppDelegate.m */; };
 		FB91AE6F1AA8D46E00BA5A35 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE6E1AA8D46E00BA5A35 /* MasterViewController.m */; };
@@ -99,6 +100,8 @@
 		B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DSLCalendarView.m"; sourceTree = "<group>"; };
 		B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerContacto.h; sourceTree = "<group>"; };
 		B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerContacto.m; sourceTree = "<group>"; };
+		FB24B9E81ADDEF8800D5431A /* ContactoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoViewController.h; sourceTree = "<group>"; };
+		FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoViewController.m; sourceTree = "<group>"; };
 		FB91AE631AA8D46E00BA5A35 /* CeldasMedida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeldasMedida.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB91AE671AA8D46E00BA5A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB91AE681AA8D46E00BA5A35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				FB91AE6D1AA8D46E00BA5A35 /* MasterViewController.h */,
 				FB91AE6E1AA8D46E00BA5A35 /* MasterViewController.m */,
 				FB91AE731AA8D46E00BA5A35 /* Main.storyboard */,
+				FB24B9E81ADDEF8800D5431A /* ContactoViewController.h */,
+				FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */,
 				FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */,
 				FB91AE761AA8D46E00BA5A35 /* Images.xcassets */,
 				B808E3141AC4E9F7003872A2 /* Imagenes */,
@@ -395,6 +400,7 @@
 				B808E3431AC4EC09003872A2 /* DSLCalendarMonthView.m in Sources */,
 				FB91AE911AA8D4A600BA5A35 /* CustomTableViewCell.m in Sources */,
 				B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */,
+				FB24B9EA1ADDEF8800D5431A /* ContactoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

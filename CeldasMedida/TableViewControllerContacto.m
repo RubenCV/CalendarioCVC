@@ -7,6 +7,7 @@
 //
 
 #import "TableViewControllerContacto.h"
+#import "ContactoViewController.h"
 
 @interface TableViewControllerContacto ()
 
@@ -180,12 +181,49 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NSInteger tmpInt = [indexPath section];
+    NSInteger tmpRow = [indexPath row];
+    
+    ContactoViewController *cvc = [segue destinationViewController];
+    
+    /*
+    NSString *rowStr = [@(tmpRow)stringValue];
     NSString *inStr = [@(tmpInt) stringValue];
     
-    //NSDictionary *object = self.exatecs[indexPath.row];
-    //NSLog([object objectForKey:@"nombre"]);
-    
     NSLog(@"%@", inStr);
+    NSLog(@"%@", rowStr);*/
+    
+    
+    switch (tmpInt) {
+        case 0:{
+            NSDictionary *object = self.asesoramiento[tmpRow];
+            cvc.nom = [object objectForKey:@"nombre"];
+            cvc.tel = [object objectForKey:@"telefono"];
+            cvc.email = [object objectForKey:@"mail"];
+            break;
+        }
+        case 1:
+        {
+            NSDictionary *object = self.exatecs[tmpRow];
+            cvc.nom = [object objectForKey:@"nombre"];
+            cvc.tel = [object objectForKey:@"telefono"];
+            cvc.email = [object objectForKey:@"mail"];
+            break;
+        }
+        case 2:
+        {
+            NSDictionary *object = self.pending[tmpRow];
+            cvc.nom = [object objectForKey:@"nombre"];
+            cvc.tel = [object objectForKey:@"telefono"];
+            cvc.email = [object objectForKey:@"mail"];
+            break;
+        }
+        default:
+            break;
+    }
+    
+    
+    
+    
 }
 
 @end
