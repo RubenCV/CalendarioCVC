@@ -8,8 +8,9 @@
 
 #import "NSDate+DSLCalendarView.h"
 
-
 @implementation NSDate (DSLCalendarView)
+
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 - (NSDateComponents*)dslCalendarView_dayWithCalendar:(NSCalendar*)calendar {
     return [calendar components:NSCalendarCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit fromDate:self];
@@ -19,4 +20,5 @@
     return [calendar components:NSCalendarCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit fromDate:self];
 }
 
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
 @end

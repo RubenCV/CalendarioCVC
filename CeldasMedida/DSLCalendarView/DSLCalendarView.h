@@ -29,11 +29,9 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
 #import "DSLCalendarRange.h"
 #import "NSDate+DSLCalendarView.h"
 @protocol DSLCalendarViewDelegate;
-
 
 @interface DSLCalendarView : UIView
 
@@ -49,7 +47,6 @@
 - (void)setVisibleMonth:(NSDateComponents *)visibleMonth animated:(BOOL)animated;
 
 @end
-
 
 @protocol DSLCalendarViewDelegate <NSObject>
 

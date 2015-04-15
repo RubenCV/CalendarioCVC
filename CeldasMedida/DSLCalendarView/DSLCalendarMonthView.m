@@ -48,12 +48,9 @@
     __strong Class _dayViewClass;
 }
 
-
 #pragma mark - Memory management
-
-
-
 #pragma mark - Initialisation
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 // Designated initialiser
 - (id)initWithMonth:(NSDateComponents*)month width:(CGFloat)width dayViewClass:(Class)dayViewClass dayViewHeight:(CGFloat)dayViewHeight {
@@ -227,4 +224,5 @@
     return [self.dayViewsDictionary objectForKey:[self dayViewKeyForDay:day]];
 }
 
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
 @end

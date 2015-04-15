@@ -43,12 +43,9 @@
     __strong NSDate *_endDate;
 }
 
-
 #pragma mark - Memory management
-
-
-
 #pragma mark - Initialisation
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 // Designated initialiser
 - (id)initWithStartDay:(NSDateComponents *)start endDay:(NSDateComponents *)end {
@@ -97,5 +94,6 @@
     
     return YES;
 }
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
 
 @end

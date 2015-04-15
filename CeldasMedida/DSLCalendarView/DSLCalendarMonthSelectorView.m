@@ -29,7 +29,6 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
 #import "DSLCalendarMonthSelectorView.h"
 
 
@@ -42,10 +41,8 @@
 
 
 #pragma mark - Memory management
-
-
-
 #pragma mark - Initialisation
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 // Designated initialiser
 + (id)view {
@@ -99,7 +96,6 @@
     }
 }
 
-
 #pragma mark - UIView methods
 
 - (void)drawRect:(CGRect)rect {
@@ -118,5 +114,5 @@
         CGContextRestoreGState(context);
     }
 }
-
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 @end

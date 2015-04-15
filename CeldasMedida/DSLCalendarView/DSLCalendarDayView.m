@@ -29,10 +29,8 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
 #import "DSLCalendarDayView.h"
 #import "NSDate+DSLCalendarView.h"
-
 
 @interface DSLCalendarDayView ()
 
@@ -46,8 +44,8 @@
     __strong NSString *_labelText;
 }
 
-
 #pragma mark - Initialisation
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -188,7 +186,6 @@
     }
 }
 
-
 - (void)drawBorders {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -231,4 +228,5 @@
     [_labelText drawInRect:textRect withFont:textFont];
 }
 
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
 @end

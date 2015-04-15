@@ -29,7 +29,6 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
 #import "DSLCalendarDayCalloutView.h"
 #import "DSLCalendarDayView.h"
 #import "DSLCalendarMonthSelectorView.h"
@@ -58,12 +57,9 @@
     NSDateComponents *_visibleMonth;
 }
 
-
 #pragma mark - Memory management
-
-
-
 #pragma mark - Initialisation
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 // Designated initialisers
 
@@ -118,6 +114,7 @@
     [self updateMonthLabelMonth:_visibleMonth];
     [self positionViewsForMonth:_visibleMonth fromMonth:_visibleMonth animated:NO];
 }
+
 
 
 #pragma mark - Properties
@@ -535,4 +532,5 @@
     */
 }
 
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
 @end

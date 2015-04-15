@@ -42,7 +42,7 @@
     s = [s stringByAppendingString:self.email];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:s]];
     
-    NSLog(s);
+    NSLog(@"%@", s);
 }
 
 @end
