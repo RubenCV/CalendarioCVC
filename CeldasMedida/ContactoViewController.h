@@ -12,8 +12,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbNombre;
 @property (weak, nonatomic) IBOutlet UILabel *lbEmail;
 @property (weak, nonatomic) IBOutlet UILabel *lbTelefono;
+@property (weak, nonatomic) IBOutlet UILabel *lbArea;
 
 @property (weak, nonatomic) NSString *nom;
+@property (weak, nonatomic) NSString *area;
 @property (weak, nonatomic) NSString *email;
 @property (weak, nonatomic) NSString *tel;
 

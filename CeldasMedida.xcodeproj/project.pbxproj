@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DEF90181AC788D800CA2E78 /* Property List Asesoramiento.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF90171AC788D800CA2E78 /* Property List Asesoramiento.plist */; };
-		8DEF901A1AC78A7D00CA2E78 /* Property List Exatec.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF90191AC78A7D00CA2E78 /* Property List Exatec.plist */; };
-		8DEF901C1AC78B4A00CA2E78 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF901B1AC78B4A00CA2E78 /* Property List.plist */; };
+		8DEF901A1AC78A7D00CA2E78 /* Property List AdmDir.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF90191AC78A7D00CA2E78 /* Property List AdmDir.plist */; };
 		B808E3181AC4E9F7003872A2 /* Calendario.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E3151AC4E9F7003872A2 /* Calendario.png */; };
 		B808E3191AC4E9F7003872A2 /* Contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E3161AC4E9F7003872A2 /* Contacto.png */; };
 		B808E31A1AC4E9F7003872A2 /* Noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E3171AC4E9F7003872A2 /* Noticias.png */; };
@@ -38,6 +36,10 @@
 		B808E3531AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E33B1AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png */; };
 		B808E3541AC4EC09003872A2 /* NSDate+DSLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */; };
 		B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */; };
+		FB18007E1ADF29BC0074C6CB /* Property List DesProVinc.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */; };
+		FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */; };
+		FB1800821ADF2C250074C6CB /* Property List ExpProf.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */; };
+		FB1800841ADF2D1B0074C6CB /* Property List InnovPlan.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1800831ADF2D1B0074C6CB /* Property List InnovPlan.plist */; };
 		FB24B9EA1ADDEF8800D5431A /* ContactoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */; };
 		FB91AE691AA8D46E00BA5A35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE681AA8D46E00BA5A35 /* main.m */; };
 		FB91AE6C1AA8D46E00BA5A35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE6B1AA8D46E00BA5A35 /* AppDelegate.m */; };
@@ -47,6 +49,16 @@
 		FB91AE7A1AA8D46E00BA5A35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */; };
 		FB91AE861AA8D46E00BA5A35 /* CeldasMedidaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE851AA8D46E00BA5A35 /* CeldasMedidaTests.m */; };
 		FB91AE911AA8D4A600BA5A35 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */; };
+		FBE53C841ADF567800AC8DE7 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C741ADF567800AC8DE7 /* GTMNSString+HTML.m */; };
+		FBE53C851ADF567800AC8DE7 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C761ADF567800AC8DE7 /* MWFeedInfo.m */; };
+		FBE53C861ADF567800AC8DE7 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C781ADF567800AC8DE7 /* MWFeedItem.m */; };
+		FBE53C871ADF567800AC8DE7 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C7A1ADF567800AC8DE7 /* MWFeedParser.m */; };
+		FBE53C881ADF567800AC8DE7 /* MWFeedParserAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C7D1ADF567800AC8DE7 /* MWFeedParserAppDelegate.m */; };
+		FBE53C891ADF567800AC8DE7 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C7F1ADF567800AC8DE7 /* NSDate+InternetDateTime.m */; };
+		FBE53C8A1ADF567800AC8DE7 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C811ADF567800AC8DE7 /* NSString+HTML.m */; };
+		FBE53C8B1ADF567800AC8DE7 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C831ADF567800AC8DE7 /* NSString+XMLEntities.m */; };
+		FBE53C901ADF568C00AC8DE7 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C8D1ADF568C00AC8DE7 /* DetailTableViewController.m */; };
+		FBE53C911ADF568C00AC8DE7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C8F1ADF568C00AC8DE7 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8DEF90171AC788D800CA2E78 /* Property List Asesoramiento.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Asesoramiento.plist"; sourceTree = "<group>"; };
-		8DEF90191AC78A7D00CA2E78 /* Property List Exatec.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List Exatec.plist"; sourceTree = "<group>"; };
-		8DEF901B1AC78B4A00CA2E78 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		8DEF90191AC78A7D00CA2E78 /* Property List AdmDir.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List AdmDir.plist"; sourceTree = "<group>"; };
 		B808E3151AC4E9F7003872A2 /* Calendario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendario.png; sourceTree = "<group>"; };
 		B808E3161AC4E9F7003872A2 /* Contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacto.png; sourceTree = "<group>"; };
 		B808E3171AC4E9F7003872A2 /* Noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Noticias.png; sourceTree = "<group>"; };
@@ -100,6 +110,10 @@
 		B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DSLCalendarView.m"; sourceTree = "<group>"; };
 		B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerContacto.h; sourceTree = "<group>"; };
 		B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerContacto.m; sourceTree = "<group>"; };
+		FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List DesProVinc.plist"; sourceTree = "<group>"; };
+		FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List EvaRetro.plist"; sourceTree = "<group>"; };
+		FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List ExpProf.plist"; sourceTree = "<group>"; };
+		FB1800831ADF2D1B0074C6CB /* Property List InnovPlan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List InnovPlan.plist"; sourceTree = "<group>"; };
 		FB24B9E81ADDEF8800D5431A /* ContactoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoViewController.h; sourceTree = "<group>"; };
 		FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoViewController.m; sourceTree = "<group>"; };
 		FB91AE631AA8D46E00BA5A35 /* CeldasMedida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeldasMedida.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +131,27 @@
 		FB91AE851AA8D46E00BA5A35 /* CeldasMedidaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeldasMedidaTests.m; sourceTree = "<group>"; };
 		FB91AE8F1AA8D4A600BA5A35 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableViewCell.h; path = ../CustomTableViewCell.h; sourceTree = "<group>"; };
 		FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableViewCell.m; path = ../CustomTableViewCell.m; sourceTree = "<group>"; };
+		FBE53C731ADF567800AC8DE7 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		FBE53C741ADF567800AC8DE7 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		FBE53C751ADF567800AC8DE7 /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		FBE53C761ADF567800AC8DE7 /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		FBE53C771ADF567800AC8DE7 /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		FBE53C781ADF567800AC8DE7 /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		FBE53C791ADF567800AC8DE7 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		FBE53C7A1ADF567800AC8DE7 /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		FBE53C7B1ADF567800AC8DE7 /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		FBE53C7C1ADF567800AC8DE7 /* MWFeedParserAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParserAppDelegate.h; sourceTree = "<group>"; };
+		FBE53C7D1ADF567800AC8DE7 /* MWFeedParserAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParserAppDelegate.m; sourceTree = "<group>"; };
+		FBE53C7E1ADF567800AC8DE7 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		FBE53C7F1ADF567800AC8DE7 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		FBE53C801ADF567800AC8DE7 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		FBE53C811ADF567800AC8DE7 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		FBE53C821ADF567800AC8DE7 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		FBE53C831ADF567800AC8DE7 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		FBE53C8C1ADF568C00AC8DE7 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		FBE53C8D1ADF568C00AC8DE7 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		FBE53C8E1ADF568C00AC8DE7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FBE53C8F1ADF568C00AC8DE7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,9 +249,13 @@
 		FB91AE651AA8D46E00BA5A35 /* CeldasMedida */ = {
 			isa = PBXGroup;
 			children = (
+				FBE53C921ADF56EA00AC8DE7 /* Contactos CVC */,
+				FBE53C721ADF567800AC8DE7 /* FeedParser */,
+				B808E3141AC4E9F7003872A2 /* Imagenes */,
+				FB91AE661AA8D46E00BA5A35 /* Supporting Files */,
 				B808E31E1AC4EC09003872A2 /* DSLCalendarView */,
-				FB91AE6A1AA8D46E00BA5A35 /* AppDelegate.h */,
 				FB91AE6B1AA8D46E00BA5A35 /* AppDelegate.m */,
+				FB91AE6A1AA8D46E00BA5A35 /* AppDelegate.h */,
 				FB91AE6D1AA8D46E00BA5A35 /* MasterViewController.h */,
 				FB91AE6E1AA8D46E00BA5A35 /* MasterViewController.m */,
 				FB91AE731AA8D46E00BA5A35 /* Main.storyboard */,
@@ -224,17 +263,16 @@
 				FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */,
 				FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */,
 				FB91AE761AA8D46E00BA5A35 /* Images.xcassets */,
-				B808E3141AC4E9F7003872A2 /* Imagenes */,
-				FB91AE661AA8D46E00BA5A35 /* Supporting Files */,
 				B808E31B1AC4EB9D003872A2 /* ViewControllerCalendario.h */,
+				FBE53C8C1ADF568C00AC8DE7 /* DetailTableViewController.h */,
+				FBE53C8D1ADF568C00AC8DE7 /* DetailTableViewController.m */,
+				FBE53C8E1ADF568C00AC8DE7 /* RootViewController.h */,
+				FBE53C8F1ADF568C00AC8DE7 /* RootViewController.m */,
 				B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */,
 				B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */,
 				B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */,
 				FB91AE8F1AA8D4A600BA5A35 /* CustomTableViewCell.h */,
 				FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */,
-				8DEF901B1AC78B4A00CA2E78 /* Property List.plist */,
-				8DEF90191AC78A7D00CA2E78 /* Property List Exatec.plist */,
-				8DEF90171AC788D800CA2E78 /* Property List Asesoramiento.plist */,
 			);
 			path = CeldasMedida;
 			sourceTree = "<group>";
@@ -263,6 +301,42 @@
 				FB91AE841AA8D46E00BA5A35 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBE53C721ADF567800AC8DE7 /* FeedParser */ = {
+			isa = PBXGroup;
+			children = (
+				FBE53C731ADF567800AC8DE7 /* GTMNSString+HTML.h */,
+				FBE53C741ADF567800AC8DE7 /* GTMNSString+HTML.m */,
+				FBE53C751ADF567800AC8DE7 /* MWFeedInfo.h */,
+				FBE53C761ADF567800AC8DE7 /* MWFeedInfo.m */,
+				FBE53C771ADF567800AC8DE7 /* MWFeedItem.h */,
+				FBE53C781ADF567800AC8DE7 /* MWFeedItem.m */,
+				FBE53C791ADF567800AC8DE7 /* MWFeedParser.h */,
+				FBE53C7A1ADF567800AC8DE7 /* MWFeedParser.m */,
+				FBE53C7B1ADF567800AC8DE7 /* MWFeedParser_Private.h */,
+				FBE53C7C1ADF567800AC8DE7 /* MWFeedParserAppDelegate.h */,
+				FBE53C7D1ADF567800AC8DE7 /* MWFeedParserAppDelegate.m */,
+				FBE53C7E1ADF567800AC8DE7 /* NSDate+InternetDateTime.h */,
+				FBE53C7F1ADF567800AC8DE7 /* NSDate+InternetDateTime.m */,
+				FBE53C801ADF567800AC8DE7 /* NSString+HTML.h */,
+				FBE53C811ADF567800AC8DE7 /* NSString+HTML.m */,
+				FBE53C821ADF567800AC8DE7 /* NSString+XMLEntities.h */,
+				FBE53C831ADF567800AC8DE7 /* NSString+XMLEntities.m */,
+			);
+			path = FeedParser;
+			sourceTree = "<group>";
+		};
+		FBE53C921ADF56EA00AC8DE7 /* Contactos CVC */ = {
+			isa = PBXGroup;
+			children = (
+				8DEF90191AC78A7D00CA2E78 /* Property List AdmDir.plist */,
+				FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */,
+				FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */,
+				FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */,
+				FB1800831ADF2D1B0074C6CB /* Property List InnovPlan.plist */,
+			);
+			name = "Contactos CVC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +422,6 @@
 				B808E3501AC4EC09003872A2 /* DSLCalendarDaySelection-right.png in Resources */,
 				B808E3481AC4EC09003872A2 /* DSLCalendar-previousMonth.png in Resources */,
 				B808E34D1AC4EC09003872A2 /* DSLCalendarDaySelection-left@2x.png in Resources */,
-				8DEF901C1AC78B4A00CA2E78 /* Property List.plist in Resources */,
 				B808E3461AC4EC09003872A2 /* DSLCalendar-nextMonth.png in Resources */,
 				B808E3421AC4EC09003872A2 /* DSLCalendarMonthSelectorView.xib in Resources */,
 				FB91AE751AA8D46E00BA5A35 /* Main.storyboard in Resources */,
@@ -358,12 +431,15 @@
 				B808E3471AC4EC09003872A2 /* DSLCalendar-nextMonth@2x.png in Resources */,
 				B808E33F1AC4EC09003872A2 /* DSLCalendarDayCalloutView.xib in Resources */,
 				FB91AE7A1AA8D46E00BA5A35 /* LaunchScreen.xib in Resources */,
+				FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */,
 				FB91AE771AA8D46E00BA5A35 /* Images.xcassets in Resources */,
 				B808E34A1AC4EC09003872A2 /* DSLCalendarDayCallout.png in Resources */,
+				FB18007E1ADF29BC0074C6CB /* Property List DesProVinc.plist in Resources */,
+				FB1800821ADF2C250074C6CB /* Property List ExpProf.plist in Resources */,
+				FB1800841ADF2D1B0074C6CB /* Property List InnovPlan.plist in Resources */,
 				B808E3511AC4EC09003872A2 /* DSLCalendarDaySelection-right@2x.png in Resources */,
-				8DEF901A1AC78A7D00CA2E78 /* Property List Exatec.plist in Resources */,
+				8DEF901A1AC78A7D00CA2E78 /* Property List AdmDir.plist in Resources */,
 				B808E34C1AC4EC09003872A2 /* DSLCalendarDaySelection-left.png in Resources */,
-				8DEF90181AC788D800CA2E78 /* Property List Asesoramiento.plist in Resources */,
 				B808E3181AC4E9F7003872A2 /* Calendario.png in Resources */,
 				B808E34B1AC4EC09003872A2 /* DSLCalendarDayCallout@2x.png in Resources */,
 				B808E3531AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png in Resources */,
@@ -389,14 +465,24 @@
 			files = (
 				B808E3411AC4EC09003872A2 /* DSLCalendarMonthSelectorView.m in Sources */,
 				B808E3541AC4EC09003872A2 /* NSDate+DSLCalendarView.m in Sources */,
+				FBE53C911ADF568C00AC8DE7 /* RootViewController.m in Sources */,
+				FBE53C901ADF568C00AC8DE7 /* DetailTableViewController.m in Sources */,
+				FBE53C871ADF567800AC8DE7 /* MWFeedParser.m in Sources */,
+				FBE53C841ADF567800AC8DE7 /* GTMNSString+HTML.m in Sources */,
+				FBE53C891ADF567800AC8DE7 /* NSDate+InternetDateTime.m in Sources */,
 				FB91AE6C1AA8D46E00BA5A35 /* AppDelegate.m in Sources */,
+				FBE53C8B1ADF567800AC8DE7 /* NSString+XMLEntities.m in Sources */,
 				B808E31D1AC4EB9D003872A2 /* ViewControllerCalendario.m in Sources */,
 				B808E3401AC4EC09003872A2 /* DSLCalendarDayView.m in Sources */,
 				B808E33E1AC4EC09003872A2 /* DSLCalendarDayCalloutView.m in Sources */,
 				FB91AE6F1AA8D46E00BA5A35 /* MasterViewController.m in Sources */,
+				FBE53C8A1ADF567800AC8DE7 /* NSString+HTML.m in Sources */,
 				B808E3451AC4EC09003872A2 /* DSLCalendarView.m in Sources */,
+				FBE53C881ADF567800AC8DE7 /* MWFeedParserAppDelegate.m in Sources */,
 				FB91AE691AA8D46E00BA5A35 /* main.m in Sources */,
 				B808E3441AC4EC09003872A2 /* DSLCalendarRange.m in Sources */,
+				FBE53C861ADF567800AC8DE7 /* MWFeedItem.m in Sources */,
+				FBE53C851ADF567800AC8DE7 /* MWFeedInfo.m in Sources */,
 				B808E3431AC4EC09003872A2 /* DSLCalendarMonthView.m in Sources */,
 				FB91AE911AA8D4A600BA5A35 /* CustomTableViewCell.m in Sources */,
 				B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */,

@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.lbNombre.text = self.nom;
+    self.lbArea.text = self.area;
+    self.lbArea.numberOfLines = 0;
     self.lbEmail.text = self.email;
     self.lbTelefono.text = self.tel;
 }
@@ -40,6 +42,7 @@
 - (IBAction)actMail:(id)sender {
     NSString *s = @"mailto:";
     s = [s stringByAppendingString:self.email];
+    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:s]];
     
     NSLog(@"%@", s);

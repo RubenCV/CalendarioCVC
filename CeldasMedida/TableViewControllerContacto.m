@@ -12,9 +12,12 @@
 @interface TableViewControllerContacto ()
 
 
-@property (strong, nonatomic) NSArray *exatecs;
-@property (strong, nonatomic) NSArray *asesoramiento;
-@property (strong, nonatomic) NSArray *pending;
+
+@property (strong, nonatomic) NSArray *arrAdmDir;
+@property (strong, nonatomic) NSArray *arrDesProVinc;
+@property (strong, nonatomic) NSArray *arrEvaRetro;
+@property (strong, nonatomic) NSArray *arrExpProf;
+@property (strong, nonatomic) NSArray *arrInnovPlan;
 
 @end
 
@@ -27,68 +30,100 @@
     [super viewDidLoad];
     // Cargamos los datos
     NSString *pathPlist;
-    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List" ofType: @"plist"];
-    self.pending = [[NSArray alloc] initWithContentsOfFile: pathPlist];
     
-    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List Exatec" ofType: @"plist"];
-    self.exatecs = [[NSArray alloc] initWithContentsOfFile: pathPlist];
+    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List AdmDir" ofType: @"plist"];
+    self.arrAdmDir = [[NSArray alloc] initWithContentsOfFile: pathPlist];
     
-    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List Asesoramiento" ofType: @"plist"];
-    self.asesoramiento = [[NSArray alloc] initWithContentsOfFile: pathPlist];
+    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List DesProVinc" ofType: @"plist"];
+    self.arrDesProVinc = [[NSArray alloc] initWithContentsOfFile: pathPlist];
     
+    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List EvaRetro" ofType: @"plist"];
+    self.arrEvaRetro = [[NSArray alloc] initWithContentsOfFile: pathPlist];
+    
+    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List ExpProf" ofType: @"plist"];
+    self.arrExpProf = [[NSArray alloc] initWithContentsOfFile: pathPlist];
+    
+    pathPlist  = [ [NSBundle mainBundle] pathForResource: @"Property List InnovPlan" ofType: @"plist"];
+    self.arrInnovPlan = [[NSArray alloc] initWithContentsOfFile: pathPlist];
     
     //Creamos los datos
     
-    NSString *sectionTitle1 = @"Asesoramiento CVC";
+    NSString *sectionTitle1 = @"Administración y Dirección";
+    NSString *sectionTitle2 = @"Desarrollo Profesional y Vinculación";
+    NSString *sectionTitle3 = @"Evaluación y Retroalimentación";
+    NSString *sectionTitle4 = @"Experiencia Profesional";
+    NSString *sectionTitle5 = @"Innovación y Planeación Estratégica";
     
-    NSString *sectionTitle2 = @"Contacto ExaTec";
     
-    NSString *sectionTitle3 = @"Departamento 3";
+    NSMutableArray *arrTmpEvaRetro = [[NSMutableArray alloc] init];
     
-    
-    NSMutableArray *pendingArr = [[NSMutableArray alloc] init];
-    
-    for(int i = 0; i < self.pending.count; i++){
-        NSDictionary *object = self.pending[i];
+    for(int i = 0; i < self.arrEvaRetro.count; i++){
+        NSDictionary *object = self.arrEvaRetro[i];
         NSString *tmp = [object objectForKey:@"nombre"];
-        [pendingArr addObject:tmp];
+        [arrTmpEvaRetro addObject:tmp];
     }
     
-    NSMutableArray *exatecArr = [[NSMutableArray alloc] init];
+    NSMutableArray *arrTmpDesProVinc = [[NSMutableArray alloc] init];
     
-    for(int i = 0; i < self.exatecs.count; i++){
-        NSDictionary *object = self.exatecs[i];
+    for(int i = 0; i < self.arrDesProVinc.count; i++){
+        NSDictionary *object = self.arrDesProVinc[i];
         NSString *tmp = [object objectForKey:@"nombre"];
-        [exatecArr addObject:tmp];
+        [arrTmpDesProVinc addObject:tmp];
     }
     
-    NSMutableArray *asesoramientoArr = [[NSMutableArray alloc] init];
+    NSMutableArray *arrTmpAdmDir = [[NSMutableArray alloc] init];
     
-    for(int i = 0; i < self.asesoramiento.count; i++){
-        NSDictionary *object = self.asesoramiento[i];
+    for(int i = 0; i < self.arrAdmDir.count; i++){
+        NSDictionary *object = self.arrAdmDir[i];
         NSString *tmp = [object objectForKey:@"nombre"];
-        [asesoramientoArr addObject:tmp];
+        [arrTmpAdmDir addObject:tmp];
+    }
+    
+    NSMutableArray *arrTmpExpProf = [[NSMutableArray alloc] init];
+    
+    for(int i = 0; i < self.arrExpProf.count; i++){
+        NSDictionary *object = self.arrExpProf[i];
+        NSString *tmp = [object objectForKey:@"nombre"];
+        [arrTmpExpProf addObject:tmp];
+    }
+    
+    NSMutableArray *arrTmpInnovPlan = [[NSMutableArray alloc] init];
+    
+    for(int i = 0; i < self.arrInnovPlan.count; i++){
+        NSDictionary *object = self.arrInnovPlan[i];
+        NSString *tmp = [object objectForKey:@"nombre"];
+        [arrTmpInnovPlan addObject:tmp];
     }
    
     
     NSDictionary *section1 = [NSDictionary dictionaryWithObjectsAndKeys:
                               sectionTitle1,@"title",
-                              asesoramientoArr,@"cities",
+                              arrTmpAdmDir,@"cities",
                               @"1",@"visible",nil];
     
     NSDictionary *section2 = [NSDictionary dictionaryWithObjectsAndKeys:
                               sectionTitle2,@"title",
-                              exatecArr,@"cities",
+                              arrTmpDesProVinc,@"cities",
                               @"1",@"visible",nil];
     
     NSDictionary *section3 = [NSDictionary dictionaryWithObjectsAndKeys:
                               sectionTitle3,@"title",
-                              pendingArr,@"cities",
+                              arrTmpEvaRetro,@"cities",
+                              @"1",@"visible",nil];
+    
+    NSDictionary *section4 = [NSDictionary dictionaryWithObjectsAndKeys:
+                              sectionTitle4,@"title",
+                              arrTmpExpProf,@"cities",
+                              @"1",@"visible",nil];
+    
+    NSDictionary *section5 = [NSDictionary dictionaryWithObjectsAndKeys:
+                              sectionTitle5,@"title",
+                              arrTmpInnovPlan,@"cities",
                               @"1",@"visible",nil];
     
     //Los cargamos en el array principal
     
-    self.tableData = @[section1,section2,section3];
+    self.tableData = @[section1,section2,section3, section4, section5];
     
     //Recargamos la tabla
     
@@ -192,34 +227,40 @@
     NSLog(@"%@", inStr);
     NSLog(@"%@", rowStr);*/
     
-    
+    NSDictionary *object;
     switch (tmpInt) {
         case 0:{
-            NSDictionary *object = self.asesoramiento[tmpRow];
-            cvc.nom = [object objectForKey:@"nombre"];
-            cvc.tel = [object objectForKey:@"telefono"];
-            cvc.email = [object objectForKey:@"mail"];
+            object = self.arrAdmDir[tmpRow];
             break;
         }
         case 1:
         {
-            NSDictionary *object = self.exatecs[tmpRow];
-            cvc.nom = [object objectForKey:@"nombre"];
-            cvc.tel = [object objectForKey:@"telefono"];
-            cvc.email = [object objectForKey:@"mail"];
+            object = self.arrDesProVinc[tmpRow];
             break;
         }
         case 2:
         {
-            NSDictionary *object = self.pending[tmpRow];
-            cvc.nom = [object objectForKey:@"nombre"];
-            cvc.tel = [object objectForKey:@"telefono"];
-            cvc.email = [object objectForKey:@"mail"];
+            object = self.arrEvaRetro[tmpRow];
+            break;
+        }
+        case 3:
+        {
+            object = self.arrExpProf[tmpRow];
+            break;
+        }
+        case 4:
+        {
+            object = self.arrInnovPlan[tmpRow];
             break;
         }
         default:
             break;
     }
+    
+    cvc.nom = [object objectForKey:@"nombre"];
+    cvc.area = [object objectForKey:@"area"];
+    cvc.tel = [object objectForKey:@"telefono"];
+    cvc.email = [object objectForKey:@"mail"];
     
     
     

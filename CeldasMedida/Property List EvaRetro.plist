@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Abigail Aguilar Cázares</string>
+		<key>area</key>
+		<string>Tec Challenge</string>
+		<key>telefono</key>
+		<string>5166</string>
+		<key>mail</key>
+		<string>abigail.aguilar@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Angélica Yolanda Zuñiga Montemayor</string>
+		<key>area</key>
+		<string>Dir. Evaluación y retroalimentación de competencias</string>
+		<key>telefono</key>
+		<string>3615</string>
+		<key>mail</key>
+		<string>azuniga@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Amanda Rey Castillo González</string>
+		<key>area</key>
+		<string>Evaluación y retroalimentación de competencias</string>
+		<key>telefono</key>
+		<string>3483</string>
+		<key>mail</key>
+		<string>acastillo04@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Leonardo Paez Hervert</string>
+		<key>area</key>
+		<string>Evaluación y retroalimentación de competencias</string>
+		<key>telefono</key>
+		<string>6022</string>
+		<key>mail</key>
+		<string>lpaez@itesm.mx</string>
+	</dict>
+</array>
+</plist>

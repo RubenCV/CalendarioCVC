@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Judith Villarreal Rodríguez</string>
+		<key>area</key>
+		<string>Dir. Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>5360</string>
+		<key>mail</key>
+		<string>judith.villarreal@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Sandra Gabriela Martínez Leal</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>5349</string>
+		<key>mail</key>
+		<string>sgml@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Carolina Acosta Valero</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>5383</string>
+		<key>mail</key>
+		<string>carolina.acosta@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Brenda Nelly Santos Guevara</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>5338</string>
+		<key>mail</key>
+		<string>brendasantos@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Lorena Sofia Ramirez Neri</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>5339</string>
+		<key>mail</key>
+		<string>lorena_sofia@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Ana Lucia Santos Villanueva</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>2284</string>
+		<key>mail</key>
+		<string>asantosv@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Alicia Lucero Briseño Juárez</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>5384</string>
+		<key>mail</key>
+		<string>lucero.briseno@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Marlene Irasema Flores Salazar</string>
+		<key>area</key>
+		<string>Experiencia Profesional</string>
+		<key>telefono</key>
+		<string>3669</string>
+		<key>mail</key>
+		<string>marlene.flores@itesm.mx</string>
+	</dict>
+</array>
+</plist>

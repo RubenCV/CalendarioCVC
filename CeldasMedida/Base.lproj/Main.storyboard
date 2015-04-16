@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -162,7 +162,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDE-kf-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="519"/>
+            <point key="canvasLocation" x="411" y="853"/>
         </scene>
         <!--Informacion-->
         <scene sceneID="V4m-Tm-TML">
@@ -192,13 +192,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gae-m8-yNQ">
-                                <rect key="frame" x="16" y="150" width="288" height="21"/>
+                                <rect key="frame" x="16" y="235" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyi-kq-2ek">
+                                <rect key="frame" x="16" y="150" width="288" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fa-9f-kja">
-                                <rect key="frame" x="16" y="179" width="288" height="21"/>
+                                <rect key="frame" x="16" y="206" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -209,6 +215,7 @@
                     <navigationItem key="navigationItem" title="Informacion" id="sah-NM-6WM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="lbArea" destination="Uyi-kq-2ek" id="hpE-64-efk"/>
                         <outlet property="lbEmail" destination="gae-m8-yNQ" id="OMJ-bE-670"/>
                         <outlet property="lbNombre" destination="uZ7-Ka-E7h" id="fYf-Ob-wAO"/>
                         <outlet property="lbTelefono" destination="5fa-9f-kja" id="73s-u4-qWS"/>
@@ -216,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypR-jA-GKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="759"/>
+            <point key="canvasLocation" x="830" y="859"/>
         </scene>
         <!--Calendario CVC-->
         <scene sceneID="aFz-8S-FoC">
@@ -297,7 +304,7 @@
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.4392156862745098" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo de eventos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxM-t3-6CW">
-                                <rect key="frame" x="47" y="440" width="227" height="30"/>
+                                <rect key="frame" x="0.0" y="440" width="227" height="30"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
                                 <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -312,6 +319,16 @@
                                 <rect key="frame" x="0.0" y="106" width="320" height="327"/>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.52941176470588236" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-UG-Kv8">
+                                <rect key="frame" x="220" y="442" width="84" height="30"/>
+                                <state key="normal" title="Debug Feed">
+                                    <color key="titleColor" red="1" green="0.21230871239999999" blue="0.01392948716" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UfZ-Vn-K5D" kind="show" id="ogN-nj-147"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.29803921568627451" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -319,11 +336,74 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="calendarView" destination="IAd-IG-wYg" id="W6H-fl-IIg"/>
+                        <segue destination="17g-cg-WMl" kind="show" identifier="test" id="qgV-js-3XN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPy-uV-Jg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="-430"/>
+            <point key="canvasLocation" x="918" y="-698"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PRR-TZ-TwT">
+            <objects>
+                <viewController id="17g-cg-WMl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ALG-Ke-l4w"/>
+                        <viewControllerLayoutGuide type="bottom" id="85g-GD-JDZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wP7-gP-x0x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vista para agregar evento al calendario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJB-tq-DhB">
+                                <rect key="frame" x="11" y="214" width="299" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jr5-yO-14o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363" y="-855"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="ZR7-4x-2ye">
+            <objects>
+                <tableViewController id="uVn-yj-MNs" customClass="RootViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eGQ-13-lko">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WjB-7k-DW9" style="IBUITableViewCellStyleDefault" id="Wji-nn-VG4">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wji-nn-VG4" id="okH-Ux-Fxw">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WjB-7k-DW9">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uVn-yj-MNs" id="svA-AO-IMF"/>
+                            <outlet property="delegate" destination="uVn-yj-MNs" id="xZe-PI-dKI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dpV-MQ-zze"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rr-Hr-Qgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="-41"/>
         </scene>
         <!--Lo ultimo en CVC-->
         <scene sceneID="Kcp-7E-dzp">
@@ -369,7 +449,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcB-3J-SSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="64"/>
+            <point key="canvasLocation" x="1315" y="784"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XUY-Mp-tLV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UfZ-Vn-K5D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ds-MQ-I9e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uVn-yj-MNs" kind="relationship" relationship="rootViewController" id="B8V-Mu-RCc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jru-ct-rmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="-41"/>
         </scene>
     </scenes>
     <resources>

@@ -151,6 +151,17 @@
         }
         
         // Checa Cursos.
+        /*
+         
+            for(int i = 0; i < listacursos.count; i++){
+                if(fechaSeleccionada == listacursos(i).getFechaInicio)
+                    addTo array;
+         }
+         
+            array.count = ?
+         }
+         
+         */
         if([listaCursos containsObject: date]) {
             [[UIColor orangeColor] setFill];
         }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Denisse Cantú Barajas</string>
+		<key>area</key>
+		<string>Administración CVC</string>
+		<key>telefono</key>
+		<string>2280</string>
+		<key>mail</key>
+		<string>denisse.cantu@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Deyanira Gloria Trujilla Creado</string>
+		<key>area</key>
+		<string>Dirección CVC</string>
+		<key>telefono</key>
+		<string>3666</string>
+		<key>mail</key>
+		<string>deyanira.trujillo@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Rosa Nelly Sierra Contreras</string>
+		<key>area</key>
+		<string>Auxiliar Administrativo Dirección CVC</string>
+		<key>telefono</key>
+		<string>3440</string>
+		<key>mail</key>
+		<string>nelly.sierra@itesm.mx</string>
+	</dict>
+</array>
+</plist>

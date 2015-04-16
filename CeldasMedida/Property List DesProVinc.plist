@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Rodrigo López Neri</string>
+		<key>area</key>
+		<string>Dir. Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3667</string>
+		<key>mail</key>
+		<string>rodrigo.lopezn@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Mónica Marcela Morales Cortés</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3484</string>
+		<key>mail</key>
+		<string>mm.morales@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Adriana Piedra Santa Mollinedo</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3627</string>
+		<key>mail</key>
+		<string>padriana@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Rosa María Rodríguez Ramírez</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3441</string>
+		<key>mail</key>
+		<string>rossy_rodriguez@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Grecia Lizeth García Escobedo</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3625</string>
+		<key>mail</key>
+		<string>lizeth.garcia@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Ana Lilia Mendoza Elizondo</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3626</string>
+		<key>mail</key>
+		<string>almendozae@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Damián Hernández Valdez</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>3626</string>
+		<key>mail</key>
+		<string>dhvaldez@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Fátima Itzel Maldonado González</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>6032</string>
+		<key>mail</key>
+		<string>f.maldonado@itesm.mx </string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Erika Lozano Soto</string>
+		<key>area</key>
+		<string>Desarrollo  Profesional y  Vinculación</string>
+		<key>telefono</key>
+		<string>6028</string>
+		<key>mail</key>
+		<string>erika.lozano@itesm.mx</string>
+	</dict>
+</array>
+</plist>

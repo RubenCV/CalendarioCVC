@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Graciela Alejandra Quintanilla Palacios</string>
+		<key>area</key>
+		<string>Coord. Innovación y Planeación Estratégica</string>
+		<key>telefono</key>
+		<string>3673</string>
+		<key>mail</key>
+		<string>gquintanilla@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Jorge Rubén Bárcenas Diaz</string>
+		<key>area</key>
+		<string>Innovación y Planeación Estratégica</string>
+		<key>telefono</key>
+		<string>3673</string>
+		<key>mail</key>
+		<string>jorge.barcenas@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Liliana Flores González</string>
+		<key>area</key>
+		<string>Innovación y Planeación Estratégica</string>
+		<key>telefono</key>
+		<string>3673</string>
+		<key>mail</key>
+		<string>lilianaflores_gonzalez@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Cynthia Carolina Nuñez Alvarez</string>
+		<key>area</key>
+		<string>Innovación y Planeación Estratégica</string>
+		<key>telefono</key>
+		<string>3442</string>
+		<key>mail</key>
+		<string>carolina.nunez.a@itesm.mx</string>
+	</dict>
+</array>
+</plist>
