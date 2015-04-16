@@ -36,6 +36,10 @@
 		B808E3531AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E33B1AC4EC09003872A2 /* DSLCalendarDaySelection@2x.png */; };
 		B808E3541AC4EC09003872A2 /* NSDate+DSLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */; };
 		B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */; };
+		B837E6901ADF7517004DCF03 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B837E68F1ADF7517004DCF03 /* CustomTableViewCell.m */; };
+		B837E6951ADF75A8004DCF03 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B837E6911ADF75A8004DCF03 /* MainWindow.xib */; };
+		B837E6961ADF75A8004DCF03 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B837E6921ADF75A8004DCF03 /* RootViewController.xib */; };
+		B837E6971ADF75A8004DCF03 /* MWFeedParser-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B837E6931ADF75A8004DCF03 /* MWFeedParser-Info.plist */; };
 		FB18007E1ADF29BC0074C6CB /* Property List DesProVinc.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */; };
 		FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */; };
 		FB1800821ADF2C250074C6CB /* Property List ExpProf.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */; };
@@ -48,7 +52,6 @@
 		FB91AE771AA8D46E00BA5A35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB91AE761AA8D46E00BA5A35 /* Images.xcassets */; };
 		FB91AE7A1AA8D46E00BA5A35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */; };
 		FB91AE861AA8D46E00BA5A35 /* CeldasMedidaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE851AA8D46E00BA5A35 /* CeldasMedidaTests.m */; };
-		FB91AE911AA8D4A600BA5A35 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */; };
 		FBE53C841ADF567800AC8DE7 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C741ADF567800AC8DE7 /* GTMNSString+HTML.m */; };
 		FBE53C851ADF567800AC8DE7 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C761ADF567800AC8DE7 /* MWFeedInfo.m */; };
 		FBE53C861ADF567800AC8DE7 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE53C781ADF567800AC8DE7 /* MWFeedItem.m */; };
@@ -110,6 +113,12 @@
 		B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DSLCalendarView.m"; sourceTree = "<group>"; };
 		B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerContacto.h; sourceTree = "<group>"; };
 		B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerContacto.m; sourceTree = "<group>"; };
+		B837E68E1ADF74FD004DCF03 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		B837E68F1ADF7517004DCF03 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B837E6911ADF75A8004DCF03 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		B837E6921ADF75A8004DCF03 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		B837E6931ADF75A8004DCF03 /* MWFeedParser-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MWFeedParser-Info.plist"; sourceTree = "<group>"; };
+		B837E6941ADF75A8004DCF03 /* MWFeedParser_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Prefix.pch; sourceTree = "<group>"; };
 		FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List DesProVinc.plist"; sourceTree = "<group>"; };
 		FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List EvaRetro.plist"; sourceTree = "<group>"; };
 		FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List ExpProf.plist"; sourceTree = "<group>"; };
@@ -129,8 +138,6 @@
 		FB91AE7F1AA8D46E00BA5A35 /* CeldasMedidaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeldasMedidaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB91AE841AA8D46E00BA5A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB91AE851AA8D46E00BA5A35 /* CeldasMedidaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeldasMedidaTests.m; sourceTree = "<group>"; };
-		FB91AE8F1AA8D4A600BA5A35 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableViewCell.h; path = ../CustomTableViewCell.h; sourceTree = "<group>"; };
-		FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableViewCell.m; path = ../CustomTableViewCell.m; sourceTree = "<group>"; };
 		FBE53C731ADF567800AC8DE7 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		FBE53C741ADF567800AC8DE7 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		FBE53C751ADF567800AC8DE7 /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
@@ -271,8 +278,8 @@
 				B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */,
 				B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */,
 				B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */,
-				FB91AE8F1AA8D4A600BA5A35 /* CustomTableViewCell.h */,
-				FB91AE901AA8D4A600BA5A35 /* CustomTableViewCell.m */,
+				B837E68E1ADF74FD004DCF03 /* CustomTableViewCell.h */,
+				B837E68F1ADF7517004DCF03 /* CustomTableViewCell.m */,
 			);
 			path = CeldasMedida;
 			sourceTree = "<group>";
@@ -311,6 +318,10 @@
 				FBE53C751ADF567800AC8DE7 /* MWFeedInfo.h */,
 				FBE53C761ADF567800AC8DE7 /* MWFeedInfo.m */,
 				FBE53C771ADF567800AC8DE7 /* MWFeedItem.h */,
+				B837E6911ADF75A8004DCF03 /* MainWindow.xib */,
+				B837E6921ADF75A8004DCF03 /* RootViewController.xib */,
+				B837E6931ADF75A8004DCF03 /* MWFeedParser-Info.plist */,
+				B837E6941ADF75A8004DCF03 /* MWFeedParser_Prefix.pch */,
 				FBE53C781ADF567800AC8DE7 /* MWFeedItem.m */,
 				FBE53C791ADF567800AC8DE7 /* MWFeedParser.h */,
 				FBE53C7A1ADF567800AC8DE7 /* MWFeedParser.m */,
@@ -419,17 +430,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B837E6951ADF75A8004DCF03 /* MainWindow.xib in Resources */,
 				B808E3501AC4EC09003872A2 /* DSLCalendarDaySelection-right.png in Resources */,
 				B808E3481AC4EC09003872A2 /* DSLCalendar-previousMonth.png in Resources */,
 				B808E34D1AC4EC09003872A2 /* DSLCalendarDaySelection-left@2x.png in Resources */,
 				B808E3461AC4EC09003872A2 /* DSLCalendar-nextMonth.png in Resources */,
 				B808E3421AC4EC09003872A2 /* DSLCalendarMonthSelectorView.xib in Resources */,
+				B837E6961ADF75A8004DCF03 /* RootViewController.xib in Resources */,
 				FB91AE751AA8D46E00BA5A35 /* Main.storyboard in Resources */,
 				B808E3491AC4EC09003872A2 /* DSLCalendar-previousMonth@2x.png in Resources */,
 				B808E3521AC4EC09003872A2 /* DSLCalendarDaySelection.png in Resources */,
 				B808E31A1AC4E9F7003872A2 /* Noticias.png in Resources */,
 				B808E3471AC4EC09003872A2 /* DSLCalendar-nextMonth@2x.png in Resources */,
 				B808E33F1AC4EC09003872A2 /* DSLCalendarDayCalloutView.xib in Resources */,
+				B837E6971ADF75A8004DCF03 /* MWFeedParser-Info.plist in Resources */,
 				FB91AE7A1AA8D46E00BA5A35 /* LaunchScreen.xib in Resources */,
 				FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */,
 				FB91AE771AA8D46E00BA5A35 /* Images.xcassets in Resources */,
@@ -471,6 +485,7 @@
 				FBE53C841ADF567800AC8DE7 /* GTMNSString+HTML.m in Sources */,
 				FBE53C891ADF567800AC8DE7 /* NSDate+InternetDateTime.m in Sources */,
 				FB91AE6C1AA8D46E00BA5A35 /* AppDelegate.m in Sources */,
+				B837E6901ADF7517004DCF03 /* CustomTableViewCell.m in Sources */,
 				FBE53C8B1ADF567800AC8DE7 /* NSString+XMLEntities.m in Sources */,
 				B808E31D1AC4EB9D003872A2 /* ViewControllerCalendario.m in Sources */,
 				B808E3401AC4EC09003872A2 /* DSLCalendarDayView.m in Sources */,
@@ -484,7 +499,6 @@
 				FBE53C861ADF567800AC8DE7 /* MWFeedItem.m in Sources */,
 				FBE53C851ADF567800AC8DE7 /* MWFeedInfo.m in Sources */,
 				B808E3431AC4EC09003872A2 /* DSLCalendarMonthView.m in Sources */,
-				FB91AE911AA8D4A600BA5A35 /* CustomTableViewCell.m in Sources */,
 				B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */,
 				FB24B9EA1ADDEF8800D5431A /* ContactoViewController.m in Sources */,
 			);
