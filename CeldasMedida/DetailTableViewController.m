@@ -29,6 +29,7 @@
 
 #import "DetailTableViewController.h"
 #import "NSString+HTML.h"
+#import <EventKit/EventKit.h>
 
 typedef enum { SectionHeader, SectionDetail } Sections;
 typedef enum { SectionHeaderTitle, SectionHeaderDate, SectionHeaderPlace } HeaderRows;
@@ -40,6 +41,7 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
 
 #pragma mark -
 #pragma mark Initialization
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 - (id)initWithStyle:(UITableViewStyle)style {
     if ((self = [super initWithStyle:style])) {
@@ -58,13 +60,19 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
 
     // Default Values
     titleString = @"Evento CVC";
-    dateString = @"Pendiente.";
+    dateString = @"Horario Pendiente.";
     placeString = @"Lugar:\nITESM";
-    descriptionString = @"Pendiente.";
-    informesString = @"Informes:\n8358 2000 ext.3614 cvc.mty@servicios.itesm.mx";
+    descriptionString = @"Descripcion Pendiente.";
+    informesString = @"Informes:\n8358 2000 ext.3614\ncvc.mty@servicios.itesm.mx";
+    _listaEventosAgregados = [NSMutableArray arrayWithObjects: nil];
     
-	// Date
-    if (item.summary) {
+    // Titulo
+    if (item.title)
+        titleString =  item.title;
+    
+	// Fecha
+    if (item.summary)
+    {
         NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
         NSString *prefix = @"Cuándo: ";
         NSString *suffix = @"CST";
@@ -75,34 +83,88 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
         if ([haystack rangeOfString:suffix].location == NSNotFound) suffix = @"Descripción del evento: ";
         if ([haystack rangeOfString:suffix].location == NSNotFound) suffix = @"Informes: ";
         if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
-             {
-                 NSRange prefixRange = [haystack rangeOfString:prefix];
-                 NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
-                 NSRange needleRange = NSMakeRange(prefixRange.location+prefix.length, suffixRange.location);
-                 NSString *needle = [haystack substringWithRange:needleRange];
-                 dateString = needle;
-                 //dateStartString = ;
-             }
-        else
-            dateString = item.summary;
-        }
-	
-	// Summary
-	if (item.summary) {
-            NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
-            NSString *prefix = @"Descripción del evento: ";
-            NSString *suffix = @"Informes";
-            if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
+        {
+            NSRange prefixRange = [haystack rangeOfString:prefix];
+            NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
+            NSRange needleRange = NSMakeRange(prefixRange.location+prefix.length, suffixRange.location);
+            NSString *needle = [haystack substringWithRange:needleRange];
+            
+            NSString *auxiliarString = needle;
+            prefix = @" a ";
+            if ([auxiliarString rangeOfString:prefix].location != NSNotFound)
             {
-                NSRange prefixRange = [haystack rangeOfString:prefix];
-                NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
-                NSRange needleRange = NSMakeRange(prefixRange.location+prefixRange.length, suffixRange.location);
-                NSString *needle = [haystack substringWithRange:needleRange];
-                descriptionString = [@"Descripción del evento:\n" stringByAppendingString: needle];
+                NSRange prefixRange = [auxiliarString rangeOfString:prefix];
+                NSString *needle = [auxiliarString substringFromIndex:prefixRange.location+prefixRange.length];
+                dateStartString = [@"Empieza: " stringByAppendingString: [auxiliarString substringWithRange:NSMakeRange(0, [auxiliarString rangeOfString:prefix].location)]];
+                if (needle.length > 7)
+                    dateEndString = [@"Finaliza: " stringByAppendingString: needle];
+                else
+                    dateEndString = [@"Finaliza: " stringByAppendingString: [[dateStartString substringWithRange:NSMakeRange(9,15)] stringByAppendingString: [@" " stringByAppendingString: needle]]];
+                dateString = [dateStartString stringByAppendingString: [@"\n" stringByAppendingString: dateEndString]];
             }
             else
-                descriptionString = [@"Descripción del evento:\n" stringByAppendingString: item.title];
+                dateString = [@"Empieza: " stringByAppendingString: auxiliarString];
         }
+        else
+        {
+            haystack = item.summary;
+            prefix = @"Cuándo: ";
+            if ([haystack rangeOfString:@"<"].location != NSNotFound && [haystack rangeOfString:prefix].location != NSNotFound)
+            {
+                NSRange range = [haystack rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"<"]];
+                haystack = [haystack substringWithRange:NSMakeRange(prefix.length, range.location-prefix.length)];
+                dateString = [@"Empieza: " stringByAppendingString: haystack];
+            }
+        }
+    }
+    
+    // Lugar
+    if (item.summary)
+    {
+        NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
+        NSString *prefix = @"Dónde: ";
+        NSString *suffix = @"Estado";
+        if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
+        {
+            NSRange prefixRange = [haystack rangeOfString:prefix];
+            NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
+            NSRange needleRange = NSMakeRange(prefixRange.location+prefixRange.length, suffixRange.location);
+            NSString *needle = [haystack substringWithRange:needleRange];
+            placeString = [@"Lugar:\n" stringByAppendingString: needle];
+        }
+    }
+	
+	// Descripcion
+	if (item.summary)
+    {
+        NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
+        NSString *prefix = @"Descripción del evento: ";
+        NSString *suffix = @"Informes";
+        if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
+        {
+            NSRange prefixRange = [haystack rangeOfString:prefix];
+            NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
+            NSRange needleRange = NSMakeRange(prefixRange.location+prefixRange.length, suffixRange.location);
+            NSString *needle = [haystack substringWithRange:needleRange];
+            descriptionString = [@"Descripción del evento:\n" stringByAppendingString: needle];
+        }
+        else
+            descriptionString = [@"Descripción del evento:\n" stringByAppendingString: item.title];
+    }
+    
+    // Informes
+    if (item.summary)
+    {
+        NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
+        NSString *prefix = @"Informes ";
+        if ([haystack rangeOfString:prefix].location != NSNotFound)
+        {
+            NSRange prefixRange = [haystack rangeOfString:prefix];
+            NSString *needle = [haystack substringFromIndex:prefixRange.location+prefixRange.length];
+            informesString = [@"Informes:\n" stringByAppendingString: needle];
+        }
+    }
+    
 }
 
 #pragma mark -
@@ -138,9 +200,6 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
 	cell.textLabel.font = [UIFont systemFontOfSize:15];
 	if (item) {
 		
-		// Item Info
-		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"Evento CVC"; // No title
-		
 		// Display
 		switch (indexPath.section) {
 			case SectionHeader: {
@@ -149,36 +208,16 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
 				switch (indexPath.row) {
 					case SectionHeaderTitle:
 						cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
-                        titleString = itemTitle;
 						cell.textLabel.text = titleString;
-                        cell.textLabel.numberOfLines = 0; // Multiline
+                        cell.textLabel.numberOfLines = 0;
 						break;
 					case SectionHeaderDate:
 						cell.textLabel.text = dateString;
-                        cell.textLabel.numberOfLines = 0; // Multiline
+                        cell.textLabel.numberOfLines = 0;
 						break;
                     case SectionHeaderPlace:
-                        if (item.summary) {
-                            {
-                                NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
-                                NSString *prefix = @"Dónde: ";
-                                NSString *suffix = @"Estado";
-                                if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
-                                {
-                                    NSRange prefixRange = [haystack rangeOfString:prefix];
-                                    NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
-                                    NSRange needleRange = NSMakeRange(prefixRange.location+prefixRange.length, suffixRange.location);
-                                    NSString *needle = [haystack substringWithRange:needleRange];
-                                    placeString = [@"Lugar:\n" stringByAppendingString: needle];
-                                    cell.textLabel.text = placeString;
-                                }
-                                else
-                                    cell.textLabel.text = placeString; // No Place
-                            }
-                        }
-                        else
-                            cell.textLabel.text = placeString; // No Place
-                        cell.textLabel.numberOfLines = 0; // Multiline
+                        cell.textLabel.text = placeString;
+                        cell.textLabel.numberOfLines = 0;
                         break;
 				}
 				break;
@@ -190,29 +229,13 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
                     // Description
                     case SectionDetailSummary:
                         cell.textLabel.text = descriptionString;
-                        cell.textLabel.numberOfLines = 0; // Multiline
+                        cell.textLabel.numberOfLines = 0;
                     break;
                         
                     // Informes
                     case SectionDetailInformes:
-                        if (item.summary) {
-                            {
-                                NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
-                                NSString *prefix = @"Informes ";
-                                if ([haystack rangeOfString:prefix].location != NSNotFound)
-                                {
-                                    NSRange prefixRange = [haystack rangeOfString:prefix];
-                                    NSString *needle = [haystack substringFromIndex:prefixRange.location+prefixRange.length];
-                                    informesString = [@"Informes:\n" stringByAppendingString: needle];
-                                    cell.textLabel.text = informesString;
-                                }
-                                else
-                                    cell.textLabel.text = informesString; //default
-                            }
-                        }
-                        else
-                            cell.textLabel.text = informesString; //default
-                        cell.textLabel.numberOfLines = 0; // Multiline
+                        cell.textLabel.text = informesString;
+                        cell.textLabel.numberOfLines = 0;
                         break;
                 }
 			}
@@ -253,7 +276,7 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
     
     CGSize s = [text sizeWithFont:[UIFont systemFontOfSize:15]
                    constrainedToSize:CGSizeMake(self.view.bounds.size.width - 40, MAXFLOAT)  // - 40 For cell padding
-                       lineBreakMode:UILineBreakModeWordWrap];
+                       lineBreakMode:NSLineBreakByWordWrapping];
     return s.height + 16; // Add padding
     
 }
@@ -262,14 +285,32 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-	// Open URL
-	/*if (indexPath.section == SectionHeader && indexPath.row == SectionHeaderURL) {
-		if (item.link) {
-			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.link]];
-		}
-	}*/
 	
+    if (indexPath.row == SectionHeaderTitle) {
+            EKEventStore *store = [[EKEventStore alloc] init];
+            [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
+                if (!granted) { return; }
+                EKEvent *event = [EKEvent eventWithEventStore:store];
+                event.title = titleString;
+                // TO DO: Usar dateStartString pasandolo por NSDateFormatter
+                event.startDate = [NSDate date]; //today
+                // TO DO: Usar dateEndString pasandolo por NSDateFormatter
+                event.endDate = [event.startDate dateByAddingTimeInterval:60*60];  //set 1 hour meeting
+                [event setCalendar:[store defaultCalendarForNewEvents]];
+                NSError *err = nil;
+                [store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];
+                [_listaEventosAgregados addObject:event.eventIdentifier];
+                NSString *mensaje = [[NSString alloc] initWithFormat: @"Evento guardado exitosamente."];
+                UIAlertView *alerta = [[UIAlertView alloc] initWithTitle: @"Aviso"
+                                                                 message: mensaje
+                                                                delegate: self
+                                                       cancelButtonTitle: @"OK"
+                                                       otherButtonTitles: nil];
+                [alerta show];
+                NSLog(@"Creado");
+            }];
+    }
+    
 	// Deselect
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 
@@ -277,8 +318,7 @@ typedef enum { SectionDetailSummary, SectionDetailInformes } DetailRows;
 
 #pragma mark -
 #pragma mark Memory management
-
-
+#pragma GCC diagnostic warning "-Wdeprecated-declarations"
 
 @end
 

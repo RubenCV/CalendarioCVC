@@ -150,7 +150,7 @@
             [[UIColor lightGrayColor] setFill];
         }
         
-        // Checa Cursos.
+        // Pseudogodigo para agregar a lista de feed
         /*
          
             for(int i = 0; i < listacursos.count; i++){
@@ -162,6 +162,8 @@
          }
          
          */
+        
+        // Checa Cursos.
         if([listaCursos containsObject: date]) {
             [[UIColor orangeColor] setFill];
         }

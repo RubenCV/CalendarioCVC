@@ -35,6 +35,7 @@
 	NSString *dateString, *summaryString;
 }
 
+@property (nonatomic, strong) NSMutableArray *listaEventosAgregados;
 @property (nonatomic, strong) MWFeedItem *item;
 @property (nonatomic, strong) NSString *dateString, *dateStartString, *dateEndString, *summaryString, *placeString, *informesString, *titleString, *descriptionString;
 
