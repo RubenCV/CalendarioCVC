@@ -94,23 +94,19 @@ GlobalCalendar *myCalendar;
 
 
 #pragma mark UIView methods
-
 - (void)drawRect:(CGRect)rect {
     if ([self isMemberOfClass:[DSLCalendarDayView class]]) {
-        // If this isn't a subclass of DSLCalendarDayView, use the default drawing
         [self drawBackground];
-        [self drawBorders];
-        [self drawDayNumber];
     }
 }
 
-
 #pragma mark Drawing
-//AQUI PUEDO CAMBIAR EL COLOR DE FONDO PARA LOS DIAS QUE TIENEN EVENTO.
 - (void)drawBackground {
+    UIColor *textColor;
+    //
     if (self.selectionState == DSLCalendarDayViewNotSelected) {
-        
-        
+        [[UIColor colorWithRed:145.0/255.0 green:198.0/255.0 blue:247.0/255.0 alpha:1] setFill];
+        UIRectFill(self.bounds);
         NSUInteger flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
         NSCalendar *calendar = [NSCalendar currentCalendar];
         
@@ -119,87 +115,29 @@ GlobalCalendar *myCalendar;
         
         NSDate *date = [calendar dateFromComponents:components];
         NSDate *dateToday = [calendar dateFromComponents:componentsOfToday];
-        
-        // Declarar date formatter.
-        NSDateFormatter *mmddccyy = [[NSDateFormatter alloc] init];
-        mmddccyy.timeStyle = NSDateFormatterNoStyle;
-        mmddccyy.dateFormat = @"dd/MM/yyyy";
-        
-        /* OBVIAMENTE AQUI HAY QUE HACER UN FEED DE QUE EVENTOS HAY, LOS QUE DECLARO ABAJO SON DE EJEMPLO */
-        
-        // Cursos
-        NSMutableArray *listaCursos;
-        NSDate *curso1 = [mmddccyy dateFromString:@"04/03/2015"];
-        NSDate *curso2 = [mmddccyy dateFromString:@"13/03/2015"];
-        NSDate *curso3 = [mmddccyy dateFromString:@"22/03/2015"];
-        listaCursos =  [[NSMutableArray alloc] initWithObjects: curso1, curso2, curso3, nil];
-        
-        // Conferencias
-        NSMutableArray *listaConferencias;
-        NSDate *conf1 = [mmddccyy dateFromString:@"18/03/2015"];
-        NSDate *conf2 = [mmddccyy dateFromString:@"30/03/2015"];
-        listaConferencias =  [[NSMutableArray alloc] initWithObjects: conf1, conf2, nil];
-        
-        /* TERMINO DECLRAR FECHAS DE EVENTOS */
-        
+
         if (self.isInCurrentMonth) {
-            [[UIColor colorWithWhite:245.0 / 255.0 alpha:1.0] setFill];
+            textColor = [UIColor blackColor];
         }
         else {
-                [[UIColor colorWithWhite:225.0 / 255.0 alpha:1.0] setFill];
-            }
+            textColor = [UIColor colorWithWhite:110.0/255.0 alpha:1.0];
+        }
         
-        // Checha dia de hoy.
+        // Checa dia de hoy.
         if ([date isEqualToDate:dateToday]) {
-            [[UIColor lightGrayColor] setFill];
+            textColor = [UIColor whiteColor];
+            [[[UIImage imageNamed:@"CalendarToday"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
         }
         
-        
-        // Pseudocodigo para obtener los items
-        /*
-        MWFeedItem *item = [[myCalendar itemsToDisplay] objectAtIndex:0];
-        if (item) {
-            
-            // Process
-            NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-            NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
-            
-            NSLog(itemTitle);
-            NSLog(itemSummary);
+        // Checar si el dia que dibujo pertenece a un evento.
+        if([myCalendar.eventDayList containsObject: date])
+        {
+            textColor = [UIColor whiteColor];
+            [[[UIImage imageNamed:@"CalendarEventYellow"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
         }
-        else{
-            NSLog(@"No items");
-        }
-         
-         */
-        
-        
-        // Pseudogodigo para agregar a lista de feed
-        /*
-         
-            for(int i = 0; i < listacursos.count; i++){
-                if(fechaSeleccionada == listacursos(i).getFechaInicio)
-                    addTo array;
-         }
-         
-            array.count = ?
-         }
-         
-         */
-        
-        // Checa Cursos.
-        if([listaCursos containsObject: date]) {
-            [[UIColor orangeColor] setFill];
-        }
-        
-        // Checa Conerencias.
-        if([listaConferencias containsObject: date]) {
-            [[UIColor redColor] setFill];
-        }
-        
-        UIRectFill(self.bounds);
     }
     else {
+        textColor = [UIColor whiteColor];
         switch (self.selectionState) {
             case DSLCalendarDayViewNotSelected:
                 break;
@@ -221,48 +159,15 @@ GlobalCalendar *myCalendar;
                 break;
         }
     }
-}
-
-- (void)drawBorders {
-    CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetLineWidth(context, 1.0);
-    
-    CGContextSaveGState(context);
-    CGContextSetStrokeColorWithColor(context, [UIColor colorWithWhite:255.0/255.0 alpha:1.0].CGColor);
-    CGContextMoveToPoint(context, 0.5, self.bounds.size.height - 0.5);
-    CGContextAddLineToPoint(context, 0.5, 0.5);
-    CGContextAddLineToPoint(context, self.bounds.size.width - 0.5, 0.5);
-    CGContextStrokePath(context);
-    CGContextRestoreGState(context);
-    
-    CGContextSaveGState(context);
-    if (self.isInCurrentMonth) {
-        CGContextSetStrokeColorWithColor(context, [UIColor colorWithWhite:205.0/255.0 alpha:1.0].CGColor);
-    }
-    else {
-        CGContextSetStrokeColorWithColor(context, [UIColor colorWithWhite:185.0/255.0 alpha:1.0].CGColor);
-    }
-    CGContextMoveToPoint(context, self.bounds.size.width - 0.5, 0.0);
-    CGContextAddLineToPoint(context, self.bounds.size.width - 0.5, self.bounds.size.height - 0.5);
-    CGContextAddLineToPoint(context, 0.0, self.bounds.size.height - 0.5);
-    CGContextStrokePath(context);
-    CGContextRestoreGState(context);
-}
-
-- (void)drawDayNumber {
-    if (self.selectionState == DSLCalendarDayViewNotSelected) {
-        [[UIColor colorWithWhite:66.0/255.0 alpha:1.0] set];
-    }
-    else {
-        [[UIColor whiteColor] set];
-    }
-    
-    UIFont *textFont = [UIFont boldSystemFontOfSize:17.0];
+    //
+    [textColor set];
+    UIFont *textFont = [UIFont boldSystemFontOfSize:18.0];
     CGSize textSize = [_labelText sizeWithFont:textFont];
     
     CGRect textRect = CGRectMake(ceilf(CGRectGetMidX(self.bounds) - (textSize.width / 2.0)), ceilf(CGRectGetMidY(self.bounds) - (textSize.height / 2.0)), textSize.width, textSize.height);
     [_labelText drawInRect:textRect withFont:textFont];
+    
 }
 
 #pragma GCC diagnostic warning "-Wdeprecated-declarations"

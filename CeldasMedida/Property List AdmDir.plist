@@ -4,16 +4,6 @@
 <array>
 	<dict>
 		<key>nombre</key>
-		<string>Denisse Cantú Barajas</string>
-		<key>area</key>
-		<string>Administración CVC</string>
-		<key>telefono</key>
-		<string>2280</string>
-		<key>mail</key>
-		<string>denisse.cantu@itesm.mx</string>
-	</dict>
-	<dict>
-		<key>nombre</key>
 		<string>Deyanira Gloria Trujilla Creado</string>
 		<key>area</key>
 		<string>Dirección CVC</string>
@@ -21,6 +11,16 @@
 		<string>3666</string>
 		<key>mail</key>
 		<string>deyanira.trujillo@itesm.mx</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Denisse Cantú Barajas</string>
+		<key>area</key>
+		<string>Administración CVC</string>
+		<key>telefono</key>
+		<string>2280</string>
+		<key>mail</key>
+		<string>denisse.cantu@itesm.mx</string>
 	</dict>
 	<dict>
 		<key>nombre</key>

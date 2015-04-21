@@ -8,12 +8,15 @@
 
 #import "DSLCalendarView.h"
 #import "ViewControllerCalendario.h"
+#import "EventoViewController.h"
 #import "NSString+HTML.h"
 #import "GlobalCalendar.h"
 
 @interface ViewControllerCalendario () <DSLCalendarViewDelegate>
 
 @property (nonatomic, weak) IBOutlet DSLCalendarView *calendarView;
+@property (strong, nonatomic) NSString *diaString;
+@property (nonatomic) NSInteger eventIndex;
 
 @end
 
@@ -24,32 +27,9 @@ GlobalCalendar *myCalendar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     myCalendar = [GlobalCalendar sharedSingleton];
     
     self.calendarView.delegate = self;
-    
-
-    /*
-     ESTE ES UN TEST, CUANDO SE CARGA LA VISTA DE CONTROLLER CALENDARIO PODEMOS ACCESAR A myCalendar itemsToDisplay.
-     */
-    MWFeedItem *item = [[myCalendar itemsToDisplay] objectAtIndex:0];
-    if (item) {
-        
-        // Process
-        NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-        NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
-        
-        NSLog(itemTitle);
-        NSLog(itemSummary);
-    }
-    else{
-        NSLog(@"No items");
-    }
-    
-    
-    
 }
 
 - (void)viewDidUnload
@@ -68,13 +48,43 @@ GlobalCalendar *myCalendar;
 
 - (void)calendarView:(DSLCalendarView *)calendarView didSelectRange:(DSLCalendarRange *)range {
     if (range != nil) {
-        // AQUI DEBERIA MANDARME A OTRO VIEW, PARA EL SIGUIENTE DIA:
-        NSLog( @"Dia: %ld Mes: %ld  Año: %ld", (long)range.startDay.day, (long)range.startDay.month, (long) range.startDay.year );
+        // Declarar date formatter.
+        NSDateFormatter *ddMMyyyy = [[NSDateFormatter alloc] init];
+        ddMMyyyy.timeStyle = NSDateFormatterNoStyle;
+        ddMMyyyy.dateFormat = @"dd-MM-yyyy";
+        
+        NSString *dayString;
+        dayString = [NSString stringWithFormat:@"%ld-%ld-%ld", (long)range.startDay.day, (long)range.startDay.month, (long) range.startDay.year];
+        
+        NSDate *dia = [ddMMyyyy dateFromString: dayString];
+        
+        
+        NSDate *event;
+        // Checar si el dia que seleccionado pertenece a un evento.
+        for(int i = 0; i < myCalendar.eventDayList.count; i++)
+        {
+        
+        event = [[myCalendar eventDayList] objectAtIndex:i];
+        if(event == dia)
+            {
+                _eventIndex = i/2;
+                _diaString = dayString;
+                [self performSegueWithIdentifier:@"Event" sender:self];
+            }
+        }
     }
     else {
-        NSLog( @"No selection" );
+        NSLog( @"Rango invalido" );
     }
-    [self performSegueWithIdentifier: @"test" sender: self];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"Event"]) {
+        EventoViewController *evc = [segue destinationViewController];
+        evc.diaString = _diaString;
+        evc.eventIndex = (int)_eventIndex;
+    }
 }
 
 - (DSLCalendarRange*)calendarView:(DSLCalendarView *)calendarView didDragToDay:(NSDateComponents *)day selectingRange:(DSLCalendarRange *)range {
@@ -94,9 +104,4 @@ GlobalCalendar *myCalendar;
 }
 
 @end
-
-/*
- Plan B:
- [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://cvc.mty.itesm.mx/go.php?page=https://www.google.com/calendar/embed?height=530&wkst=1&hl=es&bgcolor=%23FFFFFF&src=b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com&color=%23182C57&ctz=America%2FMexico_City"]];
- */
 

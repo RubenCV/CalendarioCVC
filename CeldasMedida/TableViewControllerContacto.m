@@ -23,8 +23,6 @@
 
 @implementation TableViewControllerContacto
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -181,7 +179,7 @@
     //Creamos un botón que contiene el título y que al pulsarlo modificará la visibilidad de la sección
     UIButton *headerView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 60)];
     [headerView setTitle:sectionTitle forState:UIControlStateNormal];
-    [headerView setBackgroundColor:[UIColor colorWithRed:20.0f/255.0f green:146.0f/255.0f blue:120.0f/255.0f alpha:1.0f]];
+    [headerView setBackgroundColor:[UIColor colorWithRed:87.0f/255.0f green:110.0f/255.0f blue:46.0f/255.0f alpha:1.0f]];
     [headerView addTarget:self action:@selector(updateSectionVisibility:) forControlEvents:UIControlEventTouchUpInside];
     [headerView setTag:section];
     
@@ -219,13 +217,6 @@
     NSInteger tmpRow = [indexPath row];
     
     ContactoViewController *cvc = [segue destinationViewController];
-    
-    /*
-    NSString *rowStr = [@(tmpRow)stringValue];
-    NSString *inStr = [@(tmpInt) stringValue];
-    
-    NSLog(@"%@", inStr);
-    NSLog(@"%@", rowStr);*/
     
     NSDictionary *object;
     switch (tmpInt) {

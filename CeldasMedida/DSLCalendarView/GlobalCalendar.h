@@ -28,6 +28,7 @@ extern NSDateFormatter *formatter;
     
     MWFeedParser *feedParser;
     NSMutableArray *parsedItems;
+    NSMutableArray *eventDayList;
     
     NSArray *itemsToDisplay;
     NSDateFormatter *formatter;
@@ -40,6 +41,7 @@ extern NSDateFormatter *formatter;
 
 @property (nonatomic, retain) MWFeedParser *feedParser;
 @property (nonatomic, retain) NSMutableArray *parsedItems;
+@property (nonatomic, retain) NSMutableArray *eventDayList;
 @property (nonatomic, retain) NSArray *itemsToDisplay;
 @property (nonatomic, retain) NSDateFormatter *formatter;
 

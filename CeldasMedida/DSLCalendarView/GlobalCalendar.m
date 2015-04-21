@@ -16,6 +16,7 @@ NSMutableArray *parsedItems;
 
 // Displaying
 NSArray *itemsToDisplay;
+NSMutableArray *eventDayList;
 NSDateFormatter *formatter;
 
 
@@ -25,7 +26,8 @@ NSDateFormatter *formatter;
 @synthesize feedParser;
 @synthesize formatter;
 @synthesize parsedItems;
-//@synthesize itemsToDisplay;
+@synthesize eventDayList;
+@synthesize itemsToDisplay;
 
 static GlobalCalendar *shared = NULL;
 
@@ -62,43 +64,11 @@ static GlobalCalendar *shared = NULL;
 
 
 +(NSString *)myData{
-    
-    return @"Hello world!";
+    return @"DataString";
 }
 
 - (void) SetMainCalendar{
-    
     NSLog(@"SetMainCalendar");
-    /*
-    // init the web feed baby!
-    formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    parsedItems = [[NSMutableArray alloc] init];
-    itemsToDisplay = [NSArray array];
-    
-    
-    // Parse
-    NSURL *feedURL = [NSURL URLWithString:@"https://www.google.com/calendar/feeds/b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com/public/basic"];
-    feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
-    
-    //feedParser.delegate = self.delegado;
-    feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
-    feedParser.connectionType = ConnectionTypeAsynchronously;
-    [feedParser parse];
-    
-    // Lets update our items!
-    itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
-                           [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
-                                                                                ascending:NO]]];
-    
-    */
-    
-    
-    //NSLog(@"Initializing Global Calendar. It should happen once!");
-    //NSLog(@"This means the calendar feed should be loaded also!");
-    //NSString *inStr = [@([self GetItemsToDisplayCount]) stringValue];
-    //NSLog(inStr);
 }
 
 + (NSInteger)GetItemsToDisplayCount{
