@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MWFeedParser.h"
 @interface MasterViewController : UITableViewController
+<MWFeedParserDelegate>
 
 @end
 

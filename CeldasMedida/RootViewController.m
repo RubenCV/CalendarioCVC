@@ -53,19 +53,17 @@
 	self.itemsToDisplay = [NSArray array];
 	
 	// Refresh button
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
 																							target:self 
 																							action:@selector(refresh)];
 	// Parse
-//	NSURL *feedURL = [NSURL URLWithString:@"http://images.apple.com/main/rss/hotnews/hotnews.rss"];
-//	NSURL *feedURL = [NSURL URLWithString:@"http://feeds.mashable.com/Mashable"];
-	//NSURL *feedURL = [NSURL URLWithString:@"http://techcrunch.com/feed/"];
     NSURL *feedURL = [NSURL URLWithString:@"https://www.google.com/calendar/feeds/b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com/public/basic"];
 	feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
 	feedParser.delegate = self;
 	feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
 	feedParser.connectionType = ConnectionTypeAsynchronously;
 	[feedParser parse];
+    
 
 }
 

@@ -31,11 +31,14 @@
 
 #import "DSLCalendarDayView.h"
 #import "NSDate+DSLCalendarView.h"
+#import "GlobalCalendar.h"
+#import "NSString+HTML.h"
 
 @interface DSLCalendarDayView ()
 
 @end
 
+GlobalCalendar *myCalendar;
 
 @implementation DSLCalendarDayView {
     __strong NSCalendar *_calendar;
@@ -107,6 +110,7 @@
 - (void)drawBackground {
     if (self.selectionState == DSLCalendarDayViewNotSelected) {
         
+        
         NSUInteger flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
         NSCalendar *calendar = [NSCalendar currentCalendar];
         
@@ -149,6 +153,26 @@
         if ([date isEqualToDate:dateToday]) {
             [[UIColor lightGrayColor] setFill];
         }
+        
+        
+        // Pseudocodigo para obtener los items
+        /*
+        MWFeedItem *item = [[myCalendar itemsToDisplay] objectAtIndex:0];
+        if (item) {
+            
+            // Process
+            NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+            NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+            
+            NSLog(itemTitle);
+            NSLog(itemSummary);
+        }
+        else{
+            NSLog(@"No items");
+        }
+         
+         */
+        
         
         // Pseudogodigo para agregar a lista de feed
         /*

@@ -22,6 +22,7 @@
     self.lbArea.numberOfLines = 0;
     self.lbEmail.text = self.email;
     self.lbTelefono.text = self.tel;
+    
 }
 
 - (void)didReceiveMemoryWarning {

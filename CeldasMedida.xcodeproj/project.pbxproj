@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8DEF901A1AC78A7D00CA2E78 /* Property List AdmDir.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF90191AC78A7D00CA2E78 /* Property List AdmDir.plist */; };
+		8DFBEDC01AE5C1CA00F6AF2F /* GlobalCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */; };
 		B808E3181AC4E9F7003872A2 /* Calendario.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E3151AC4E9F7003872A2 /* Calendario.png */; };
 		B808E3191AC4E9F7003872A2 /* Contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E3161AC4E9F7003872A2 /* Contacto.png */; };
 		B808E31A1AC4E9F7003872A2 /* Noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = B808E3171AC4E9F7003872A2 /* Noticias.png */; };
@@ -76,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		8DEF90191AC78A7D00CA2E78 /* Property List AdmDir.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List AdmDir.plist"; sourceTree = "<group>"; };
+		8DFBEDBE1AE5C1CA00F6AF2F /* GlobalCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalCalendar.h; path = DSLCalendarView/GlobalCalendar.h; sourceTree = "<group>"; };
+		8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalCalendar.m; path = DSLCalendarView/GlobalCalendar.m; sourceTree = "<group>"; };
 		B808E3151AC4E9F7003872A2 /* Calendario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendario.png; sourceTree = "<group>"; };
 		B808E3161AC4E9F7003872A2 /* Contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacto.png; sourceTree = "<group>"; };
 		B808E3171AC4E9F7003872A2 /* Noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Noticias.png; sourceTree = "<group>"; };
@@ -270,11 +273,13 @@
 				FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */,
 				FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */,
 				FB91AE761AA8D46E00BA5A35 /* Images.xcassets */,
-				B808E31B1AC4EB9D003872A2 /* ViewControllerCalendario.h */,
-				FBE53C8C1ADF568C00AC8DE7 /* DetailTableViewController.h */,
-				FBE53C8D1ADF568C00AC8DE7 /* DetailTableViewController.m */,
+				8DFBEDBE1AE5C1CA00F6AF2F /* GlobalCalendar.h */,
+				8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */,
 				FBE53C8E1ADF568C00AC8DE7 /* RootViewController.h */,
 				FBE53C8F1ADF568C00AC8DE7 /* RootViewController.m */,
+				FBE53C8C1ADF568C00AC8DE7 /* DetailTableViewController.h */,
+				FBE53C8D1ADF568C00AC8DE7 /* DetailTableViewController.m */,
+				B808E31B1AC4EB9D003872A2 /* ViewControllerCalendario.h */,
 				B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */,
 				B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */,
 				B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */,
@@ -498,6 +503,7 @@
 				B808E3441AC4EC09003872A2 /* DSLCalendarRange.m in Sources */,
 				FBE53C861ADF567800AC8DE7 /* MWFeedItem.m in Sources */,
 				FBE53C851ADF567800AC8DE7 /* MWFeedInfo.m in Sources */,
+				8DFBEDC01AE5C1CA00F6AF2F /* GlobalCalendar.m in Sources */,
 				B808E3431AC4EC09003872A2 /* DSLCalendarMonthView.m in Sources */,
 				B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */,
 				FB24B9EA1ADDEF8800D5431A /* ContactoViewController.m in Sources */,

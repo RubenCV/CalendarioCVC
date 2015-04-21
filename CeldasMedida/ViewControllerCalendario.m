@@ -8,12 +8,16 @@
 
 #import "DSLCalendarView.h"
 #import "ViewControllerCalendario.h"
+#import "NSString+HTML.h"
+#import "GlobalCalendar.h"
 
 @interface ViewControllerCalendario () <DSLCalendarViewDelegate>
 
 @property (nonatomic, weak) IBOutlet DSLCalendarView *calendarView;
 
 @end
+
+GlobalCalendar *myCalendar;
 
 @implementation ViewControllerCalendario
 
@@ -22,7 +26,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    myCalendar = [GlobalCalendar sharedSingleton];
+    
     self.calendarView.delegate = self;
+    
+
+    /*
+     ESTE ES UN TEST, CUANDO SE CARGA LA VISTA DE CONTROLLER CALENDARIO PODEMOS ACCESAR A myCalendar itemsToDisplay.
+     */
+    MWFeedItem *item = [[myCalendar itemsToDisplay] objectAtIndex:0];
+    if (item) {
+        
+        // Process
+        NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+        NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+        
+        NSLog(itemTitle);
+        NSLog(itemSummary);
+    }
+    else{
+        NSLog(@"No items");
+    }
+    
+    
+    
 }
 
 - (void)viewDidUnload
