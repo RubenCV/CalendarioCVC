@@ -30,6 +30,17 @@ GlobalCalendar *myCalendar;
     myCalendar = [GlobalCalendar sharedSingleton];
     
     self.calendarView.delegate = self;
+    
+    // HOY
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MMMM-yyyy"];
+    NSString *dateString = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
+    NSRange dayRange = [dateString rangeOfString:@"/"];
+    NSRange monthRange = [dateString rangeOfString:@"-"];
+    self.lbDay.text = [dateString substringWithRange:NSMakeRange(0, dayRange.location)];
+    self.lbMonth.text = [dateString substringWithRange:NSMakeRange(dayRange.location+1, dateString.length - monthRange.location)];
+    self.lbYear.text = [dateString substringWithRange:NSMakeRange(dateString.length-4, 4)];
+    
 }
 
 - (void)viewDidUnload

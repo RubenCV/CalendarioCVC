@@ -105,7 +105,7 @@ GlobalCalendar *myCalendar;
     UIColor *textColor;
     //
     if (self.selectionState == DSLCalendarDayViewNotSelected) {
-        [[UIColor colorWithRed:145.0/255.0 green:198.0/255.0 blue:247.0/255.0 alpha:1] setFill];
+        [[UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1] setFill];
         UIRectFill(self.bounds);
         NSUInteger flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
         NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -125,8 +125,7 @@ GlobalCalendar *myCalendar;
         
         // Checa dia de hoy.
         if ([date isEqualToDate:dateToday]) {
-            textColor = [UIColor whiteColor];
-            [[[UIImage imageNamed:@"CalendarToday"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+            textColor = [UIColor colorWithRed:21.0/255.0 green:170.0/255.0 blue:237.0/255.0 alpha:1];
         }
         
         // Checar si el dia que dibujo pertenece a un evento.
@@ -137,6 +136,8 @@ GlobalCalendar *myCalendar;
         }
     }
     else {
+        [[UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1] setFill];
+        UIRectFill(self.bounds);
         textColor = [UIColor whiteColor];
         switch (self.selectionState) {
             case DSLCalendarDayViewNotSelected:

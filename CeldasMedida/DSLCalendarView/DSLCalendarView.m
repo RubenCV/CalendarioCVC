@@ -187,7 +187,7 @@
     formatter.dateFormat = @"MMMM yyyy";
     
     NSDate *date = [month.calendar dateFromComponents:month];
-    self.monthSelectorView.titleLabel.text = [formatter stringFromDate:date];
+    self.monthSelectorView.titleLabel.text = [[formatter stringFromDate:date]uppercaseString];
 }
 
 - (NSString*)monthViewKeyForMonth:(NSDateComponents*)month {
@@ -282,12 +282,12 @@
     }
     
     // Comento esto porque no quiero que se cambien los tamaños del calendario.
-    /*
+    
     // Size the month container to fit all the month views
     CGRect frame = self.monthContainerViewContentView.frame;
     frame.size.height = CGRectGetMaxY([[activeMonthViews lastObject] frame]);
     self.monthContainerViewContentView.frame = frame;
-    */
+    
      
     // Remove any old month views we don't need anymore
     NSArray *monthViewKeyes = self.monthViews.allKeys;
@@ -324,17 +324,17 @@
         self.monthContainerViewContentView.frame = frame;
         
         // Comento esto porque no quiero que se cambien los tamaños del calendario.
-        /*
+        
         // Resize the container view to show the height of the target month
-        frame = self.monthContainerView.frame;
+        /*frame = self.monthContainerView.frame;
         frame.size.height = restingHeight;
-        self.monthContainerView.frame = frame;
+        self.monthContainerView.frame = frame;*/
         
         // Resize the our frame to show the height of the target month
         frame = self.frame;
         frame.size.height = CGRectGetMaxY(self.monthContainerView.frame);
         self.frame = frame;
-        */
+        
         
         // Tell the delegate method that we're about to animate to a new month
         if (monthComparisonResult != NSOrderedSame && [self.delegate respondsToSelector:@selector(calendarView:willChangeToVisibleMonth:duration:)]) {

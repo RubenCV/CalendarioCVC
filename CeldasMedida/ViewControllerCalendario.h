@@ -10,4 +10,8 @@
 
 @interface ViewControllerCalendario : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *lbDay;
+@property (strong, nonatomic) IBOutlet UILabel *lbMonth;
+@property (strong, nonatomic) IBOutlet UILabel *lbYear;
+
 @end

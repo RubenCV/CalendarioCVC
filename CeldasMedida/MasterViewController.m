@@ -85,9 +85,14 @@ GlobalCalendar *myCalendar;
             NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
             NSRange needleRange = NSMakeRange(prefixRange.location+prefix.length, suffixRange.location);
             NSString *needle = [haystack substringWithRange:needleRange];
-            
             NSString *auxiliarString = needle;
+            
+            // Enlgish
             prefix = @" a ";
+            
+            // Spanish
+            if ([auxiliarString rangeOfString:prefix].location == NSNotFound) prefix = @" al ";
+            
             if ([auxiliarString rangeOfString:prefix].location != NSNotFound)
             {
                 dateStartString = [auxiliarString substringWithRange:NSMakeRange(0, [auxiliarString rangeOfString:prefix].location)];
@@ -107,9 +112,9 @@ GlobalCalendar *myCalendar;
             }
         }
 
-        if (dateStartString.length > 16){
+        if (dateStartString.length > 16){ //19
         dateStartString = [dateStartString substringWithRange:NSMakeRange(4, dateStartString.length-5)];
-            if (dateStartString.length > 12){
+            if (dateStartString.length > 12){ //9
         dateStartString = [dateStartString substringWithRange:NSMakeRange(0, dateStartString.length-5)];
             }
         }
@@ -126,10 +131,15 @@ GlobalCalendar *myCalendar;
         {
             dateStartString = [dateStartString substringWithRange:NSMakeRange(4, dateStartString.length-5)];
         }
-        
+        // Spanish
+        dateStartString = [dateStartString stringByReplacingOccurrencesOfString:@" de "
+                                                                     withString:@"-"];
+        // English
         dateStartString = [dateStartString stringByReplacingOccurrencesOfString:@" "
-                                                               withString:@"-"];
-
+                                                                     withString:@"-"];
+        if (dateStartString.length > 12)
+            dateStartString = [dateStartString substringWithRange:NSMakeRange(0, 10)];
+        
         NSDate *evento = [ddMMMyyyy dateFromString: dateStartString];
         [arrFechaEventos addObject:evento];
         [arrFechaEventos addObject:dateStartString];

@@ -23,7 +23,7 @@ GlobalCalendar *myCalendar;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.title = @"Evento";
     myCalendar = [GlobalCalendar sharedSingleton];
     MWFeedItem *item = [[myCalendar itemsToDisplay] objectAtIndex:_eventIndex];
     
@@ -44,6 +44,7 @@ GlobalCalendar *myCalendar;
         NSString *haystack = [item.summary stringByConvertingHTMLToPlainText];
         NSString *prefix = @"Cuándo: ";
         NSString *suffix = @"CST";
+        haystack = [haystack stringByReplacingOccurrencesOfString:@" de " withString:@" "];
         if ([haystack rangeOfString:suffix].location == NSNotFound) suffix = @"CDT";
         if ([haystack rangeOfString:suffix].location == NSNotFound) suffix = @"Quién: ";
         if ([haystack rangeOfString:suffix].location == NSNotFound) suffix = @"Dónde: ";
@@ -59,6 +60,7 @@ GlobalCalendar *myCalendar;
             
             NSString *auxiliarString = needle;
             prefix = @" a ";
+            if ([auxiliarString rangeOfString:prefix].location == NSNotFound) prefix = @" al ";
             if ([auxiliarString rangeOfString:prefix].location != NSNotFound)
             {
                 NSRange prefixRange = [auxiliarString rangeOfString:prefix];
