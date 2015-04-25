@@ -79,7 +79,7 @@
                                         <color key="backgroundColor" red="0.048627550302157832" green="0.23489330037136305" blue="0.47064811720142607" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="E6A-po-MDp" kind="show" identifier="Noticias" id="1Xc-Mx-wja"/>
+                                            <segue destination="m7W-P3-mqW" kind="show" id="0CG-cv-awq"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contacto" rowHeight="171" id="X7p-p9-FZO">
@@ -265,6 +265,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-IG-wYg" customClass="DSLCalendarView">
+                                <rect key="frame" x="16" y="234" width="288" height="319"/>
+                                <color key="backgroundColor" red="0.90881470963131317" green="0.90881470963131317" blue="0.90881470963131317" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D14-6y-pnL">
                                 <rect key="frame" x="16" y="81" width="288" height="154"/>
                                 <subviews>
@@ -281,12 +285,6 @@
                                         <rect key="frame" x="24" y="19" width="82" height="25"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" red="0.08195020826619441" green="0.66645541165371824" blue="0.92962970697878788" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-Q3-gu8">
-                                        <rect key="frame" x="158" y="74" width="102" height="25"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-xw-5hZ">
@@ -322,12 +320,14 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CalendarToday.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-pU-JBb">
                                         <rect key="frame" x="137" y="78" width="25" height="25"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-Q3-gu8">
+                                        <rect key="frame" x="158" y="78" width="102" height="25"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-IG-wYg" customClass="DSLCalendarView">
-                                <rect key="frame" x="16" y="234" width="288" height="319"/>
-                                <color key="backgroundColor" red="0.90881470963131317" green="0.90881470963131317" blue="0.90881470963131317" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,7 +348,7 @@
             </objects>
             <point key="canvasLocation" x="885" y="-580"/>
         </scene>
-        <!--Evento View Controller-->
+        <!--Evento-->
         <scene sceneID="DAL-A1-QHv">
             <objects>
                 <viewController id="mqx-UX-z8a" customClass="EventoViewController" sceneMemberID="viewController">
@@ -360,32 +360,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FW-Cw-lef">
-                                <rect key="frame" x="16" y="83" width="288" height="472"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HN-s8-xSx">
+                                <rect key="frame" x="16" y="80" width="288" height="83"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIi-Cm-frB">
-                                        <rect key="frame" x="26" y="190" width="237" height="178"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugar del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zav-dj-7j8">
-                                        <rect key="frame" x="26" y="124" width="237" height="86"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informes del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ree-O6-wLG">
-                                        <rect key="frame" x="26" y="376" width="249" height="83"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del evento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-e1-Xk4">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="71"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="83"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FW-Cw-lef">
+                                <rect key="frame" x="16" y="154" width="288" height="397"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIi-Cm-frB">
+                                        <rect key="frame" x="26" y="118" width="237" height="178"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugar del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zav-dj-7j8">
+                                        <rect key="frame" x="26" y="52" width="237" height="86"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informes del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ree-O6-wLG">
+                                        <rect key="frame" x="26" y="304" width="249" height="83"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha del evento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jO-ky-fIi">
-                                        <rect key="frame" x="26" y="79" width="237" height="64"/>
+                                        <rect key="frame" x="26" y="7" width="237" height="64"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -395,6 +401,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Evento" id="Ha6-Gl-hTU">
+                        <barButtonItem key="backBarButtonItem" title="Calendario" id="hDZ-3Z-ZLO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lbDescripcion" destination="oIi-Cm-frB" id="R51-So-2Nt"/>
                         <outlet property="lbFecha" destination="7jO-ky-fIi" id="1yN-PX-5tc"/>
@@ -407,51 +416,122 @@
             </objects>
             <point key="canvasLocation" x="1305" y="-580"/>
         </scene>
-        <!--Lo ultimo en CVC-->
-        <scene sceneID="Kcp-7E-dzp">
+        <!--Noticia-->
+        <scene sceneID="dOr-KH-h0o">
             <objects>
-                <viewController id="E6A-po-MDp" sceneMemberID="viewController">
+                <viewController id="QEG-pH-lmC" customClass="NoticiaViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CXo-O4-0DJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="NoP-MC-OyR"/>
+                        <viewControllerLayoutGuide type="top" id="ZeA-dn-BhG"/>
+                        <viewControllerLayoutGuide type="bottom" id="E3a-ZJ-bg7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iaw-13-d22">
+                    <view key="view" contentMode="scaleToFill" id="CSR-Un-wIP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holloware ©" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNN-a3-TTa">
-                                <rect key="frame" x="92" y="511" width="137" height="37"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
-                                <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQ2-LU-3Dm">
-                                <rect key="frame" x="55" y="221" width="210" height="206"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soon TM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogp-sI-Vk6">
-                                        <rect key="frame" x="17" y="84" width="177" height="37"/>
-                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                                        <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.078678196841165102" green="0.28915124741506226" blue="0.64482717803030298" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noticias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88e-94-Ynb">
-                                <rect key="frame" x="72" y="89" width="177" height="37"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                                <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView alpha="0.79999999999999982" contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyO-vC-iKD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
                         </subviews>
-                        <color key="backgroundColor" red="0.039215686274509803" green="0.18431372549019609" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.1843137255" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Lo ultimo en CVC" id="bNV-n7-gZQ"/>
+                    <navigationItem key="navigationItem" title="Noticia" id="eNw-Vf-Yem"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="viewWeb" destination="vyO-vC-iKD" id="Lpx-qV-GRe"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tcB-3J-SSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jy9-Q6-L1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="64"/>
+            <point key="canvasLocation" x="1305" y="58"/>
+        </scene>
+        <!--Lo ultimo en CVC-->
+        <scene sceneID="qZh-rX-6cO">
+            <objects>
+                <tableViewController id="m7W-P3-mqW" customClass="NoticiarioTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" id="G9Z-CY-IoT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoticiaB" rowHeight="112" id="z8E-Ed-3Wf" customClass="NoticiaTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8E-Ed-3Wf" id="FWz-3C-L2J">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDH-Ml-gT9">
+                                            <rect key="frame" x="16" y="19" width="101" height="74"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJU-RY-pO6">
+                                                    <rect key="frame" x="8" y="8" width="85" height="58"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZv-nF-LLn">
+                                            <rect key="frame" x="139" y="19" width="161" height="74"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgvNoticia" destination="rJU-RY-pO6" id="lPi-4g-FnD"/>
+                                    <outlet property="lbNoticia" destination="lZv-nF-LLn" id="3cp-u8-Whu"/>
+                                    <outlet property="viewImagen" destination="FWz-3C-L2J" id="NoW-Wj-6QT"/>
+                                    <outlet property="viewRenglon" destination="FWz-3C-L2J" id="SZf-0T-diQ"/>
+                                    <segue destination="QEG-pH-lmC" kind="show" id="G98-Xe-oDk"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia" rowHeight="112" id="UG3-8E-CwG" customClass="NoticiaTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UG3-8E-CwG" id="1BL-CE-83n">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YC2-ue-XFN">
+                                            <rect key="frame" x="16" y="18" width="101" height="74"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJL-Fz-6Az">
+                                                    <rect key="frame" x="8" y="8" width="85" height="58"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-0N-yDs">
+                                            <rect key="frame" x="139" y="18" width="161" height="74"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgvNoticia" destination="BJL-Fz-6Az" id="tqR-FN-z0X"/>
+                                    <outlet property="lbNoticia" destination="fgf-0N-yDs" id="R8l-im-9AA"/>
+                                    <outlet property="viewImagen" destination="1BL-CE-83n" id="dib-pq-x12"/>
+                                    <outlet property="viewRenglon" destination="1BL-CE-83n" id="HlH-5i-euA"/>
+                                    <segue destination="QEG-pH-lmC" kind="show" id="ql6-Pg-8XD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m7W-P3-mqW" id="Z1Z-B1-pUI"/>
+                            <outlet property="delegate" destination="m7W-P3-mqW" id="bhR-2q-58X"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lo ultimo en CVC" id="rrL-Fl-rma">
+                        <barButtonItem key="backBarButtonItem" title="Seleccion" id="ZoD-mv-7Hw"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCD-y9-4Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="58"/>
         </scene>
     </scenes>
     <resources>
@@ -462,4 +542,7 @@
         <image name="ContactoFondo.png" width="566" height="1070"/>
         <image name="Noticias.png" width="68" height="53"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ql6-Pg-8XD"/>
+    </inferredMetricsTieBreakers>
 </document>

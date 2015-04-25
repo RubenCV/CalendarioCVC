@@ -252,10 +252,7 @@
     cvc.area = [object objectForKey:@"area"];
     cvc.tel = [object objectForKey:@"telefono"];
     cvc.email = [object objectForKey:@"mail"];
-    
-    
-    
-    
+     
 }
 
 @end

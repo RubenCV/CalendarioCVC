@@ -148,6 +148,82 @@ GlobalCalendar *myCalendar;
     myCalendar.eventDayList = arrFechaEventos;
 }
 
+- (void)loadNewsID {
+    // Declarar arreglo de eventos.
+    NSMutableArray *arrNoticiasID = [[NSMutableArray alloc] init];
+    NSMutableArray *arrNoticiasTitulos = [[NSMutableArray alloc] init];
+    
+    NSString *cvcString = @"https://cvc.itesm.mx/portal/page/portal/CVC/02/01/Noticias";
+    NSURL *cvcURL = [NSURL URLWithString:cvcString];
+    NSError *error;
+    NSString *cvcPage = [NSString stringWithContentsOfURL:cvcURL
+                                                 encoding:NSASCIIStringEncoding
+                                                    error:&error];
+    
+    cvcPage = [cvcPage stringByReplacingOccurrencesOfString:@"/ex_general_img/A"
+                                                withString:@" $$StartN$$ "];
+    cvcPage = [cvcPage stringByReplacingOccurrencesOfString:@".jpg"
+                                                 withString:@" $$EndN$$ "];
+    
+    cvcPage = [cvcPage stringByReplacingOccurrencesOfString:@" border=\"0\"><B> "
+                                                 withString:@" $$StartT$$ "];
+    cvcPage = [cvcPage stringByReplacingOccurrencesOfString:@" </B></FONT></A></TD"
+                                                 withString:@" $$EndT$$ "];
+    
+    NSString *haystack;
+    NSString *prefix = @" $$StartN$$ ";
+    NSString *suffix = @" $$EndN$$ ";
+    NSString *prefixT = @" $$StartT$$ ";
+    NSString *suffixT = @" $$EndT$$ ";
+    
+    for(int i = 0; i < 10; i++)
+    {
+        haystack = cvcPage;
+        
+        if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
+        {
+            // ID
+            NSRange prefixRange = [haystack rangeOfString:prefix];
+            NSRange suffixRange = [[haystack substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffix];
+            NSRange needleRange = NSMakeRange(prefixRange.location+prefix.length, suffixRange.location);
+            NSString *needle = [haystack substringWithRange:needleRange];
+            cvcPage = [haystack substringFromIndex:[haystack rangeOfString:suffix].location+suffix.length];
+            [arrNoticiasID addObject:needle];
+            // Titulo
+            prefixRange = [cvcPage rangeOfString:prefixT];
+            suffixRange = [[cvcPage substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffixT];
+            needleRange = NSMakeRange(prefixRange.location+prefixT.length, suffixRange.location);
+            needle = [cvcPage substringWithRange:needleRange];
+            [arrNoticiasTitulos addObject:needle];
+        }
+        
+    }
+    
+    myCalendar.newsIDList = arrNoticiasID;
+    myCalendar.newsTitles = arrNoticiasTitulos;
+}
+
+- (void)loadNewsImages {
+    
+    NSMutableArray *arrImages = [[NSMutableArray alloc] init];
+    NSString *link = @"https://cvc.itesm.mx/ex_general_img/A";
+    NSString *ext = @".jpg";
+    
+    for(int i = 0; i < myCalendar.newsIDList.count; i++)
+    {
+        NSString *urlAux;
+        urlAux = [link stringByAppendingString:myCalendar.newsIDList[i]];
+        urlAux = [urlAux stringByAppendingString:ext];
+        
+        NSURL *nsurl = [NSURL URLWithString: urlAux ];
+        NSData *data = [[NSData alloc] initWithContentsOfURL: nsurl];
+        
+        [arrImages addObject:[UIImage imageWithData: data]];
+    }
+    
+    myCalendar.newsImages = arrImages;
+}
+
 #pragma mark -
 #pragma mark MWFeedParserDelegate
 
@@ -172,6 +248,9 @@ GlobalCalendar *myCalendar;
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
     [self loadEventDays];
+    [self loadNewsID];
+    [self loadNewsImages];
+    NSLog(@"Finalizo el Parser costum CVC.");
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {

@@ -27,7 +27,10 @@
 		B80C205E1AE7012900EA67DE /* Calendario.png in Resources */ = {isa = PBXBuildFile; fileRef = B80C205B1AE7012900EA67DE /* Calendario.png */; };
 		B80C205F1AE7012900EA67DE /* Contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = B80C205C1AE7012900EA67DE /* Contacto.png */; };
 		B80C20601AE7012900EA67DE /* Noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = B80C205D1AE7012900EA67DE /* Noticias.png */; };
+		B84AF3DF1AEBECBB00E31131 /* NoticiaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */; };
 		B84C2C9D1AE6D80100CF063B /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C2C9C1AE6D80100CF063B /* EventoViewController.m */; };
+		B861FC391AEA91F60037ACE9 /* NoticiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */; };
+		B861FC3C1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */; };
 		B891F1811AE9DA3400A1F5C8 /* DSLCalendarDayCallout.png in Resources */ = {isa = PBXBuildFile; fileRef = B891F17A1AE9DA3400A1F5C8 /* DSLCalendarDayCallout.png */; };
 		B891F1821AE9DA3400A1F5C8 /* DSLCalendarDaySelection-left.png in Resources */ = {isa = PBXBuildFile; fileRef = B891F17B1AE9DA3400A1F5C8 /* DSLCalendarDaySelection-left.png */; };
 		B891F1831AE9DA3400A1F5C8 /* DSLCalendarDaySelection-middle.png in Resources */ = {isa = PBXBuildFile; fileRef = B891F17C1AE9DA3400A1F5C8 /* DSLCalendarDaySelection-middle.png */; };
@@ -98,8 +101,14 @@
 		B80C205C1AE7012900EA67DE /* Contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contacto.png; sourceTree = "<group>"; };
 		B80C205D1AE7012900EA67DE /* Noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Noticias.png; sourceTree = "<group>"; };
 		B837E6941ADF75A8004DCF03 /* MWFeedParser_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Prefix.pch; sourceTree = "<group>"; };
+		B84AF3DD1AEBECBB00E31131 /* NoticiaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiaTableViewCell.h; sourceTree = "<group>"; };
+		B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaTableViewCell.m; sourceTree = "<group>"; };
 		B84C2C9B1AE6D80100CF063B /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
 		B84C2C9C1AE6D80100CF063B /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
+		B861FC371AEA91F60037ACE9 /* NoticiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiaViewController.h; sourceTree = "<group>"; };
+		B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaViewController.m; sourceTree = "<group>"; };
+		B861FC3A1AEA9D2E0037ACE9 /* NoticiarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiarioTableViewController.h; sourceTree = "<group>"; };
+		B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiarioTableViewController.m; sourceTree = "<group>"; };
 		B891F17A1AE9DA3400A1F5C8 /* DSLCalendarDayCallout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSLCalendarDayCallout.png; sourceTree = "<group>"; };
 		B891F17B1AE9DA3400A1F5C8 /* DSLCalendarDaySelection-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSLCalendarDaySelection-left.png"; sourceTree = "<group>"; };
 		B891F17C1AE9DA3400A1F5C8 /* DSLCalendarDaySelection-middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSLCalendarDaySelection-middle.png"; sourceTree = "<group>"; };
@@ -255,6 +264,12 @@
 				FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */,
 				FB24B9E81ADDEF8800D5431A /* ContactoViewController.h */,
 				FB91AE731AA8D46E00BA5A35 /* Main.storyboard */,
+				B84AF3DD1AEBECBB00E31131 /* NoticiaTableViewCell.h */,
+				B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */,
+				B861FC3A1AEA9D2E0037ACE9 /* NoticiarioTableViewController.h */,
+				B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */,
+				B861FC371AEA91F60037ACE9 /* NoticiaViewController.h */,
+				B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */,
 				FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */,
 				FB91AE761AA8D46E00BA5A35 /* Images.xcassets */,
 			);
@@ -444,10 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B861FC391AEA91F60037ACE9 /* NoticiaViewController.m in Sources */,
 				B808E3411AC4EC09003872A2 /* DSLCalendarMonthSelectorView.m in Sources */,
 				B808E3541AC4EC09003872A2 /* NSDate+DSLCalendarView.m in Sources */,
 				FBE53C871ADF567800AC8DE7 /* MWFeedParser.m in Sources */,
 				FBE53C841ADF567800AC8DE7 /* GTMNSString+HTML.m in Sources */,
+				B861FC3C1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m in Sources */,
 				FBE53C891ADF567800AC8DE7 /* NSDate+InternetDateTime.m in Sources */,
 				B84C2C9D1AE6D80100CF063B /* EventoViewController.m in Sources */,
 				FB91AE6C1AA8D46E00BA5A35 /* AppDelegate.m in Sources */,
@@ -457,6 +474,7 @@
 				B808E33E1AC4EC09003872A2 /* DSLCalendarDayCalloutView.m in Sources */,
 				FB91AE6F1AA8D46E00BA5A35 /* MasterViewController.m in Sources */,
 				FBE53C8A1ADF567800AC8DE7 /* NSString+HTML.m in Sources */,
+				B84AF3DF1AEBECBB00E31131 /* NoticiaTableViewCell.m in Sources */,
 				B808E3451AC4EC09003872A2 /* DSLCalendarView.m in Sources */,
 				FBE53C881ADF567800AC8DE7 /* MWFeedParserAppDelegate.m in Sources */,
 				FB91AE691AA8D46E00BA5A35 /* main.m in Sources */,

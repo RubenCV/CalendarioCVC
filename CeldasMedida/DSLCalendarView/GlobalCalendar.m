@@ -27,6 +27,9 @@ NSDateFormatter *formatter;
 @synthesize formatter;
 @synthesize parsedItems;
 @synthesize eventDayList;
+@synthesize newsIDList;
+@synthesize newsImages;
+@synthesize newsTitles;
 @synthesize itemsToDisplay;
 
 static GlobalCalendar *shared = NULL;
