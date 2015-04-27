@@ -131,7 +131,8 @@ GlobalCalendar *myCalendar;
         // Checar si el dia que dibujo pertenece a un evento.
         if([myCalendar.eventDayList containsObject: date])
         {
-            textColor = [UIColor whiteColor];
+            if (![date isEqualToDate:dateToday])
+                textColor = [UIColor whiteColor];
             [[[UIImage imageNamed:@"CalendarEventYellow"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
         }
     }
@@ -163,7 +164,7 @@ GlobalCalendar *myCalendar;
     
     //
     [textColor set];
-    UIFont *textFont = [UIFont boldSystemFontOfSize:18.0];
+    UIFont *textFont = [UIFont boldSystemFontOfSize:19.0];
     CGSize textSize = [_labelText sizeWithFont:textFont];
     
     CGRect textRect = CGRectMake(ceilf(CGRectGetMidX(self.bounds) - (textSize.width / 2.0)), ceilf(CGRectGetMidY(self.bounds) - (textSize.height / 2.0)), textSize.width, textSize.height);

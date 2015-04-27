@@ -198,6 +198,32 @@ GlobalCalendar *myCalendar;
             suffixRange = [[cvcPage substringFromIndex:prefixRange.location+prefixRange.length] rangeOfString:suffixT];
             needleRange = NSMakeRange(prefixRange.location+prefixT.length, suffixRange.location);
             needle = [cvcPage substringWithRange:needleRange];
+            
+            // Quito cursivas y negritas.
+            
+            needle = [needle stringByReplacingOccurrencesOfString:@"<i>"
+                                                       withString:@""];
+            
+            needle = [needle stringByReplacingOccurrencesOfString:@"</i>"
+                                                       withString:@""];
+            
+            needle = [needle stringByReplacingOccurrencesOfString:@"<b>"
+                                                       withString:@""];
+            
+            needle = [needle stringByReplacingOccurrencesOfString:@"</b>"
+                                                       withString:@""];
+            // Si hay mas cod. HTML lo borro.
+            
+            needle = [needle stringByReplacingOccurrencesOfString:@"<"
+                                            withString:@" $$NewEnd$$ "];
+            if ([needle rangeOfString:@" $$NewEnd$$ "].location != NSNotFound)
+            {
+                suffixRange = [needle rangeOfString:@" $$NewEnd$$ "];
+                needle = [needle substringWithRange:NSMakeRange(0, suffixRange.location)];
+            }
+            
+            // Almacena el titulo en el arreglo.
+            
             [arrNoticiasTitulos addObject:needle];
         }
         

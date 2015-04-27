@@ -22,7 +22,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contacto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0DW-5Z-Fhw">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
-                                            <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -187,9 +187,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias.png" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-4v-hYT">
-                                <rect key="frame" x="38" y="360" width="88" height="68"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6Q-Ii-sbT">
                                 <rect key="frame" x="163" y="329" width="152" height="170"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.74509803919999995" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -259,8 +256,11 @@
                                     <action selector="facebook:" destination="uMG-99-MYU" eventType="touchUpInside" id="bqw-gh-5gM"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias.png" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-4v-hYT">
+                                <rect key="frame" x="38" y="360" width="88" height="68"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.82709236788918883" green="0.96378457140025819" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Centro de Vida y Carrera" id="H7c-gw-40T">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="cbQ-Lv-FYp"/>
@@ -474,65 +474,123 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" id="G9Z-CY-IoT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoticiaB" rowHeight="112" id="z8E-Ed-3Wf" customClass="NoticiaTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia0" rowHeight="112" id="shj-Nc-Lke" customClass="NoticiaTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8E-Ed-3Wf" id="FWz-3C-L2J">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="shj-Nc-Lke" id="gNf-sL-Nq5">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDH-Ml-gT9">
-                                            <rect key="frame" x="16" y="19" width="101" height="74"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJU-RY-pO6">
-                                                    <rect key="frame" x="8" y="8" width="85" height="58"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <imageView userInteractionEnabled="NO" alpha="0.65000000000000013" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctI-JC-wtR">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                        </imageView>
+                                        <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-Lv-n1R">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <color key="backgroundColor" red="0.26473010197246533" green="0.32754064840665165" blue="0.93436316287878785" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZv-nF-LLn">
-                                            <rect key="frame" x="139" y="19" width="161" height="74"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3C-1o-A14">
+                                            <rect key="frame" x="25" y="14" width="270" height="85"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="-1" height="-1"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.73021025127426076" green="0.84640020981137531" blue="0.87930082070707072" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="imgvNoticia" destination="rJU-RY-pO6" id="lPi-4g-FnD"/>
-                                    <outlet property="lbNoticia" destination="lZv-nF-LLn" id="3cp-u8-Whu"/>
-                                    <segue destination="QEG-pH-lmC" kind="show" id="G98-Xe-oDk"/>
+                                    <outlet property="imgvNoticia" destination="ctI-JC-wtR" id="ceT-6j-LgS"/>
+                                    <outlet property="lbNoticia" destination="T3C-1o-A14" id="NZI-T7-0BB"/>
+                                    <segue destination="QEG-pH-lmC" kind="show" id="XvC-ea-YDG"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia" rowHeight="112" id="UG3-8E-CwG" customClass="NoticiaTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia1" rowHeight="112" id="KXg-HY-1Tc" customClass="NoticiaTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UG3-8E-CwG" id="1BL-CE-83n">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KXg-HY-1Tc" id="dIf-PQ-PR0">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YC2-ue-XFN">
-                                            <rect key="frame" x="16" y="18" width="101" height="74"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJL-Fz-6Az">
-                                                    <rect key="frame" x="8" y="8" width="85" height="58"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-8G-SwV">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                        </imageView>
+                                        <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-rc-LWQ">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <color key="backgroundColor" red="0.21518305222319531" green="0.56181242391753783" blue="0.91936947601010099" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgf-0N-yDs">
-                                            <rect key="frame" x="139" y="18" width="161" height="74"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-bC-hRW">
+                                            <rect key="frame" x="25" y="14" width="269" height="85"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="-1" height="-1"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="imgvNoticia" destination="BJL-Fz-6Az" id="tqR-FN-z0X"/>
-                                    <outlet property="lbNoticia" destination="fgf-0N-yDs" id="R8l-im-9AA"/>
-                                    <segue destination="QEG-pH-lmC" kind="show" id="ql6-Pg-8XD"/>
+                                    <outlet property="imgvNoticia" destination="mXS-8G-SwV" id="U5p-mv-bwh"/>
+                                    <outlet property="lbNoticia" destination="ccV-bC-hRW" id="jH5-x8-LVf"/>
+                                    <segue destination="QEG-pH-lmC" kind="show" id="Crv-AK-kQm"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia2" rowHeight="112" id="d6J-yJ-Bs0" customClass="NoticiaTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6J-yJ-Bs0" id="LfF-nk-eMo">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yeb-Gi-ETe">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                        </imageView>
+                                        <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-yi-Nn7">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <color key="backgroundColor" red="0.53163733787244871" green="0.84905697601010099" blue="0.37922272972991167" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-Ic-xjR">
+                                            <rect key="frame" x="26" y="14" width="267" height="85"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="-1" height="-1"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgvNoticia" destination="Yeb-Gi-ETe" id="0wA-xy-dAR"/>
+                                    <outlet property="lbNoticia" destination="NJB-Ic-xjR" id="25X-GY-zag"/>
+                                    <segue destination="QEG-pH-lmC" kind="show" id="gVZ-Ez-NyU"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia3" rowHeight="112" id="RDV-n3-mv1" customClass="NoticiaTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDV-n3-mv1" id="xqj-V7-ADN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkZ-Ln-MQa">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                        </imageView>
+                                        <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-xg-mrt">
+                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <color key="backgroundColor" red="0.87438841540404044" green="0.75983481010735554" blue="0.24486834224944137" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-AI-gdM">
+                                            <rect key="frame" x="27" y="14" width="266" height="85"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="-1" height="-1"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgvNoticia" destination="tkZ-Ln-MQa" id="ShX-tW-avJ"/>
+                                    <outlet property="lbNoticia" destination="2h1-AI-gdM" id="aUt-1z-3My"/>
+                                    <segue destination="QEG-pH-lmC" kind="show" id="NdI-eH-C45"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -584,6 +642,6 @@
         <image name="youtube.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ql6-Pg-8XD"/>
+        <segue reference="NdI-eH-C45"/>
     </inferredMetricsTieBreakers>
 </document>

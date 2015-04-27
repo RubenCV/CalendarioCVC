@@ -49,10 +49,21 @@ GlobalCalendar *myCalendar;
     NoticiaTableViewCell *cell;
     
     // Checo si es par, para asignar que tipo de color sera.
-    if (indexPath.row % 2 == 0)
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Noticia" forIndexPath:indexPath];
-    else
-        cell = [tableView dequeueReusableCellWithIdentifier:@"NoticiaB" forIndexPath:indexPath];
+    switch (indexPath.row % 4){
+        case 0:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"Noticia0" forIndexPath:indexPath];
+            break;
+        case 1:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"Noticia1" forIndexPath:indexPath];
+            break;
+        case 2:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"Noticia2" forIndexPath:indexPath];
+            break;
+        case 3:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"Noticia3" forIndexPath:indexPath];
+            break;
+            
+    }
     
     // Cambio los atributos de la cell.
     cell.lbNoticia.text = myCalendar.newsTitles[indexPath.row];
