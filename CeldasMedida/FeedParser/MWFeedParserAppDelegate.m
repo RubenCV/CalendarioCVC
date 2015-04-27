@@ -28,7 +28,7 @@
 //
 
 #import "MWFeedParserAppDelegate.h"
-#import "MasterViewController.h"
+#import "MenuViewController.h"
 
 @implementation MWFeedParserAppDelegate
 

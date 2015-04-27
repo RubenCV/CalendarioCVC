@@ -11,9 +11,7 @@
 @interface NoticiaTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *lbNoticia;
-@property (strong, nonatomic) IBOutlet UIView *viewRenglon;
 @property (strong, nonatomic) IBOutlet UIImageView *imgvNoticia;
-@property (strong, nonatomic) IBOutlet UIView *viewImagen;
 
 
 @end

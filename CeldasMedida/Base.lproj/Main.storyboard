@@ -1,128 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z7T-Qf-Ja4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Master-->
-        <scene sceneID="cUi-kZ-frf">
-            <objects>
-                <navigationController title="Master" id="rS3-R9-Ivy" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-148" y="64"/>
-        </scene>
-        <!--Master-->
-        <scene sceneID="VgW-fR-Quf">
-            <objects>
-                <tableViewController title="Master" id="pGg-6v-bdr" customClass="MasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.074509803921568626" green="0.56470588235294117" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.058823529411764705" green="0.51372549019607838" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <sections>
-                            <tableViewSection id="fIX-N6-2KJ">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Eventos" rowHeight="170" id="m0d-ak-lc9">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendario.png" translatesAutoresizingMaskIntoConstraints="NO" id="5P1-DP-RWO">
-                                                    <rect key="frame" x="32" y="37" width="95" height="95"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eventos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="req-gQ-Urw">
-                                                    <rect key="frame" x="135" y="60" width="177" height="49"/>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                                                    <color key="textColor" red="0.946788022514502" green="0.95036484895658357" blue="0.96109532828282829" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.18995668233244334" green="0.59420913268030673" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="VcX-qi-WfO" kind="show" identifier="Eventos" id="Qf6-fR-pKF"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Noticias" rowHeight="171" id="3e3-8C-TB7">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3e3-8C-TB7" id="Rpk-iK-zzt">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias.png" translatesAutoresizingMaskIntoConstraints="NO" id="WbM-RU-hkM">
-                                                    <rect key="frame" x="32" y="37" width="95" height="95"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noticias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1d-uJ-yZn">
-                                                    <rect key="frame" x="135" y="66" width="177" height="37"/>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                                                    <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.031372549019607843" green="0.25098039215686274" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.048627550302157832" green="0.23489330037136305" blue="0.47064811720142607" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="m7W-P3-mqW" kind="show" id="0CG-cv-awq"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contacto" rowHeight="171" id="X7p-p9-FZO">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X7p-p9-FZO" id="UJF-4f-UDz">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacto.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tlf-DN-NAQ">
-                                                    <rect key="frame" x="33" y="38" width="95" height="95"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contacto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXu-rW-5oV">
-                                                    <rect key="frame" x="136" y="61" width="176" height="47"/>
-                                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
-                                                    <color key="textColor" red="0.94678802250000005" green="0.95036484899999996" blue="0.9610953283" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.44313725490196076" green="0.74509803921568629" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0092990933361674407" green="0.79274895090611996" blue="0.56803276749479537" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="xwr-Tu-MMK" kind="show" id="Cus-yg-J73"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="pGg-6v-bdr" id="P41-gY-KXY"/>
-                            <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Centro de Vida y Carrera" id="tQt-TN-PWz">
-                        <barButtonItem key="backBarButtonItem" title="Menu" id="lDh-9i-sgB"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="411" y="64"/>
-        </scene>
         <!--Personal CVC-->
         <scene sceneID="C2M-SD-REi">
             <objects>
@@ -164,7 +45,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDE-kf-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="740"/>
+            <point key="canvasLocation" x="1697" y="118"/>
         </scene>
         <!--Contacto CVC-->
         <scene sceneID="V4m-Tm-TML">
@@ -251,7 +132,147 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypR-jA-GKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="740"/>
+            <point key="canvasLocation" x="2117" y="118"/>
+        </scene>
+        <!--Centro de Vida y Carrera-->
+        <scene sceneID="IFc-MC-Alj">
+            <objects>
+                <viewController id="uMG-99-MYU" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ksk-rd-Hoo"/>
+                        <viewControllerLayoutGuide type="bottom" id="HnM-E8-Y58"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nCi-dE-z9h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMF-jI-ZAB">
+                                <rect key="frame" x="6" y="70" width="309" height="254"/>
+                                <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VcX-qi-WfO" kind="show" id="pgV-SW-rA5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendario.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-Zr-4qw">
+                                <rect key="frame" x="89" y="100" width="143" height="143"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eventos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgX-Tc-zHu">
+                                <rect key="frame" x="72" y="251" width="177" height="42"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00/MES/00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmp-55-cgK">
+                                <rect key="frame" x="89" y="103" width="143" height="42"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="textColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zj-Dg-63Z">
+                                <rect key="frame" x="6" y="329" width="152" height="170"/>
+                                <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="m7W-P3-mqW" kind="show" id="WZ4-Td-HmM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noticias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtR-j2-8YP">
+                                <rect key="frame" x="14" y="431" width="136" height="37"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias.png" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-4v-hYT">
+                                <rect key="frame" x="38" y="360" width="88" height="68"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6Q-Ii-sbT">
+                                <rect key="frame" x="163" y="329" width="152" height="170"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.74509803919999995" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xwr-Tu-MMK" kind="show" id="ACt-cI-h5D"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacto.png" translatesAutoresizingMaskIntoConstraints="NO" id="yRn-aD-cQI">
+                                <rect key="frame" x="190" y="360" width="98" height="63"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contacto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vs-SI-rQO">
+                                <rect key="frame" x="170" y="426" width="139" height="47"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNJ-DO-3ff">
+                                <rect key="frame" x="257" y="504" width="58" height="58"/>
+                                <color key="backgroundColor" red="0.83848248106060608" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="youtube.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="youtube:" destination="uMG-99-MYU" eventType="touchUpInside" id="ioO-X8-TvZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-Db-e7S">
+                                <rect key="frame" x="194" y="504" width="58" height="58"/>
+                                <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="twitter.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitter:" destination="uMG-99-MYU" eventType="touchUpInside" id="Gc9-l3-waD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-Qw-9Ri">
+                                <rect key="frame" x="131" y="504" width="58" height="58"/>
+                                <color key="backgroundColor" red="0.056136131333445159" green="0.45652389796197074" blue="0.63679905672626269" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="linkedin.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkedin:" destination="uMG-99-MYU" eventType="touchUpInside" id="0FI-Af-DFP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNP-Me-4FL">
+                                <rect key="frame" x="69" y="504" width="58" height="58"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="google+.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="google:" destination="uMG-99-MYU" eventType="touchUpInside" id="fkH-3X-tfu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9W7-qu-f3O">
+                                <rect key="frame" x="6" y="504" width="58" height="58"/>
+                                <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebook:" destination="uMG-99-MYU" eventType="touchUpInside" id="bqw-gh-5gM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82709236788918883" green="0.96378457140025819" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Centro de Vida y Carrera" id="H7c-gw-40T">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="cbQ-Lv-FYp"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lbDia" destination="kmp-55-cgK" id="hTs-l9-KsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgU-am-Lcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="-170"/>
         </scene>
         <!--Calendario CVC-->
         <scene sceneID="aFz-8S-FoC">
@@ -279,7 +300,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CalendarEventYellow.png" translatesAutoresizingMaskIntoConstraints="NO" id="S2A-X9-v2k">
-                                        <rect key="frame" x="137" y="107" width="25" height="25"/>
+                                        <rect key="frame" x="140" y="105" width="25" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGs-hK-CNx">
                                         <rect key="frame" x="24" y="19" width="82" height="25"/>
@@ -287,26 +308,20 @@
                                         <color key="textColor" red="0.08195020826619441" green="0.66645541165371824" blue="0.92962970697878788" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-xw-5hZ">
-                                        <rect key="frame" x="158" y="107" width="102" height="25"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CalendarToday.png" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-lF-5eg">
-                                        <rect key="frame" x="137" y="16" width="25" height="25"/>
+                                        <rect key="frame" x="140" y="16" width="25" height="25"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CalendarEventYellow.png" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-sF-zHI">
-                                        <rect key="frame" x="137" y="45" width="25" height="25"/>
+                                        <rect key="frame" x="140" y="46" width="25" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUe-lm-vcO">
-                                        <rect key="frame" x="158" y="14" width="102" height="25"/>
+                                        <rect key="frame" x="161" y="16" width="102" height="25"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aap-0M-soA">
-                                        <rect key="frame" x="158" y="45" width="102" height="25"/>
+                                        <rect key="frame" x="161" y="46" width="102" height="25"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -318,10 +333,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CalendarToday.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-pU-JBb">
-                                        <rect key="frame" x="137" y="78" width="25" height="25"/>
+                                        <rect key="frame" x="140" y="76" width="25" height="25"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-Q3-gu8">
-                                        <rect key="frame" x="158" y="78" width="102" height="25"/>
+                                        <rect key="frame" x="161" y="76" width="102" height="25"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo Evento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgB-xw-5hZ">
+                                        <rect key="frame" x="161" y="105" width="102" height="25"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -346,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPy-uV-Jg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="-580"/>
+            <point key="canvasLocation" x="1697" y="-580"/>
         </scene>
         <!--Evento-->
         <scene sceneID="DAL-A1-QHv">
@@ -414,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRk-G2-qfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="-580"/>
+            <point key="canvasLocation" x="2117" y="-580"/>
         </scene>
         <!--Noticia-->
         <scene sceneID="dOr-KH-h0o">
@@ -444,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jy9-Q6-L1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="58"/>
+            <point key="canvasLocation" x="1257" y="542"/>
         </scene>
         <!--Lo ultimo en CVC-->
         <scene sceneID="qZh-rX-6cO">
@@ -482,8 +503,6 @@
                                 <connections>
                                     <outlet property="imgvNoticia" destination="rJU-RY-pO6" id="lPi-4g-FnD"/>
                                     <outlet property="lbNoticia" destination="lZv-nF-LLn" id="3cp-u8-Whu"/>
-                                    <outlet property="viewImagen" destination="FWz-3C-L2J" id="NoW-Wj-6QT"/>
-                                    <outlet property="viewRenglon" destination="FWz-3C-L2J" id="SZf-0T-diQ"/>
                                     <segue destination="QEG-pH-lmC" kind="show" id="G98-Xe-oDk"/>
                                 </connections>
                             </tableViewCell>
@@ -513,8 +532,6 @@
                                 <connections>
                                     <outlet property="imgvNoticia" destination="BJL-Fz-6Az" id="tqR-FN-z0X"/>
                                     <outlet property="lbNoticia" destination="fgf-0N-yDs" id="R8l-im-9AA"/>
-                                    <outlet property="viewImagen" destination="1BL-CE-83n" id="dib-pq-x12"/>
-                                    <outlet property="viewRenglon" destination="1BL-CE-83n" id="HlH-5i-euA"/>
                                     <segue destination="QEG-pH-lmC" kind="show" id="ql6-Pg-8XD"/>
                                 </connections>
                             </tableViewCell>
@@ -531,16 +548,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCD-y9-4Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="58"/>
+            <point key="canvasLocation" x="821" y="542"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F3P-1z-7fi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z7T-Qf-Ja4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ODt-JW-nCE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uMG-99-MYU" kind="relationship" relationship="rootViewController" id="zMW-QN-YHl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcV-7Z-68z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="-170"/>
         </scene>
     </scenes>
     <resources>
         <image name="CalendarEventYellow.png" width="44" height="44"/>
         <image name="CalendarToday.png" width="44" height="44"/>
-        <image name="Calendario.png" width="74" height="70"/>
-        <image name="Contacto.png" width="58" height="35"/>
+        <image name="Calendario.jpg" width="226" height="251"/>
+        <image name="Contacto.png" width="347" height="225"/>
         <image name="ContactoFondo.png" width="566" height="1070"/>
-        <image name="Noticias.png" width="68" height="53"/>
+        <image name="Noticias.png" width="225" height="174"/>
+        <image name="facebook.png" width="512" height="512"/>
+        <image name="google+.png" width="512" height="512"/>
+        <image name="linkedin.jpg" width="512" height="512"/>
+        <image name="twitter.png" width="256" height="256"/>
+        <image name="youtube.png" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ql6-Pg-8XD"/>

@@ -1,24 +1,22 @@
 //
-//  MasterViewController.m
+//  MenuViewController.m
 //  CeldasMedida
 //
-//  Created by alumno on 05/03/15.
+//  Created by Ruben Cantu on 4/26/15.
 //  Copyright (c) 2015 A00814298. All rights reserved.
 //
 
-#import "MasterViewController.h"
 #import "GlobalCalendar.h"
 #import "NSString+HTML.h"
+#import "MenuViewController.h"
 
-
-@interface MasterViewController ()
+@interface MenuViewController ()
 
 @end
 
 GlobalCalendar *myCalendar;
 
-
-@implementation MasterViewController
+@implementation MenuViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -28,6 +26,12 @@ GlobalCalendar *myCalendar;
     [super viewDidLoad];
     myCalendar = [GlobalCalendar sharedSingleton];
     //[myCalendar feedParser].delegate = self;
+    
+    //HOY
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MMM/yy"];
+    NSString *dateString = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
+    self.lbDia.text = dateString;
     
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterShortStyle];
@@ -111,23 +115,23 @@ GlobalCalendar *myCalendar;
                 dateStartString = haystack;
             }
         }
-
+        
         if (dateStartString.length > 16){ //19
-        dateStartString = [dateStartString substringWithRange:NSMakeRange(4, dateStartString.length-5)];
+            dateStartString = [dateStartString substringWithRange:NSMakeRange(4, dateStartString.length-5)];
             if (dateStartString.length > 12){ //9
-        dateStartString = [dateStartString substringWithRange:NSMakeRange(0, dateStartString.length-5)];
+                dateStartString = [dateStartString substringWithRange:NSMakeRange(0, dateStartString.length-5)];
             }
         }
         else if(!([[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"0"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"1"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"2"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"3"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"4"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"5"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"6"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"7"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"8"] ||
-                [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"9"]))
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"1"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"2"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"3"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"4"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"5"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"6"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"7"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"8"] ||
+                  [[dateStartString substringWithRange:NSMakeRange(0, 1)]isEqualToString:@"9"]))
         {
             dateStartString = [dateStartString substringWithRange:NSMakeRange(4, dateStartString.length-5)];
         }
@@ -161,7 +165,7 @@ GlobalCalendar *myCalendar;
                                                     error:&error];
     
     cvcPage = [cvcPage stringByReplacingOccurrencesOfString:@"/ex_general_img/A"
-                                                withString:@" $$StartN$$ "];
+                                                 withString:@" $$StartN$$ "];
     cvcPage = [cvcPage stringByReplacingOccurrencesOfString:@".jpg"
                                                  withString:@" $$EndN$$ "];
     
@@ -268,10 +272,30 @@ GlobalCalendar *myCalendar;
     }
     //[self updateTableWithParsedItems];
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
-                           [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
-                                                                                ascending:NO]]];
-
+                                [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
+                                                                                     ascending:NO]]];
+    
     
 }
 
+
+- (IBAction)facebook:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/cvcmonterrey"]];
+}
+
+- (IBAction)google:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://plus.google.com/112361602358516849606/posts"]];
+}
+
+- (IBAction)linkedin:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.linkedin.com/groups/ITESM-Centro-Vida-Carrera-3737527?mostPopular=&gid=3737527"]];
+}
+
+- (IBAction)twitter:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/CVC_Monterrey"]];
+}
+
+- (IBAction)youtube:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/user/TecnologicoMonterrey"]];
+}
 @end
