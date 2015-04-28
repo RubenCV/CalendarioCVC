@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NoticiaViewController : UIViewController
+@interface NoticiaViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWebView *viewWeb;
 @property (strong, nonatomic) NSString *idNoticia;

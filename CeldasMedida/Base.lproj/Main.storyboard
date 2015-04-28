@@ -449,7 +449,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView alpha="0.79999999999999982" contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyO-vC-iKD">
+                            <webView alpha="0.74999999999999978" contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyO-vC-iKD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -471,27 +471,27 @@
         <scene sceneID="qZh-rX-6cO">
             <objects>
                 <tableViewController id="m7W-P3-mqW" customClass="NoticiarioTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" id="G9Z-CY-IoT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="G9Z-CY-IoT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia0" rowHeight="112" id="shj-Nc-Lke" customClass="NoticiaTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia0" rowHeight="120" id="shj-Nc-Lke" customClass="NoticiaTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="shj-Nc-Lke" id="gNf-sL-Nq5">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.65000000000000013" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctI-JC-wtR">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                         </imageView>
                                         <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-Lv-n1R">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                             <color key="backgroundColor" red="0.26473010197246533" green="0.32754064840665165" blue="0.93436316287878785" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3C-1o-A14">
-                                            <rect key="frame" x="25" y="14" width="270" height="85"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <rect key="frame" x="25" y="4" width="270" height="112"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -506,21 +506,21 @@
                                     <segue destination="QEG-pH-lmC" kind="show" id="XvC-ea-YDG"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia1" rowHeight="112" id="KXg-HY-1Tc" customClass="NoticiaTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia1" rowHeight="120" id="KXg-HY-1Tc" customClass="NoticiaTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KXg-HY-1Tc" id="dIf-PQ-PR0">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-8G-SwV">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                         </imageView>
                                         <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-rc-LWQ">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                             <color key="backgroundColor" red="0.21518305222319531" green="0.56181242391753783" blue="0.91936947601010099" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-bC-hRW">
-                                            <rect key="frame" x="25" y="14" width="269" height="85"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <rect key="frame" x="25" y="4" width="269" height="112"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -535,21 +535,21 @@
                                     <segue destination="QEG-pH-lmC" kind="show" id="Crv-AK-kQm"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia2" rowHeight="112" id="d6J-yJ-Bs0" customClass="NoticiaTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia2" rowHeight="120" id="d6J-yJ-Bs0" customClass="NoticiaTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6J-yJ-Bs0" id="LfF-nk-eMo">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yeb-Gi-ETe">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                         </imageView>
                                         <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-yi-Nn7">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                             <color key="backgroundColor" red="0.53163733787244871" green="0.84905697601010099" blue="0.37922272972991167" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-Ic-xjR">
-                                            <rect key="frame" x="26" y="14" width="267" height="85"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <rect key="frame" x="26" y="8" width="267" height="104"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -564,21 +564,21 @@
                                     <segue destination="QEG-pH-lmC" kind="show" id="gVZ-Ez-NyU"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia3" rowHeight="112" id="RDV-n3-mv1" customClass="NoticiaTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Noticia3" rowHeight="120" id="RDV-n3-mv1" customClass="NoticiaTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDV-n3-mv1" id="xqj-V7-ADN">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkZ-Ln-MQa">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                         </imageView>
                                         <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Mh-xg-mrt">
-                                            <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
                                             <color key="backgroundColor" red="0.87438841540404044" green="0.75983481010735554" blue="0.24486834224944137" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-AI-gdM">
-                                            <rect key="frame" x="27" y="14" width="266" height="85"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <rect key="frame" x="27" y="4" width="266" height="112"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

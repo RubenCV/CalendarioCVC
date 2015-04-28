@@ -8,7 +8,7 @@
 
 #import "NoticiaViewController.h"
 
-@interface NoticiaViewController ()
+@interface NoticiaViewController () <UIWebViewDelegate>
 
 @end
 
