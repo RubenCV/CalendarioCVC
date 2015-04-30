@@ -10,44 +10,33 @@
 #import "NSString+HTML.h"
 #import "MWFeedParser.h"
 
-NSString *var2; // global variable
+// Parser.
 MWFeedParser *feedParser;
 NSMutableArray *parsedItems;
 
-// Displaying
+// Display.
 NSArray *itemsToDisplay;
-NSMutableArray *eventDayList;
 NSDateFormatter *formatter;
-
+NSMutableArray *eventDayList;
 
 @implementation GlobalCalendar
 
-@synthesize var1;
+// Parser.
 @synthesize feedParser;
-@synthesize formatter;
-@synthesize parsedItems;
-@synthesize eventDayList;
-@synthesize newsIDList;
-@synthesize newsImages;
-@synthesize newsTitles;
 @synthesize itemsToDisplay;
+@synthesize parsedItems;
+
+// Calendario.
+@synthesize formatter;
+@synthesize eventDayList;
+@synthesize eventTypeList;
+
+// Noticias.
+@synthesize newsIDList;
+@synthesize newsTitles;
+@synthesize newsImages;
 
 static GlobalCalendar *shared = NULL;
-
-
-
-- (id)init
-{
-    if ( self = [super init] )
-    {
-        // initialize your singleton variable here (i.e. set to initial value that you require)
-        
-        var1 = @"My Cool Singleton";
-    }
-    return self;
-    
-}
-
 
 + (GlobalCalendar *)sharedSingleton
 {
@@ -55,31 +44,12 @@ static GlobalCalendar *shared = NULL;
     {
         if ( !shared || shared == NULL )
         {
-            // allocate the shared instance, because it hasn't been done yet
+            // Allocate the shared instance.
             shared = [[GlobalCalendar alloc] init];
-            
-            
         }
-        
         return shared;
     }
 }
 
-
-+(NSString *)myData{
-    return @"DataString";
-}
-
-- (void) SetMainCalendar{
-    NSLog(@"SetMainCalendar");
-}
-
-+ (NSInteger)GetItemsToDisplayCount{
-    return itemsToDisplay.count;
-}
-
-
-
 @end
-
 

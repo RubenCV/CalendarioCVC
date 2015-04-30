@@ -14,7 +14,8 @@
 
 @implementation NoticiaViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     NSString *fullURL = [@"https://cvc.itesm.mx/egresados/plsql/NoticiasPortalOr.NPO_Inicio?l_noticia=" stringByAppendingString: _idNoticia];
     NSURL *url = [NSURL URLWithString:fullURL];
@@ -43,15 +44,5 @@
     // Hago esto para que si hacen doble tap no cambie el tamaño.
     return nil;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

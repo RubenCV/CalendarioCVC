@@ -6,56 +6,53 @@
 //  Copyright (c) 2015 A00814298. All rights reserved.
 //
 
-
 #import <Foundation/Foundation.h>
 #import "MWFeedParser.h"
 
-//Global variable
-extern NSString *var2;
-
-// Parser
+// Parser.
 extern MWFeedParser *feedParser;
 extern NSMutableArray *parsedItems;
 
-// Displaying
-//extern NSArray *itemsToDisplay;
+// Displaying.
 extern NSDateFormatter *formatter;
 
-@interface GlobalCalendar : NSObject {
-    
-    //Singleton
-    NSString *var1;
-    
+// Singleton.
+@interface GlobalCalendar : NSObject
+{
+    // Necesarios para el Parser.
     MWFeedParser *feedParser;
-    NSMutableArray *parsedItems;
-    NSMutableArray *eventDayList;
-    NSMutableArray *newsIDList;
-    NSMutableArray *newsImages;
-    NSMutableArray *newsTitles;
-    
     NSArray *itemsToDisplay;
-    NSDateFormatter *formatter;
+    NSMutableArray *parsedItems;
     
+    // Necesarios para el calendario.
+    NSDateFormatter *formatter;
+    NSMutableArray *eventDayList;
+    NSMutableArray *eventTypeList;
+    
+    // Necesarios para las noticias.
+    NSMutableArray *newsIDList;
+    NSMutableArray *newsTitles;
+    NSMutableArray *newsImages;
 }
 
-
-// Properties
-@property (nonatomic, retain) NSString *var1;
-
+// Propiedades Parser.
 @property (nonatomic, retain) MWFeedParser *feedParser;
+@property (nonatomic, retain) NSArray *itemsToDisplay;
 @property (nonatomic, retain) NSMutableArray *parsedItems;
+
+// Propiedades calendario.
+@property (nonatomic, retain) NSDateFormatter *formatter;
 @property (nonatomic, retain) NSMutableArray *eventDayList;
+@property (nonatomic, retain) NSMutableArray *eventTypeList;
+
+// Propiedades noticias.
 @property (nonatomic, retain) NSMutableArray *newsIDList;
 @property (nonatomic, retain) NSMutableArray *newsImages;
 @property (nonatomic, retain) NSMutableArray *newsTitles;
-@property (nonatomic, retain) NSArray *itemsToDisplay;
-@property (nonatomic, retain) NSDateFormatter *formatter;
 
 @property (retain, nonatomic) id <MWFeedParserDelegate> delegado;
 
-// Functions
+// Funciones.
 + (GlobalCalendar *)sharedSingleton;
-+(NSString *)myData;
-- (void) SetMainCalendar;
 
 @end

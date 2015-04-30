@@ -29,7 +29,6 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "DSLCalendarDayCalloutView.h"
 #import "DSLCalendarDayView.h"
 #import "DSLCalendarMonthSelectorView.h"
 #import "DSLCalendarMonthView.h"
@@ -39,7 +38,6 @@
 
 @interface DSLCalendarView ()
 
-@property (nonatomic, strong) DSLCalendarDayCalloutView *dayCalloutView;
 @property (nonatomic, copy) NSDateComponents *draggingFixedDay;
 @property (nonatomic, copy) NSDateComponents *draggingStartDay;
 @property (nonatomic, assign) BOOL draggedOffStartDay;
@@ -86,8 +84,6 @@
     
     _visibleMonth = [[NSCalendar currentCalendar] components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSCalendarCalendarUnit fromDate:[NSDate date]];
     _visibleMonth.day = 1;
-    
-    _showDayCalloutView = YES;
     
     self.monthSelectorView = [[[self class] monthSelectorViewClass] view];
     self.monthSelectorView.backgroundColor = [UIColor clearColor];
@@ -136,13 +132,6 @@
     
     for (DSLCalendarMonthView *monthView in self.monthViews.allValues) {
         [monthView updateDaySelectionStatesForRange:self.selectedRange];
-    }
-}
-
-- (void)setDraggingStartDay:(NSDateComponents *)draggingStartDay {
-    _draggingStartDay = [draggingStartDay copy];
-    if (draggingStartDay == nil) {
-        [self.dayCalloutView removeFromSuperview];
     }
 }
 
@@ -392,7 +381,6 @@
     }
     self.selectedRange = newRange;
     
-    [self positionCalloutViewForDayView:touchedView];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -425,7 +413,6 @@
         }
     }
 
-    [self positionCalloutViewForDayView:touchedView];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -501,36 +488,6 @@
     return nil;
 }
 
-
-#pragma mark - Day callout view methods
-
-- (void)positionCalloutViewForDayView:(DSLCalendarDayView*)dayView {
-    // Comente esto porque por ahora no me interesa hacer el callOut al dia.
-    /*
-    if (dayView == nil) {
-        [self.dayCalloutView removeFromSuperview];
-    }
-    else if([self showDayCalloutView]){
-        CGRect calloutFrame = [self convertRect:dayView.frame fromView:dayView.superview];
-        calloutFrame.origin.y -= calloutFrame.size.height;
-        calloutFrame.size.height *= 2;
-        
-        if (self.dayCalloutView == nil) {
-            self.dayCalloutView = [DSLCalendarDayCalloutView view];
-        }
-
-        self.dayCalloutView.frame = calloutFrame;
-        [self.dayCalloutView configureForDay:dayView.day];
-        
-        if (self.dayCalloutView.superview == nil) {
-            [self addSubview:self.dayCalloutView];
-        }
-        else {
-            [self bringSubviewToFront:self.dayCalloutView];
-        }
-    }
-    */
-}
 
 #pragma GCC diagnostic warning "-Wdeprecated-declarations"
 @end

@@ -78,7 +78,7 @@ GlobalCalendar *myCalendar;
         event = [[myCalendar eventDayList] objectAtIndex:i];
         if(event == dia)
             {
-                _eventIndex = i/2;
+                _eventIndex = (int)i/2;
                 _diaString = dayString;
                 [self performSegueWithIdentifier:@"Event" sender:self];
             }
@@ -94,7 +94,7 @@ GlobalCalendar *myCalendar;
     if ([[segue identifier] isEqualToString:@"Event"]) {
         EventoViewController *evc = [segue destinationViewController];
         evc.diaString = _diaString;
-        evc.eventIndex = (int)_eventIndex;
+        evc.eventIndex = _eventIndex;
     }
 }
 

@@ -25,7 +25,6 @@ GlobalCalendar *myCalendar;
 - (void)viewDidLoad {
     [super viewDidLoad];
     myCalendar = [GlobalCalendar sharedSingleton];
-    //[myCalendar feedParser].delegate = self;
     
     //HOY
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -57,9 +56,10 @@ GlobalCalendar *myCalendar;
 
 
 - (void)loadEventDays {
-    // Declarar arreglo de eventos.
+    // Declarar arreglo de fechas y tipos de eventos.
     NSMutableArray *arrFechaEventos = [[NSMutableArray alloc] init];
-    
+    NSMutableArray *arrTipoEventos = [[NSMutableArray alloc] init];
+
     // Declarar date formatter.
     NSDateFormatter *ddMMMyyyy = [[NSDateFormatter alloc] init];
     NSLocale *mxLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
@@ -147,8 +147,25 @@ GlobalCalendar *myCalendar;
         NSDate *evento = [ddMMMyyyy dateFromString: dateStartString];
         [arrFechaEventos addObject:evento];
         [arrFechaEventos addObject:dateStartString];
+        
+        // Tipo de Evento
+        NSString *eventoString = [[item.title stringByAppendingString:item.summary]uppercaseString];
+        
+        // TIPO 1 = Reclutamiento.
+        eventoString = [eventoString stringByReplacingOccurrencesOfString:@"RECLUTAMIENTO"
+                                                                        withString:@" TIPO1 "];
+        // TIPO 2 = Platica / Conferencia.
+        eventoString = [eventoString stringByReplacingOccurrencesOfString:@"PLÁTICA"
+                                                               withString:@" TIPO2 "];
+        eventoString = [eventoString stringByReplacingOccurrencesOfString:@"CONFERENCIA"
+                                                               withString:@" TIPO2 "];
+        
+        arrTipoEventos[i] = @"0";
+        if ([eventoString rangeOfString:@"TIPO1"].location != NSNotFound) arrTipoEventos[i] = @"1";
+        else if ([eventoString rangeOfString:@"TIPO2"].location != NSNotFound) arrTipoEventos[i] = @"2";
     }
     
+    myCalendar.eventTypeList = arrTipoEventos;
     myCalendar.eventDayList = arrFechaEventos;
 }
 
@@ -296,7 +313,6 @@ GlobalCalendar *myCalendar;
                                               otherButtonTitles:nil];
         [alert show];
     }
-    //[self updateTableWithParsedItems];
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
@@ -304,23 +320,27 @@ GlobalCalendar *myCalendar;
     
 }
 
-
+// Boton facebook
 - (IBAction)facebook:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/cvcmonterrey"]];
 }
 
+// Boton google+
 - (IBAction)google:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://plus.google.com/112361602358516849606/posts"]];
 }
 
+// Boton linkedin
 - (IBAction)linkedin:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.linkedin.com/groups/ITESM-Centro-Vida-Carrera-3737527?mostPopular=&gid=3737527"]];
 }
 
+// Boton twitter
 - (IBAction)twitter:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/CVC_Monterrey"]];
 }
 
+// Boton youtube
 - (IBAction)youtube:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/user/TecnologicoMonterrey"]];
 }

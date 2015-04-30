@@ -40,7 +40,8 @@
 
 GlobalCalendar *myCalendar;
 
-@implementation DSLCalendarDayView {
+@implementation DSLCalendarDayView
+{
     __strong NSCalendar *_calendar;
     __strong NSDate *_dayAsDate;
     __strong NSDateComponents *_day;
@@ -50,126 +51,134 @@ GlobalCalendar *myCalendar;
 #pragma mark - Initialisation
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame
+{
     self = [super initWithFrame:frame];
-    if (self != nil) {
+    if (self != nil)
+    {
         self.backgroundColor = [UIColor whiteColor];
         _positionInWeek = DSLCalendarDayViewMidWeek;
     }
-    
     return self;
 }
 
 
 #pragma mark Properties
 
-- (void)setSelectionState:(DSLCalendarDayViewSelectionState)selectionState {
+- (void)setSelectionState:(DSLCalendarDayViewSelectionState)selectionState
+{
     _selectionState = selectionState;
     [self setNeedsDisplay];
 }
 
-- (void)setDay:(NSDateComponents *)day {
+- (void)setDay:(NSDateComponents *)day
+{
     _calendar = [day calendar];
     _dayAsDate = [day date];
     _day = nil;
     _labelText = [NSString stringWithFormat:@"%ld", (long)day.day];
 }
 
-- (NSDateComponents*)day {
-    if (_day == nil) {
+- (NSDateComponents*)day
+{
+    if (_day == nil)
+    {
         _day = [_dayAsDate dslCalendarView_dayWithCalendar:_calendar];
     }
-    
     return _day;
 }
 
-- (NSDate*)dayAsDate {
+- (NSDate*)dayAsDate
+{
     return _dayAsDate;
 }
 
-- (void)setInCurrentMonth:(BOOL)inCurrentMonth {
+- (void)setInCurrentMonth:(BOOL)inCurrentMonth
+{
     _inCurrentMonth = inCurrentMonth;
     [self setNeedsDisplay];
 }
 
 
 #pragma mark UIView methods
-- (void)drawRect:(CGRect)rect {
-    if ([self isMemberOfClass:[DSLCalendarDayView class]]) {
+- (void)drawRect:(CGRect)rect
+{
+    if ([self isMemberOfClass:[DSLCalendarDayView class]])
+    {
         [self drawBackground];
     }
 }
 
 #pragma mark Drawing
-- (void)drawBackground {
+- (void)drawBackground
+{
+    // Pinto el fondo del color gris claro.
+    [[UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1] setFill];
+    UIRectFill(self.bounds);
+    
+    // Declaracion de variables.
     UIColor *textColor;
-    //
-    if (self.selectionState == DSLCalendarDayViewNotSelected) {
-        [[UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1] setFill];
-        UIRectFill(self.bounds);
-        NSUInteger flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        
-        NSDateComponents *components = [calendar components:flags fromDate:[self.day date]];
-        NSDateComponents *componentsOfToday = [calendar components:flags fromDate:[NSDate date]];
-        
-        NSDate *date = [calendar dateFromComponents:components];
-        NSDate *dateToday = [calendar dateFromComponents:componentsOfToday];
+    UIFont *textFont = [UIFont boldSystemFontOfSize:18.0];
+    NSUInteger flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents *components = [calendar components:flags fromDate:[self.day date]];
+    NSDateComponents *componentsOfToday = [calendar components:flags fromDate:[NSDate date]];
+    
+    NSDate *date = [calendar dateFromComponents:components];
+    NSDate *dateToday = [calendar dateFromComponents:componentsOfToday];
 
-        if (self.isInCurrentMonth) {
+    // Si este dia no esta siendo seleccionado.
+    if (self.selectionState == DSLCalendarDayViewNotSelected) {
+        if (self.isInCurrentMonth)
+        {
             textColor = [UIColor blackColor];
         }
-        else {
+        else
+        {
             textColor = [UIColor colorWithWhite:110.0/255.0 alpha:1.0];
-        }
-        
-        // Checa dia de hoy.
-        if ([date isEqualToDate:dateToday]) {
-            textColor = [UIColor colorWithRed:21.0/255.0 green:170.0/255.0 blue:237.0/255.0 alpha:1];
         }
         
         // Checar si el dia que dibujo pertenece a un evento.
         if([myCalendar.eventDayList containsObject: date])
         {
-            if (![date isEqualToDate:dateToday])
-                textColor = [UIColor whiteColor];
-            [[[UIImage imageNamed:@"CalendarEventYellow"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
-        }
-    }
-    else {
-        [[UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1] setFill];
-        UIRectFill(self.bounds);
-        textColor = [UIColor whiteColor];
-        switch (self.selectionState) {
-            case DSLCalendarDayViewNotSelected:
-                break;
-                
-            case DSLCalendarDayViewStartOfSelection:
-                [[[UIImage imageNamed:@"DSLCalendarDaySelection-left"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
-                break;
-                
-            case DSLCalendarDayViewEndOfSelection:
-                [[[UIImage imageNamed:@"DSLCalendarDaySelection-right"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
-                break;
-                
-            case DSLCalendarDayViewWithinSelection:
-                [[[UIImage imageNamed:@"DSLCalendarDaySelection-middle"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
-                break;
-                
-            case DSLCalendarDayViewWholeSelection:
+            textColor = [UIColor whiteColor];
+            NSInteger index = [myCalendar.eventDayList indexOfObject:date];
+            
+            // Evento tipo Misc.
+            if ([myCalendar.eventTypeList[(int)index/2] isEqualToString:@"0"])
+            {
+                [[[UIImage imageNamed:@"CalendarEventYellow"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+            }
+            // Evento tipo Reclutamiento.
+            else if ([myCalendar.eventTypeList[(int)index/2] isEqualToString:@"1"])
+            {
+                [[[UIImage imageNamed:@"CalendarToday"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+            }
+            // Evento tipo Platica / Conferencia.
+            else if ([myCalendar.eventTypeList[(int)index/2] isEqualToString:@"2"])
+            {
                 [[[UIImage imageNamed:@"DSLCalendarDaySelection"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
-                break;
+            }
         }
     }
-    
-    //
+    // Si este dia esta siendo seleccionado.
+    else
+    {
+        textColor = [UIColor whiteColor];
+        [[[UIImage imageNamed:@"DSLCalendarDaySelection"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+    }
+    // Checa dia de hoy.
+    if ([date isEqualToDate:dateToday])
+    {
+        textFont = [UIFont boldSystemFontOfSize:25.0];
+        textColor = [UIColor colorWithRed:21.0/255.0 green:170.0/255.0 blue:237.0/255.0 alpha:1];
+    }
+    // Escribir el num. de dia.
     [textColor set];
-    UIFont *textFont = [UIFont boldSystemFontOfSize:19.0];
     CGSize textSize = [_labelText sizeWithFont:textFont];
-    
     CGRect textRect = CGRectMake(ceilf(CGRectGetMidX(self.bounds) - (textSize.width / 2.0)), ceilf(CGRectGetMidY(self.bounds) - (textSize.height / 2.0)), textSize.width, textSize.height);
     [_labelText drawInRect:textRect withFont:textFont];
-    
 }
 
 #pragma GCC diagnostic warning "-Wdeprecated-declarations"

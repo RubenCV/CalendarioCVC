@@ -11,8 +11,6 @@
 
 @interface TableViewControllerContacto ()
 
-
-
 @property (strong, nonatomic) NSArray *arrAdmDir;
 @property (strong, nonatomic) NSArray *arrDesProVinc;
 @property (strong, nonatomic) NSArray *arrEvaRetro;

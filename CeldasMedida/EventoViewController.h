@@ -10,14 +10,31 @@
 
 @interface EventoViewController : UIViewController
 
+// Outlets.
 @property (strong, nonatomic) IBOutlet UILabel *lbTitulo;
-@property (strong, nonatomic) IBOutlet UILabel *lbDescripcion;
-@property (strong, nonatomic) IBOutlet UILabel *lbInformes;
-@property (strong, nonatomic) IBOutlet UILabel *lbFecha;
-@property (strong, nonatomic) IBOutlet UILabel *lbLugar;
+@property (strong, nonatomic) IBOutlet UITextView *tvFecha;
+@property (strong, nonatomic) IBOutlet UITextView *tvLugar;
+@property (strong, nonatomic) IBOutlet UITextView *tvInformes;
+@property (strong, nonatomic) IBOutlet UITextView *tvDescripcion;
 
-@property (nonatomic, strong) NSString *dateString, *dateStartString, *dateEndString, *summaryString, *placeString, *informesString, *titleString, *descriptionString;
+// Dia en el que aparece el evento en la vista calendario.
 @property (strong, nonatomic) NSString *diaString;
+
+// Propiedades relacionadas al dia del evento.
+@property (strong, nonatomic) NSString *dateString;
+@property (strong, nonatomic) NSString *dateStartString;
+@property (strong, nonatomic) NSString *dateEndString;
+
+// Propiedades del evento.
 @property (nonatomic) NSInteger eventIndex;
+@property (strong, nonatomic) NSString *titleString;
+@property (strong, nonatomic) NSString *placeString;
+@property (strong, nonatomic) NSString *summaryString;
+@property (strong, nonatomic) NSString *informesString;
+@property (strong, nonatomic) NSString *descriptionString;
+
+// Botones
+- (IBAction)mail:(id)sender;
+- (IBAction)agregarCal:(id)sender;
 
 @end

@@ -14,7 +14,8 @@
 
 @implementation ContactoViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.lbNombre.text = self.nom;
@@ -25,12 +26,14 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)actMail:(id)sender {
+- (IBAction)actMail:(id)sender
+{
     NSString *s = @"mailto:";
     s = [s stringByAppendingString:self.email];
     

@@ -13,5 +13,4 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbNoticia;
 @property (strong, nonatomic) IBOutlet UIImageView *imgvNoticia;
 
-
 @end

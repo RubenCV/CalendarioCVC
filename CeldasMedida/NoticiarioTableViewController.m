@@ -9,7 +9,6 @@
 #import "NoticiarioTableViewController.h"
 #import "NoticiaViewController.h"
 #import "NoticiaTableViewCell.h"
-#import "NSString+HTML.h"
 #import "GlobalCalendar.h"
 
 @interface NoticiarioTableViewController ()
@@ -20,24 +19,28 @@ GlobalCalendar *myCalendar;
 
 @implementation NoticiarioTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     myCalendar = [GlobalCalendar sharedSingleton];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     // Return the number of rows in the section.
     return myCalendar.newsIDList.count;
 }
@@ -76,11 +79,11 @@ GlobalCalendar *myCalendar;
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NoticiaViewController *nvc = [segue destinationViewController];
     nvc.idNoticia = myCalendar.newsIDList[indexPath.row];
 }
-
 
 @end
