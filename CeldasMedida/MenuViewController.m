@@ -28,7 +28,9 @@ GlobalCalendar *myCalendar;
     
     //HOY
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    NSLocale *mxLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
     [dateFormat setDateFormat:@"dd/MMM/yy"];
+    [dateFormat setLocale:mxLocale];
     NSString *dateString = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
     self.lbDia.text = dateString;
     
@@ -37,7 +39,6 @@ GlobalCalendar *myCalendar;
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     parsedItems = [[NSMutableArray alloc] init];
     myCalendar.itemsToDisplay = [NSArray array];
-    
     
     // Parse
     NSURL *feedURL = [NSURL URLWithString:@"https://www.google.com/calendar/feeds/b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com/public/basic"];

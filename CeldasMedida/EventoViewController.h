@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *tvLugar;
 @property (strong, nonatomic) IBOutlet UITextView *tvInformes;
 @property (strong, nonatomic) IBOutlet UITextView *tvDescripcion;
+@property (strong, nonatomic) IBOutlet UIButton *btCalendario;
 
 // Dia en el que aparece el evento en la vista calendario.
 @property (strong, nonatomic) NSString *diaString;

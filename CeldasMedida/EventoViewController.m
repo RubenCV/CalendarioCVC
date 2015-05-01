@@ -43,7 +43,7 @@ GlobalCalendar *myCalendar;
     dateString = @"Horario Pendiente.";
     placeString = @"ITESM";
     descriptionString = @"Descripcion Pendiente.";
-    informesString = @"8358 2000 ext.3614\ncvc.mty@servicios.itesm.mx";
+    informesString = @"8358 2000 ext 3614\ncvc.mty@servicios.itesm.mx";
     _emailString = @"cvc.mty@servicios.itesm.mx";
     
     // Titulo
@@ -179,6 +179,10 @@ GlobalCalendar *myCalendar;
     _tvLugar.selectable = NO;
     _tvInformes.selectable = NO;
     _tvFecha.selectable = NO;
+    
+    // Si no tiene horario aisgnado, ocultar boton de agregar iCal.
+    if([dateString isEqualToString:@"Horario Pendiente."])
+        _btCalendario.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -199,25 +203,73 @@ GlobalCalendar *myCalendar;
 
 - (IBAction)agregarCal:(id)sender
 {
+    NSString *startEvent;
+    NSDate *fechaInicio;
+    
     // Declarar date formatter.
-    /*
-    NSDateFormatter *ddMMMyyyy = [[NSDateFormatter alloc] init];
+    NSDateFormatter *ddMMMyyyyHHmm = [[NSDateFormatter alloc] init];
     NSLocale *mxLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
-    [ddMMMyyyy setLocale:mxLocale];
-    ddMMMyyyy.dateFormat = @"dd-MMM-yyyy";
-    NSDate *inicio = [ddMMMyyyy dateFromString: _diaString];
-     */
+    ddMMMyyyyHHmm.dateFormat = @"dd-MMM-yyyy-HH:mm";
+    ddMMMyyyyHHmm.locale = mxLocale;
+    
+    /// FECHA INICIO ///
+    
+    // Empiezo despues de "Empieza: xxx ".
+    startEvent = [dateString substringFromIndex:13];
+    
+    // Quitar apartir de Finaliza.
+    if ([startEvent rangeOfString:@"Finaliza: "].location != NSNotFound)
+        startEvent = [startEvent substringWithRange:NSMakeRange(0, [startEvent rangeOfString:@"Finaliza: "].location-1)];
+    
+    // Poner en Formato.
+    startEvent = [startEvent stringByReplacingOccurrencesOfString:@" "
+                                                       withString:@"-"];
+    
+    // Si no tiene programada una hora, lo pondre a las 4 de la tarde.
+    if (startEvent.length < 14)
+        startEvent = [startEvent stringByAppendingString:@"16:00"];
+    
+    // Lo asigno en la variable de tipo NSDate.
+    fechaInicio = [ddMMMyyyyHHmm dateFromString: startEvent];
+    
+    
+    /// FECHA FIN ///
+    NSString *endEvent = dateString;
+    NSDate *fechaFin;
+    
+    // Checo si el evento me da la duracion.
+    if ([endEvent rangeOfString:@"Finaliza: "].location != NSNotFound)
+    {
+        // Quitar apartir de Finaliza
+        endEvent = [endEvent substringFromIndex:[endEvent rangeOfString:@"Finaliza: "].location + 14];
+        
+        // Poner en Formato.
+        endEvent = [endEvent stringByReplacingOccurrencesOfString:@" "
+                                                       withString:@"-"];
+        
+        endEvent = [endEvent substringWithRange:NSMakeRange(0, endEvent.length-2)];
+        
+        // Lo asigno en la variable de tipo NSDate.
+        fechaFin = [ddMMMyyyyHHmm dateFromString: endEvent];
+    }
+    
+    // Si no tiene fecha fin determinada, le asigno por default 1 hora.
+    else
+    {
+        fechaFin = [fechaInicio dateByAddingTimeInterval:60*60];
+    }
     
     EKEventStore *store = [[EKEventStore alloc] init];
     [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error)
     {
         if (!granted){ return; }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+        
         EKEvent *event = [EKEvent eventWithEventStore:store];
         event.title = titleString;
-        // Cambiar a dia / hora inicio.
-        event.startDate = [NSDate date]; // Dia del evento.
-        // Cambiar a dia / hora fin.
-        event.endDate = [event.startDate dateByAddingTimeInterval:60*60];  // Dura una hora (testing).
+        event.startDate = fechaInicio;
+        event.endDate = fechaFin;
         [event setCalendar:[store defaultCalendarForNewEvents]];
         NSError *err = nil;
         [store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];
@@ -229,9 +281,8 @@ GlobalCalendar *myCalendar;
                                                cancelButtonTitle: @"OK"
                                                otherButtonTitles: nil];
         [alerta show];
-        
-        NSLog(@"Agregado a Calendario.");
-        
+            
+        });
     }];
 }
 

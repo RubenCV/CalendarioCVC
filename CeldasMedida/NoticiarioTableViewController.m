@@ -45,7 +45,6 @@ GlobalCalendar *myCalendar;
     return myCalendar.newsIDList.count;
 }
 
-// Checar esto
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Creo la cell.

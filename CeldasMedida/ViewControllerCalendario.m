@@ -27,19 +27,24 @@ GlobalCalendar *myCalendar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    myCalendar = [GlobalCalendar sharedSingleton];
     
+    // Singleton
+    myCalendar = [GlobalCalendar sharedSingleton];
     self.calendarView.delegate = self;
     
-    // HOY
+    /// HOY ///
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd/MMMM-yyyy"];
-    NSString *dateString = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
-    NSRange dayRange = [dateString rangeOfString:@"/"];
-    NSRange monthRange = [dateString rangeOfString:@"-"];
-    self.lbDay.text = [dateString substringWithRange:NSMakeRange(0, dayRange.location)];
-    self.lbMonth.text = [dateString substringWithRange:NSMakeRange(dayRange.location+1, dateString.length - monthRange.location)];
-    self.lbYear.text = [dateString substringWithRange:NSMakeRange(dateString.length-4, 4)];
+    NSLocale *mxLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
+    [dateFormat setLocale:mxLocale];
+    // Dia
+    [dateFormat setDateFormat:@"dd"];
+    self.lbDay.text = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
+    // Mes
+    [dateFormat setDateFormat:@"MMMM"];
+    self.lbMonth.text = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
+    // Año
+    [dateFormat setDateFormat:@"yyyy"];
+    self.lbYear.text = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
     
 }
 

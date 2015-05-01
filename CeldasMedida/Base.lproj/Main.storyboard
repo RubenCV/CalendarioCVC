@@ -436,24 +436,24 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W82-EE-9wn">
-                                        <rect key="frame" x="102" y="72" width="156" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Agregar a mi Calendario">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="agregarCal:" destination="mqx-UX-z8a" eventType="touchUpInside" id="pIX-2s-HNk"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aH-ZD-3n2">
-                                        <rect key="frame" x="182" y="358" width="76" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="182" y="359" width="76" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Enviar mail">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="mail:" destination="mqx-UX-z8a" eventType="touchUpInside" id="byG-eZ-GO0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W82-EE-9wn">
+                                        <rect key="frame" x="94" y="72" width="166" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Agregar a mi Calendario">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="agregarCal:" destination="mqx-UX-z8a" eventType="touchUpInside" id="pIX-2s-HNk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -466,6 +466,7 @@
                         <barButtonItem key="backBarButtonItem" title="Calendario" id="hDZ-3Z-ZLO"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="btCalendario" destination="W82-EE-9wn" id="qj4-kW-RHs"/>
                         <outlet property="lbTitulo" destination="P5c-e1-Xk4" id="ehM-aX-ccq"/>
                         <outlet property="tvDescripcion" destination="QRI-9q-mni" id="zhP-F6-bJi"/>
                         <outlet property="tvFecha" destination="79x-qJ-n83" id="ddl-Nx-y9u"/>

@@ -90,31 +90,31 @@
         NSString *tmp = [object objectForKey:@"nombre"];
         [arrTmpInnovPlan addObject:tmp];
     }
-   
+    
     
     NSDictionary *section1 = [NSDictionary dictionaryWithObjectsAndKeys:
-                              sectionTitle1,@"title",
-                              arrTmpAdmDir,@"cities",
+                              sectionTitle1,@"nombre",
+                              arrTmpAdmDir,@"departamento",
                               @"1",@"visible",nil];
     
     NSDictionary *section2 = [NSDictionary dictionaryWithObjectsAndKeys:
-                              sectionTitle2,@"title",
-                              arrTmpDesProVinc,@"cities",
+                              sectionTitle2,@"nombre",
+                              arrTmpDesProVinc,@"departamento",
                               @"1",@"visible",nil];
     
     NSDictionary *section3 = [NSDictionary dictionaryWithObjectsAndKeys:
-                              sectionTitle3,@"title",
-                              arrTmpEvaRetro,@"cities",
+                              sectionTitle3,@"nombre",
+                              arrTmpEvaRetro,@"departamento",
                               @"1",@"visible",nil];
     
     NSDictionary *section4 = [NSDictionary dictionaryWithObjectsAndKeys:
-                              sectionTitle4,@"title",
-                              arrTmpExpProf,@"cities",
+                              sectionTitle4,@"nombre",
+                              arrTmpExpProf,@"departamento",
                               @"1",@"visible",nil];
     
     NSDictionary *section5 = [NSDictionary dictionaryWithObjectsAndKeys:
-                              sectionTitle5,@"title",
-                              arrTmpInnovPlan,@"cities",
+                              sectionTitle5,@"nombre",
+                              arrTmpInnovPlan,@"departamento",
                               @"1",@"visible",nil];
     
     //Los cargamos en el array principal
@@ -141,13 +141,13 @@
 {
     //Cargamos los datos de la sección
     NSDictionary *dataSection = [self.tableData objectAtIndex:section];
-    NSArray *sectionSubtitles = [dataSection objectForKey:@"cities"];
+    NSArray *sectionSubnombres = [dataSection objectForKey:@"departamento"];
     BOOL visible = [[dataSection objectForKey:@"visible"] boolValue];
     
     //Comprobamos si el flag "visible" está activo o no. Si lo está mostramos las ciudades si no,
     //se mostrará una sección vacía (oculta)
     if (visible) {
-        return [sectionSubtitles count];
+        return [sectionSubnombres count];
     } else {
         return 0;
     }
@@ -160,10 +160,10 @@
     
     //Cargamos los datos de la sección
     NSDictionary *dataSection = [self.tableData objectAtIndex:indexPath.section];
-    NSArray *sectionSubtitles = [dataSection objectForKey:@"cities"];
+    NSArray *sectionSubnombres = [dataSection objectForKey:@"departamento"];
     
     //Modificamos la celda con el texto correspondiente dentro de la sección
-    [cell.textLabel setText:[sectionSubtitles objectAtIndex:indexPath.row]];
+    [cell.textLabel setText:[sectionSubnombres objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -172,7 +172,7 @@
 {
     //Cargamos el título de la sección
     NSDictionary *dataSection = [self.tableData objectAtIndex:section];
-    NSString *sectionTitle = [dataSection objectForKey:@"title"];
+    NSString *sectionTitle = [dataSection objectForKey:@"nombre"];
     
     //Creamos un botón que contiene el título y que al pulsarlo modificará la visibilidad de la sección
     UIButton *headerView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 60)];
@@ -218,30 +218,26 @@
     
     NSDictionary *object;
     switch (tmpInt) {
-        case 0:{
+        case 0:
             object = self.arrAdmDir[tmpRow];
             break;
-        }
+            
         case 1:
-        {
             object = self.arrDesProVinc[tmpRow];
             break;
-        }
+            
         case 2:
-        {
             object = self.arrEvaRetro[tmpRow];
             break;
-        }
+            
         case 3:
-        {
             object = self.arrExpProf[tmpRow];
             break;
-        }
+            
         case 4:
-        {
             object = self.arrInnovPlan[tmpRow];
             break;
-        }
+            
         default:
             break;
     }
@@ -250,7 +246,7 @@
     cvc.area = [object objectForKey:@"area"];
     cvc.tel = [object objectForKey:@"telefono"];
     cvc.email = [object objectForKey:@"mail"];
-     
+    
 }
 
 @end
