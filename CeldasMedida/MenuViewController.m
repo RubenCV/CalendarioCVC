@@ -24,12 +24,14 @@ GlobalCalendar *myCalendar;
     [super awakeFromNib];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     myCalendar = [GlobalCalendar sharedSingleton];
+    // Inicializo boleana que indica si ya se cargaron los datos necesarios.
     _loaded = NO;
     
-    //HOY
+    // Escribir el dia de hoy en el icono de calendario.
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     NSLocale *mxLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_MX"];
     [dateFormat setDateFormat:@"dd/MMM/yy"];
@@ -43,23 +45,24 @@ GlobalCalendar *myCalendar;
     parsedItems = [[NSMutableArray alloc] init];
     myCalendar.itemsToDisplay = [NSArray array];
     
-    // Parse
+    // Inicializar el Parse con la liga feed de Google calendar.
     NSURL *feedURL = [NSURL URLWithString:@"https://www.google.com/calendar/feeds/b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com/public/basic"];
     feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
-    
     feedParser.delegate = self;
     feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
     feedParser.connectionType = ConnectionTypeAsynchronously;
     [feedParser parse];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 
-- (void)loadEventDays {
+- (void)loadEventDays
+{
     // Declarar arreglo de fechas y tipos de eventos.
     NSMutableArray *arrFechaEventos = [[NSMutableArray alloc] init];
     NSMutableArray *arrTipoEventos = [[NSMutableArray alloc] init];
@@ -168,12 +171,12 @@ GlobalCalendar *myCalendar;
         if ([eventoString rangeOfString:@"TIPO1"].location != NSNotFound) arrTipoEventos[i] = @"1";
         else if ([eventoString rangeOfString:@"TIPO2"].location != NSNotFound) arrTipoEventos[i] = @"2";
     }
-    
     myCalendar.eventTypeList = arrTipoEventos;
     myCalendar.eventDayList = arrFechaEventos;
 }
 
-- (void)loadNewsID {
+- (void)loadNewsID
+{
     // Declarar arreglo de eventos.
     NSMutableArray *arrNoticiasID = [[NSMutableArray alloc] init];
     NSMutableArray *arrNoticiasTitulos = [[NSMutableArray alloc] init];
@@ -204,7 +207,6 @@ GlobalCalendar *myCalendar;
     for(int i = 0; i < 10; i++)
     {
         haystack = cvcPage;
-        
         if ([haystack rangeOfString:prefix].location != NSNotFound && [haystack rangeOfString:suffix].location != NSNotFound)
         {
             // ID
@@ -221,7 +223,6 @@ GlobalCalendar *myCalendar;
             needle = [cvcPage substringWithRange:needleRange];
             
             // Quito cursivas y negritas.
-            
             needle = [needle stringByReplacingOccurrencesOfString:@"<i>"
                                                        withString:@""];
             
@@ -242,20 +243,16 @@ GlobalCalendar *myCalendar;
                 suffixRange = [needle rangeOfString:@" $$NewEnd$$ "];
                 needle = [needle substringWithRange:NSMakeRange(0, suffixRange.location)];
             }
-            
             // Almacena el titulo en el arreglo.
-            
             [arrNoticiasTitulos addObject:needle];
         }
-        
     }
-    
     myCalendar.newsIDList = arrNoticiasID;
     myCalendar.newsTitles = arrNoticiasTitulos;
 }
 
-- (void)loadNewsImages {
-    
+- (void)loadNewsImages
+{
     NSMutableArray *arrImages = [[NSMutableArray alloc] init];
     NSString *link = @"https://cvc.itesm.mx/ex_general_img/A";
     NSString *ext = @".jpg";
@@ -278,34 +275,42 @@ GlobalCalendar *myCalendar;
 #pragma mark -
 #pragma mark MWFeedParserDelegate
 
-- (void)feedParserDidStart:(MWFeedParser *)parser {
+- (void)feedParserDidStart:(MWFeedParser *)parser
+{
     NSLog(@"Started Parsing: %@", parser.url);
 }
 
-- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
+- (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info
+{
     NSLog(@"Parsed Feed Info: “%@”", info.title);
     //self.title = info.title;
 }
 
-- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
+- (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item
+{
     NSLog(@"Parsed Feed Item: “%@”", item.title);
     if (item) [parsedItems addObject:item];
 }
 
-- (void)feedParserDidFinish:(MWFeedParser *)parser {
+- (void)feedParserDidFinish:(MWFeedParser *)parser
+{
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
+    // Hacer el feed de los dias de evento, de las imagenes y encabezados de las noticias.
     [self loadEventDays];
     [self loadNewsID];
     [self loadNewsImages];
     NSLog(@"Finalizo el Parser costum CVC.");
+    
+    // Detener los activity, y permitir al usuario hacer clic en esas opciones.
     [_actEventos stopAnimating];
     [_actNoticias stopAnimating];
     _loaded = YES;
 }
 
-- (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
+- (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error
+{
     NSLog(@"Finished Parsing With Error: %@", error);
     if (parsedItems.count == 0) {
         self.title = @"Failed"; // Show failed message in title
@@ -321,8 +326,6 @@ GlobalCalendar *myCalendar;
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
-    
-    
 }
 
 // Boton eventos

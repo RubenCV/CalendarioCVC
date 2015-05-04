@@ -148,31 +148,31 @@ GlobalCalendar *myCalendar;
             // Evento tipo Misc.
             if ([myCalendar.eventTypeList[(int)index/2] isEqualToString:@"0"])
             {
-                [[[UIImage imageNamed:@"CalendarEventYellow"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+                [[[UIImage imageNamed:@"diaEvento3"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
             }
             // Evento tipo Reclutamiento.
             else if ([myCalendar.eventTypeList[(int)index/2] isEqualToString:@"1"])
             {
-                [[[UIImage imageNamed:@"CalendarToday"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+                [[[UIImage imageNamed:@"diaEvento1"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
             }
             // Evento tipo Platica / Conferencia.
             else if ([myCalendar.eventTypeList[(int)index/2] isEqualToString:@"2"])
             {
-                [[[UIImage imageNamed:@"DSLCalendarDaySelection"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
+                [[[UIImage imageNamed:@"diaEvento2"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
             }
         }
-    }
-    // Si este dia esta siendo seleccionado.
-    else
-    {
-        textColor = [UIColor whiteColor];
-        [[[UIImage imageNamed:@"DSLCalendarDaySelection"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
     }
     // Checa dia de hoy.
     if ([date isEqualToDate:dateToday])
     {
         textFont = [UIFont boldSystemFontOfSize:25.0];
         textColor = [UIColor colorWithRed:21.0/255.0 green:170.0/255.0 blue:237.0/255.0 alpha:1];
+    }
+    // Si este dia esta siendo seleccionado.
+    if (self.selectionState != DSLCalendarDayViewNotSelected)
+    {
+        textColor = [UIColor whiteColor];
+        [[[UIImage imageNamed:@"diaSeleccionado"] resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)] drawInRect:self.bounds];
     }
     // Escribir el num. de dia.
     [textColor set];

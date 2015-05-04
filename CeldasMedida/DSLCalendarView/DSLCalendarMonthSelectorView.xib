@@ -95,7 +95,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">DSLCalendar-previousMonth.png</string>
+							<string key="NSResourceName">flechaIzquierda.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription" id="309090528">
 							<int key="type">2</int>
@@ -127,7 +127,7 @@
 						<reference key="IBUINormalTitleShadowColor" ref="971388478"/>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">DSLCalendar-nextMonth.png</string>
+							<string key="NSResourceName">flechaDerecha.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="309090528"/>
 						<reference key="IBUIFont" ref="165138114"/>
@@ -436,9 +436,9 @@
 							<reference ref="346842101"/>
 							<reference ref="1064320974"/>
 							<reference ref="150265878"/>
+							<reference ref="461668017"/>
 							<reference ref="504227179"/>
 							<reference ref="942570906"/>
-							<reference ref="461668017"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -541,8 +541,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="DSLCalendar-nextMonth.png">{50, 90}</string>
-			<string key="DSLCalendar-previousMonth.png">{50, 90}</string>
+			<string key="flechaDerecha.png">{50, 90}</string>
+			<string key="flechaIzquierda.png">{50, 90}</string>
 		</dictionary>
 	</data>
 </archive>

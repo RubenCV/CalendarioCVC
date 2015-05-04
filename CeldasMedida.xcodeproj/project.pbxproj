@@ -10,8 +10,6 @@
 		8DEF901A1AC78A7D00CA2E78 /* Property List AdmDir.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEF90191AC78A7D00CA2E78 /* Property List AdmDir.plist */; };
 		8DFBEDC01AE5C1CA00F6AF2F /* GlobalCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */; };
 		B806B1661AE60A7D00AF96F0 /* ContactoFondo.png in Resources */ = {isa = PBXBuildFile; fileRef = B806B1651AE60A7D00AF96F0 /* ContactoFondo.png */; };
-		B806B16C1AE60F9300AF96F0 /* CalendarToday.png in Resources */ = {isa = PBXBuildFile; fileRef = B806B16B1AE60F9300AF96F0 /* CalendarToday.png */; };
-		B806B16E1AE60F9D00AF96F0 /* CalendarEventYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B806B16D1AE60F9D00AF96F0 /* CalendarEventYellow.png */; };
 		B808E31D1AC4EB9D003872A2 /* ViewControllerCalendario.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */; };
 		B808E3401AC4EC09003872A2 /* DSLCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E3231AC4EC09003872A2 /* DSLCalendarDayView.m */; };
 		B808E3411AC4EC09003872A2 /* DSLCalendarMonthSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E3251AC4EC09003872A2 /* DSLCalendarMonthSelectorView.m */; };
@@ -21,7 +19,15 @@
 		B808E3451AC4EC09003872A2 /* DSLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E32C1AC4EC09003872A2 /* DSLCalendarView.m */; };
 		B808E3541AC4EC09003872A2 /* NSDate+DSLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */; };
 		B808E35A1AC4EE27003872A2 /* TableViewControllerContacto.m in Sources */ = {isa = PBXBuildFile; fileRef = B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */; };
-		B80A5EE31AE9EEE50078F5E5 /* DSLCalendarDaySelection.png in Resources */ = {isa = PBXBuildFile; fileRef = B80A5EE21AE9EEE50078F5E5 /* DSLCalendarDaySelection.png */; };
+		B80951111AF7B1D5003C8A0D /* flechaDerecha.png in Resources */ = {isa = PBXBuildFile; fileRef = B809510E1AF7B1D5003C8A0D /* flechaDerecha.png */; };
+		B80951121AF7B1D5003C8A0D /* flechaIzquierda.png in Resources */ = {isa = PBXBuildFile; fileRef = B809510F1AF7B1D5003C8A0D /* flechaIzquierda.png */; };
+		B809511F1AF7B87F003C8A0D /* diaEvento1.png in Resources */ = {isa = PBXBuildFile; fileRef = B809511B1AF7B87F003C8A0D /* diaEvento1.png */; };
+		B80951201AF7B87F003C8A0D /* diaEvento2.png in Resources */ = {isa = PBXBuildFile; fileRef = B809511C1AF7B87F003C8A0D /* diaEvento2.png */; };
+		B80951211AF7B87F003C8A0D /* diaEvento3.png in Resources */ = {isa = PBXBuildFile; fileRef = B809511D1AF7B87F003C8A0D /* diaEvento3.png */; };
+		B80951221AF7B87F003C8A0D /* diaSeleccionado.png in Resources */ = {isa = PBXBuildFile; fileRef = B809511E1AF7B87F003C8A0D /* diaSeleccionado.png */; };
+		B80951271AF7B985003C8A0D /* icn_diaEvento1.png in Resources */ = {isa = PBXBuildFile; fileRef = B80951241AF7B985003C8A0D /* icn_diaEvento1.png */; };
+		B80951281AF7B985003C8A0D /* icn_diaEvento2.png in Resources */ = {isa = PBXBuildFile; fileRef = B80951251AF7B985003C8A0D /* icn_diaEvento2.png */; };
+		B80951291AF7B985003C8A0D /* icn_diaEvento3.png in Resources */ = {isa = PBXBuildFile; fileRef = B80951261AF7B985003C8A0D /* icn_diaEvento3.png */; };
 		B8206D181AEDD0E200FE4B3C /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B8206D131AEDD0E200FE4B3C /* facebook.png */; };
 		B8206D191AEDD0E200FE4B3C /* google+.png in Resources */ = {isa = PBXBuildFile; fileRef = B8206D141AEDD0E200FE4B3C /* google+.png */; };
 		B8206D1A1AEDD0E200FE4B3C /* linkedin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8206D151AEDD0E200FE4B3C /* linkedin.jpg */; };
@@ -35,8 +41,6 @@
 		B84C2C9D1AE6D80100CF063B /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C2C9C1AE6D80100CF063B /* EventoViewController.m */; };
 		B861FC391AEA91F60037ACE9 /* NoticiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */; };
 		B861FC3C1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */; };
-		B891F1871AE9E08800A1F5C8 /* DSLCalendar-nextMonth.png in Resources */ = {isa = PBXBuildFile; fileRef = B891F1861AE9E08800A1F5C8 /* DSLCalendar-nextMonth.png */; };
-		B891F1891AE9E09100A1F5C8 /* DSLCalendar-previousMonth.png in Resources */ = {isa = PBXBuildFile; fileRef = B891F1881AE9E09100A1F5C8 /* DSLCalendar-previousMonth.png */; };
 		FB18007E1ADF29BC0074C6CB /* Property List DesProVinc.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */; };
 		FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */; };
 		FB1800821ADF2C250074C6CB /* Property List ExpProf.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */; };
@@ -73,8 +77,6 @@
 		8DFBEDBE1AE5C1CA00F6AF2F /* GlobalCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalCalendar.h; path = DSLCalendarView/GlobalCalendar.h; sourceTree = "<group>"; };
 		8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalCalendar.m; path = DSLCalendarView/GlobalCalendar.m; sourceTree = "<group>"; };
 		B806B1651AE60A7D00AF96F0 /* ContactoFondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactoFondo.png; path = ../ContactoFondo.png; sourceTree = "<group>"; };
-		B806B16B1AE60F9300AF96F0 /* CalendarToday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarToday.png; sourceTree = "<group>"; };
-		B806B16D1AE60F9D00AF96F0 /* CalendarEventYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarEventYellow.png; sourceTree = "<group>"; };
 		B808E31B1AC4EB9D003872A2 /* ViewControllerCalendario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerCalendario.h; sourceTree = "<group>"; };
 		B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerCalendario.m; sourceTree = "<group>"; };
 		B808E3221AC4EC09003872A2 /* DSLCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLCalendarDayView.h; sourceTree = "<group>"; };
@@ -92,7 +94,15 @@
 		B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DSLCalendarView.m"; sourceTree = "<group>"; };
 		B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerContacto.h; sourceTree = "<group>"; };
 		B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerContacto.m; sourceTree = "<group>"; };
-		B80A5EE21AE9EEE50078F5E5 /* DSLCalendarDaySelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DSLCalendarDaySelection.png; sourceTree = "<group>"; };
+		B809510E1AF7B1D5003C8A0D /* flechaDerecha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechaDerecha.png; sourceTree = "<group>"; };
+		B809510F1AF7B1D5003C8A0D /* flechaIzquierda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechaIzquierda.png; sourceTree = "<group>"; };
+		B809511B1AF7B87F003C8A0D /* diaEvento1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaEvento1.png; sourceTree = "<group>"; };
+		B809511C1AF7B87F003C8A0D /* diaEvento2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaEvento2.png; sourceTree = "<group>"; };
+		B809511D1AF7B87F003C8A0D /* diaEvento3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaEvento3.png; sourceTree = "<group>"; };
+		B809511E1AF7B87F003C8A0D /* diaSeleccionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diaSeleccionado.png; sourceTree = "<group>"; };
+		B80951241AF7B985003C8A0D /* icn_diaEvento1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_diaEvento1.png; sourceTree = "<group>"; };
+		B80951251AF7B985003C8A0D /* icn_diaEvento2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_diaEvento2.png; sourceTree = "<group>"; };
+		B80951261AF7B985003C8A0D /* icn_diaEvento3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_diaEvento3.png; sourceTree = "<group>"; };
 		B8206D131AEDD0E200FE4B3C /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		B8206D141AEDD0E200FE4B3C /* google+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google+.png"; sourceTree = "<group>"; };
 		B8206D151AEDD0E200FE4B3C /* linkedin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = linkedin.jpg; sourceTree = "<group>"; };
@@ -112,8 +122,6 @@
 		B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaViewController.m; sourceTree = "<group>"; };
 		B861FC3A1AEA9D2E0037ACE9 /* NoticiarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiarioTableViewController.h; sourceTree = "<group>"; };
 		B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiarioTableViewController.m; sourceTree = "<group>"; };
-		B891F1861AE9E08800A1F5C8 /* DSLCalendar-nextMonth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSLCalendar-nextMonth.png"; sourceTree = "<group>"; };
-		B891F1881AE9E09100A1F5C8 /* DSLCalendar-previousMonth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DSLCalendar-previousMonth.png"; sourceTree = "<group>"; };
 		FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List DesProVinc.plist"; sourceTree = "<group>"; };
 		FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List EvaRetro.plist"; sourceTree = "<group>"; };
 		FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List ExpProf.plist"; sourceTree = "<group>"; };
@@ -171,9 +179,8 @@
 		B808E3141AC4E9F7003872A2 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
-				B8206D121AEDD0E200FE4B3C /* iconos */,
-				B806B16D1AE60F9D00AF96F0 /* CalendarEventYellow.png */,
-				B806B16B1AE60F9300AF96F0 /* CalendarToday.png */,
+				B8206D121AEDD0E200FE4B3C /* Iconos Inicio */,
+				B809510C1AF7B1B8003C8A0D /* Calendario */,
 				B806B1651AE60A7D00AF96F0 /* ContactoFondo.png */,
 			);
 			name = Imagenes;
@@ -196,12 +203,35 @@
 				B808E33C1AC4EC09003872A2 /* NSDate+DSLCalendarView.h */,
 				B808E33D1AC4EC09003872A2 /* NSDate+DSLCalendarView.m */,
 				B808E3261AC4EC09003872A2 /* DSLCalendarMonthSelectorView.xib */,
-				B891F1771AE9DA3400A1F5C8 /* Images */,
 			);
 			path = DSLCalendarView;
 			sourceTree = "<group>";
 		};
-		B8206D121AEDD0E200FE4B3C /* iconos */ = {
+		B809510C1AF7B1B8003C8A0D /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				B809511B1AF7B87F003C8A0D /* diaEvento1.png */,
+				B809511C1AF7B87F003C8A0D /* diaEvento2.png */,
+				B809511D1AF7B87F003C8A0D /* diaEvento3.png */,
+				B809511E1AF7B87F003C8A0D /* diaSeleccionado.png */,
+				B80951231AF7B95A003C8A0D /* Iconos */,
+			);
+			name = Calendario;
+			sourceTree = "<group>";
+		};
+		B80951231AF7B95A003C8A0D /* Iconos */ = {
+			isa = PBXGroup;
+			children = (
+				B80951241AF7B985003C8A0D /* icn_diaEvento1.png */,
+				B80951251AF7B985003C8A0D /* icn_diaEvento2.png */,
+				B80951261AF7B985003C8A0D /* icn_diaEvento3.png */,
+				B809510F1AF7B1D5003C8A0D /* flechaIzquierda.png */,
+				B809510E1AF7B1D5003C8A0D /* flechaDerecha.png */,
+			);
+			name = Iconos;
+			sourceTree = "<group>";
+		};
+		B8206D121AEDD0E200FE4B3C /* Iconos Inicio */ = {
 			isa = PBXGroup;
 			children = (
 				B8206D211AEDE19200FE4B3C /* Calendario.jpg */,
@@ -213,6 +243,7 @@
 				B8206D161AEDD0E200FE4B3C /* twitter.png */,
 				B8206D171AEDD0E200FE4B3C /* youtube.png */,
 			);
+			name = "Iconos Inicio";
 			path = iconos;
 			sourceTree = "<group>";
 		};
@@ -265,16 +296,6 @@
 				FBE53C721ADF567800AC8DE7 /* FeedParser */,
 			);
 			name = Inicio;
-			sourceTree = "<group>";
-		};
-		B891F1771AE9DA3400A1F5C8 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B891F1881AE9E09100A1F5C8 /* DSLCalendar-previousMonth.png */,
-				B891F1861AE9E08800A1F5C8 /* DSLCalendar-nextMonth.png */,
-				B80A5EE21AE9EEE50078F5E5 /* DSLCalendarDaySelection.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		FB91AE5A1AA8D46E00BA5A35 = {
@@ -456,27 +477,31 @@
 			files = (
 				B808E3421AC4EC09003872A2 /* DSLCalendarMonthSelectorView.xib in Resources */,
 				B8206D201AEDDF0000FE4B3C /* Noticias.png in Resources */,
+				B80951211AF7B87F003C8A0D /* diaEvento3.png in Resources */,
 				B8206D181AEDD0E200FE4B3C /* facebook.png in Resources */,
 				FB91AE751AA8D46E00BA5A35 /* Main.storyboard in Resources */,
 				B8206D1A1AEDD0E200FE4B3C /* linkedin.jpg in Resources */,
+				B80951121AF7B1D5003C8A0D /* flechaIzquierda.png in Resources */,
+				B80951281AF7B985003C8A0D /* icn_diaEvento2.png in Resources */,
+				B80951201AF7B87F003C8A0D /* diaEvento2.png in Resources */,
+				B80951111AF7B1D5003C8A0D /* flechaDerecha.png in Resources */,
 				B806B1661AE60A7D00AF96F0 /* ContactoFondo.png in Resources */,
+				B809511F1AF7B87F003C8A0D /* diaEvento1.png in Resources */,
 				B8206D221AEDE19200FE4B3C /* Calendario.jpg in Resources */,
-				B891F1871AE9E08800A1F5C8 /* DSLCalendar-nextMonth.png in Resources */,
 				FB91AE7A1AA8D46E00BA5A35 /* LaunchScreen.xib in Resources */,
+				B80951221AF7B87F003C8A0D /* diaSeleccionado.png in Resources */,
 				B8206D1E1AEDDC6B00FE4B3C /* Contacto.png in Resources */,
 				FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */,
 				FB91AE771AA8D46E00BA5A35 /* Images.xcassets in Resources */,
-				B891F1891AE9E09100A1F5C8 /* DSLCalendar-previousMonth.png in Resources */,
 				FB18007E1ADF29BC0074C6CB /* Property List DesProVinc.plist in Resources */,
+				B80951271AF7B985003C8A0D /* icn_diaEvento1.png in Resources */,
+				B80951291AF7B985003C8A0D /* icn_diaEvento3.png in Resources */,
 				FB1800821ADF2C250074C6CB /* Property List ExpProf.plist in Resources */,
-				B80A5EE31AE9EEE50078F5E5 /* DSLCalendarDaySelection.png in Resources */,
 				FB1800841ADF2D1B0074C6CB /* Property List InnovPlan.plist in Resources */,
 				B8206D191AEDD0E200FE4B3C /* google+.png in Resources */,
 				B8206D1C1AEDD0E200FE4B3C /* youtube.png in Resources */,
 				8DEF901A1AC78A7D00CA2E78 /* Property List AdmDir.plist in Resources */,
 				B8206D1B1AEDD0E200FE4B3C /* twitter.png in Resources */,
-				B806B16E1AE60F9D00AF96F0 /* CalendarEventYellow.png in Resources */,
-				B806B16C1AE60F9300AF96F0 /* CalendarToday.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
