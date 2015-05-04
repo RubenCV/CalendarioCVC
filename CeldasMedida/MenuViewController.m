@@ -12,6 +12,8 @@
 
 @interface MenuViewController ()
 
+@property BOOL loaded;
+
 @end
 
 GlobalCalendar *myCalendar;
@@ -25,6 +27,7 @@ GlobalCalendar *myCalendar;
 - (void)viewDidLoad {
     [super viewDidLoad];
     myCalendar = [GlobalCalendar sharedSingleton];
+    _loaded = NO;
     
     //HOY
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -290,8 +293,6 @@ GlobalCalendar *myCalendar;
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
-    NSLog(@"Finished Parsing%@", (parser.stopped ? @" (Stopped)" : @""));
-    //[self updateTableWithParsedItems];
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
@@ -299,6 +300,9 @@ GlobalCalendar *myCalendar;
     [self loadNewsID];
     [self loadNewsImages];
     NSLog(@"Finalizo el Parser costum CVC.");
+    [_actEventos stopAnimating];
+    [_actNoticias stopAnimating];
+    _loaded = YES;
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
@@ -319,6 +323,20 @@ GlobalCalendar *myCalendar;
                                                                                      ascending:NO]]];
     
     
+}
+
+// Boton eventos
+- (IBAction)eventos:(id)sender
+{
+    if (_loaded)
+        [self performSegueWithIdentifier:@"Calendario" sender:self];
+}
+
+// Boton noticias
+- (IBAction)noticias:(id)sender
+{
+    if (_loaded)
+        [self performSegueWithIdentifier:@"Noticias" sender:self];
 }
 
 // Boton facebook

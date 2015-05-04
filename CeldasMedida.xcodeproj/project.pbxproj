@@ -216,6 +216,57 @@
 			path = iconos;
 			sourceTree = "<group>";
 		};
+		B853B92F1AF6AD0500D101CF /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				B84C2C9B1AE6D80100CF063B /* EventoViewController.h */,
+				B84C2C9C1AE6D80100CF063B /* EventoViewController.m */,
+				B808E31B1AC4EB9D003872A2 /* ViewControllerCalendario.h */,
+				B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */,
+				B808E31E1AC4EC09003872A2 /* DSLCalendarView */,
+			);
+			name = Calendario;
+			sourceTree = "<group>";
+		};
+		B853B9301AF6AD3B00D101CF /* Contactos */ = {
+			isa = PBXGroup;
+			children = (
+				B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */,
+				B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */,
+				FB24B9E81ADDEF8800D5431A /* ContactoViewController.h */,
+				FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */,
+				FBE53C921ADF56EA00AC8DE7 /* Contactos CVC */,
+			);
+			name = Contactos;
+			sourceTree = "<group>";
+		};
+		B853B9311AF6AD6D00D101CF /* Noticias */ = {
+			isa = PBXGroup;
+			children = (
+				B861FC3A1AEA9D2E0037ACE9 /* NoticiarioTableViewController.h */,
+				B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */,
+				B84AF3DD1AEBECBB00E31131 /* NoticiaTableViewCell.h */,
+				B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */,
+				B861FC371AEA91F60037ACE9 /* NoticiaViewController.h */,
+				B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */,
+			);
+			name = Noticias;
+			sourceTree = "<group>";
+		};
+		B853B9321AF6ADA200D101CF /* Inicio */ = {
+			isa = PBXGroup;
+			children = (
+				FB91AE6A1AA8D46E00BA5A35 /* AppDelegate.h */,
+				FB91AE6B1AA8D46E00BA5A35 /* AppDelegate.m */,
+				8DFBEDBE1AE5C1CA00F6AF2F /* GlobalCalendar.h */,
+				8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */,
+				B84173D21AEDAA4100629E0A /* MenuViewController.h */,
+				B84173D31AEDAA4100629E0A /* MenuViewController.m */,
+				FBE53C721ADF567800AC8DE7 /* FeedParser */,
+			);
+			name = Inicio;
+			sourceTree = "<group>";
+		};
 		B891F1771AE9DA3400A1F5C8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,31 +298,12 @@
 		FB91AE651AA8D46E00BA5A35 /* CeldasMedida */ = {
 			isa = PBXGroup;
 			children = (
-				B808E31E1AC4EC09003872A2 /* DSLCalendarView */,
-				FBE53C721ADF567800AC8DE7 /* FeedParser */,
-				FBE53C921ADF56EA00AC8DE7 /* Contactos CVC */,
+				B853B9321AF6ADA200D101CF /* Inicio */,
+				B853B92F1AF6AD0500D101CF /* Calendario */,
+				B853B9311AF6AD6D00D101CF /* Noticias */,
+				B853B9301AF6AD3B00D101CF /* Contactos */,
 				B808E3141AC4E9F7003872A2 /* Imagenes */,
 				FB91AE661AA8D46E00BA5A35 /* Supporting Files */,
-				FB91AE6A1AA8D46E00BA5A35 /* AppDelegate.h */,
-				FB91AE6B1AA8D46E00BA5A35 /* AppDelegate.m */,
-				8DFBEDBE1AE5C1CA00F6AF2F /* GlobalCalendar.h */,
-				8DFBEDBF1AE5C1CA00F6AF2F /* GlobalCalendar.m */,
-				B84173D21AEDAA4100629E0A /* MenuViewController.h */,
-				B84173D31AEDAA4100629E0A /* MenuViewController.m */,
-				B808E31B1AC4EB9D003872A2 /* ViewControllerCalendario.h */,
-				B808E31C1AC4EB9D003872A2 /* ViewControllerCalendario.m */,
-				B84C2C9B1AE6D80100CF063B /* EventoViewController.h */,
-				B84C2C9C1AE6D80100CF063B /* EventoViewController.m */,
-				B808E3581AC4EE27003872A2 /* TableViewControllerContacto.h */,
-				B808E3591AC4EE27003872A2 /* TableViewControllerContacto.m */,
-				FB24B9E81ADDEF8800D5431A /* ContactoViewController.h */,
-				FB24B9E91ADDEF8800D5431A /* ContactoViewController.m */,
-				B861FC3A1AEA9D2E0037ACE9 /* NoticiarioTableViewController.h */,
-				B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */,
-				B84AF3DD1AEBECBB00E31131 /* NoticiaTableViewCell.h */,
-				B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */,
-				B861FC371AEA91F60037ACE9 /* NoticiaViewController.h */,
-				B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */,
 				FB91AE731AA8D46E00BA5A35 /* Main.storyboard */,
 				FB91AE781AA8D46E00BA5A35 /* LaunchScreen.xib */,
 				FB91AE761AA8D46E00BA5A35 /* Images.xcassets */,

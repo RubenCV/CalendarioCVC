@@ -153,7 +153,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VcX-qi-WfO" kind="show" id="pgV-SW-rA5"/>
+                                    <action selector="eventos:" destination="uMG-99-MYU" eventType="touchUpInside" id="ivP-gZ-0vQ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendario.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-Zr-4qw">
@@ -178,7 +178,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="m7W-P3-mqW" kind="show" id="WZ4-Td-HmM"/>
+                                    <action selector="noticias:" destination="uMG-99-MYU" eventType="touchUpInside" id="sac-7W-O4w"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noticias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtR-j2-8YP">
@@ -259,15 +259,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Noticias.png" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-4v-hYT">
                                 <rect key="frame" x="38" y="360" width="88" height="68"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gwR-n1-sOB">
+                                <rect key="frame" x="38" y="256" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="aNC-RF-FsG">
+                                <rect key="frame" x="72" y="468" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Centro de Vida y Carrera" id="H7c-gw-40T">
-                        <barButtonItem key="backBarButtonItem" title="Menu" id="cbQ-Lv-FYp"/>
+                        <barButtonItem key="backBarButtonItem" title="Menú" id="cbQ-Lv-FYp"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="actEventos" destination="gwR-n1-sOB" id="fRJ-Eq-llv"/>
+                        <outlet property="actNoticias" destination="aNC-RF-FsG" id="S2v-Sa-AhS"/>
                         <outlet property="lbDia" destination="kmp-55-cgK" id="hTs-l9-KsL"/>
+                        <segue destination="VcX-qi-WfO" kind="show" identifier="Calendario" id="Sh1-EM-Y9f"/>
+                        <segue destination="m7W-P3-mqW" kind="show" identifier="Noticias" id="dWm-mp-45A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgU-am-Lcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -463,7 +473,7 @@
                         <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Evento" id="Ha6-Gl-hTU">
-                        <barButtonItem key="backBarButtonItem" title="Calendario" id="hDZ-3Z-ZLO"/>
+                        <barButtonItem key="backBarButtonItem" title="Evento" id="hDZ-3Z-ZLO"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btCalendario" destination="W82-EE-9wn" id="qj4-kW-RHs"/>
@@ -508,7 +518,7 @@
             </objects>
             <point key="canvasLocation" x="1257" y="542"/>
         </scene>
-        <!--Lo ultimo en CVC-->
+        <!--Lo último en CVC-->
         <scene sceneID="qZh-rX-6cO">
             <objects>
                 <tableViewController id="m7W-P3-mqW" customClass="NoticiarioTableViewController" sceneMemberID="viewController">
@@ -640,14 +650,14 @@
                             <outlet property="delegate" destination="m7W-P3-mqW" id="bhR-2q-58X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lo ultimo en CVC" id="rrL-Fl-rma">
-                        <barButtonItem key="backBarButtonItem" title="Seleccion" id="ZoD-mv-7Hw"/>
+                    <navigationItem key="navigationItem" title="Lo último en CVC" id="rrL-Fl-rma">
+                        <barButtonItem key="backBarButtonItem" title="Selección" id="ZoD-mv-7Hw"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCD-y9-4Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821" y="542"/>
+            <point key="canvasLocation" x="808" y="542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F3P-1z-7fi">

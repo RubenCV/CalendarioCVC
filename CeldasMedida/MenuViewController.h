@@ -13,7 +13,11 @@
 <MWFeedParserDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *lbDia;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *actEventos;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *actNoticias;
 
+- (IBAction)eventos:(id)sender;
+- (IBAction)noticias:(id)sender;
 - (IBAction)facebook:(id)sender;
 - (IBAction)google:(id)sender;
 - (IBAction)linkedin:(id)sender;
