@@ -565,6 +565,10 @@
                                         <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-8G-SwV">
                                             <rect key="frame" x="8" y="8" width="304" height="112"/>
                                         </imageView>
+                                        <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-rc-LWQ">
+                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
+                                            <color key="backgroundColor" red="0.21518305222319531" green="0.56181242391753783" blue="0.91936947601010099" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        </view>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" text="Noticia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-bC-hRW">
                                             <rect key="frame" x="25" y="4" width="269" height="112"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
@@ -573,10 +577,6 @@
                                             <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <size key="shadowOffset" width="-1" height="-1"/>
                                         </label>
-                                        <view alpha="0.60000000000000009" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-rc-LWQ">
-                                            <rect key="frame" x="8" y="8" width="304" height="112"/>
-                                            <color key="backgroundColor" red="0.21518305222319531" green="0.56181242391753783" blue="0.91936947601010099" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
