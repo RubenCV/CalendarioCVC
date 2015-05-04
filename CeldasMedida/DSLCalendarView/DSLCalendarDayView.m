@@ -166,7 +166,8 @@ GlobalCalendar *myCalendar;
     if ([date isEqualToDate:dateToday])
     {
         textFont = [UIFont boldSystemFontOfSize:25.0];
-        textColor = [UIColor colorWithRed:21.0/255.0 green:170.0/255.0 blue:237.0/255.0 alpha:1];
+        if (![myCalendar.eventDayList containsObject: date])
+            textColor = [UIColor colorWithRed:21.0/255.0 green:170.0/255.0 blue:237.0/255.0 alpha:1];
     }
     // Si este dia esta siendo seleccionado.
     if (self.selectionState != DSLCalendarDayViewNotSelected)
