@@ -156,6 +156,10 @@ GlobalCalendar *myCalendar;
             // Agregar espacio despues de ext.
             needle = [needle stringByReplacingOccurrencesOfString:@"ext."
                                                        withString:@"ext "];
+            needle = [needle stringByReplacingOccurrencesOfString:@"Ext."
+                                                       withString:@"ext "];
+            needle = [needle stringByReplacingOccurrencesOfString:@"Ext "
+                                                       withString:@"ext "];
             informesString = needle;
             
             // Reconocer el email.

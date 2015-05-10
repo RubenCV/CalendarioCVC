@@ -83,7 +83,7 @@ GlobalCalendar *myCalendar;
         event = [[myCalendar eventDayList] objectAtIndex:i];
         if(event == dia)
             {
-                _eventIndex = (int)i/2;
+                _eventIndex = (int)(i/2);
                 _diaString = dayString;
                 [self performSegueWithIdentifier:@"Event" sender:self];
             }
