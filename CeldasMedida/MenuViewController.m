@@ -27,6 +27,13 @@ GlobalCalendar *myCalendar;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.hidesBackButton = YES;
+    
+    [[UIDevice currentDevice] setValue:
+     [NSNumber numberWithInteger: UIInterfaceOrientationPortrait]
+                                forKey:@"orientation"];
+    
     myCalendar = [GlobalCalendar sharedSingleton];
     // Inicializo boleana que indica si ya se cargaron los datos necesarios.
     _loaded = NO;
@@ -53,6 +60,7 @@ GlobalCalendar *myCalendar;
     feedParser.connectionType = ConnectionTypeAsynchronously;
     [feedParser parse];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -367,3 +375,34 @@ GlobalCalendar *myCalendar;
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/user/TecnologicoMonterrey"]];
 }
 @end
+
+@interface UINavigationController (Rotation_IOS6)
+@end
+
+@implementation UINavigationController (Rotation_IOS6)
+
+-(BOOL)shouldAutorotate
+{
+    if([self.visibleViewController isMemberOfClass:NSClassFromString(@"MenuViewController")])
+    {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return [[self topViewController] supportedInterfaceOrientations];
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    if([self.visibleViewController isMemberOfClass:NSClassFromString(@"MenuViewController")])
+    {
+        return (UIInterfaceOrientation)UIInterfaceOrientationMaskPortrait;
+    }
+    return [[self.viewControllers lastObject] preferredInterfaceOrientationForPresentation];
+}
+
+@end
+
