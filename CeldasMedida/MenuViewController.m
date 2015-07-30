@@ -374,6 +374,10 @@ GlobalCalendar *myCalendar;
 - (IBAction)youtube:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/user/TecnologicoMonterrey"]];
 }
+
+- (IBAction)logout:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
 
 @interface UINavigationController (Rotation_IOS6)

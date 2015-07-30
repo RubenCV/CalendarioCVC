@@ -24,4 +24,6 @@
 - (IBAction)twitter:(id)sender;
 - (IBAction)youtube:(id)sender;
 
+- (IBAction)logout:(id)sender;
+
 @end
