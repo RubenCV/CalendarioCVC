@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Sé puntual</string>
+		<key>descripcion</key>
+		<string>Recuerda que la puntualidad es tu primera carta de presentación. No hay nada peor que llegar tarde a una entrevista, te hace ver irresponsable e irrespetuoso. Las primeras impresiones son las más importantes. Procura llegar por lo menos 15 minutos antes de la hora acordada; esto permitirá que tengas tiempo suficiente para relajarte, observar el lugar donde estás y arreglar algún detalle de tu atuendo. Si llegas tarde, pide una disculpa y ofrece una explicación muy breve. Si es posible, llámale a la empresa o la persona que te va a entrevistar desde tu celular para avisar que vas con retraso.</string>
+		<key>imagen</key>
+		<string>n1.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Muestra un interés genuino</string>
+		<key>descripcion</key>
+		<string>Procura mostrar interés, no solo con tus palabras, sino también haciendo contacto visual, asintiendo con la cabeza y sonriendo en momentos apropiados. Evita sentarte cruzado de piernas y/o brazos, ya que esto demuestra una mente cerrada o una actitud a la defensiva. Presta atención y participa en la conversación.</string>
+		<key>imagen</key>
+		<string>n2.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Prepárate</string>
+		<key>descripcion</key>
+		<string>La persona que te va a entrevistar espera que tú sepas algo acerca de la empresa en la cual buscas empleo, así como el puesto que deseas obtener. Estos datos te ayudarán a proyectar una imagen de motivación, interés, responsabilidad y actitud de team player. No es difícil encontrar información; empieza por explorar el sitio web de la empresa, así como las de sus clientes y sus historias de éxito.</string>
+		<key>imagen</key>
+		<string>n3.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Sé cortés y usa tus mejores modales</string>
+		<key>descripcion</key>
+		<string>Los buenos modales siempre son indispensables: di “por favor” y háblale de “usted” al entrevistador, a menos que te invite a “tutearlo”. Usa un tono de voz respetuoso y evita interrumpir a la otra persona. Evita usar groserías o palabras corrientes, así como las muletillas y recuerda mantener contacto visual lo más posible. Al final de la entrevista, agradece a la persona por su tiempo. Estos buenos modales dejarán una buena impresión de ti en la persona que te entrevista.</string>
+		<key>imagen</key>
+		<string>n4.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Vístete bien</string>
+		<key>descripcion</key>
+		<string>Tu meta principal es obtener el empleo, no estar al último grito de la moda. En el mundo laboral, debes procurar vestirte de tal manera que la atención se enfoque en ti y no en tu ropa. Evita colores estridentes de cabello, así como usar demasiada joyería o accesorios, maquillaje excesivo o ropa que más bien usarías para una fiesta con tus amigos.</string>
+		<key>imagen</key>
+		<string>n5.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Mantente tranquilo</string>
+		<key>descripcion</key>
+		<string>Evita estar moviéndote en la silla, cruzando y descruzando las piernas o jugando con tu ropa o pelo. Recuerda que el lenguaje corporal es importantísimo y comunica mucho acerca de lo que estás pensando o sintiendo.</string>
+		<key>imagen</key>
+		<string>n6.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Habla con la verdad</string>
+		<key>descripcion</key>
+		<string>No caigas en la tentación de mentir o exagerar la verdad durante una entrevista. Si sale a la luz (y muy probablemente lo hará), es muy improbable que te ofrezcan el puesto. Por otro lado, si tu jefe descubre que mentiste después de haber sido contratado, es una buena razón para despedirte. Evítate el problema y mejor habla siempre con la verdad.</string>
+		<key>imagen</key>
+		<string>n7.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Habla y escribe correctamente</string>
+		<key>descripcion</key>
+		<string>El usar las palabras y frases correctas, así como la buena gramática y ortografía, te darán una ventaja enorme. Es mucho más creíble una persona que habla de sus metas y logros de la manera correcta, que alguien que podría estar saliendo de preparatoria. Muchas personas de excelente formación tienen mala ortografía -un gran obstáculo. La comunicación correcta, el carisma y la empatía abren muchas puertas al éxito.</string>
+		<key>imagen</key>
+		<string>n8.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Muéstrate a ti mismo de la mejor manera</string>
+		<key>descripcion</key>
+		<string>Durante tu entrevista, habla con seguridad acerca de tus habilidades y logros. Tu curriculum te dará la oportunidad de ir a una entrevista, pero depende de ti el poder mostrar tu mejor cara y convencer al entrevistador que eres la mejor opción para el puesto.</string>
+		<key>imagen</key>
+		<string>n9.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Haz contacto visual</string>
+		<key>descripcion</key>
+		<string>No olvides mirar a los ojos a quien te entreviste, especialmente cuando termines tu oración. </string>
+		<key>imagen</key>
+		<string>n10.png</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Agradece al entrevistador</string>
+		<key>descripcion</key>
+		<string>Tómate algunos minutos para hacer una nota de los puntos importantes que se platicaron durante la entrevista una vez que ésta haya terminado. Incluye algunos de estos puntos cuando mandes un correo para agradecerle a la persona por su tiempo, y vuelve a expresar tu interés en el puesto.</string>
+		<key>imagen</key>
+		<string>n11.png</string>
+	</dict>
+</array>
+</plist>

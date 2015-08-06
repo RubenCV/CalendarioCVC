@@ -160,8 +160,9 @@ GlobalCalendar *myCalendar;
             dateStartString = [dateStartString substringWithRange:NSMakeRange(0, 10)];
         
         NSDate *evento = [ddMMMyyyy dateFromString: dateStartString];
+        
+        if (evento == nil) evento = [NSDate date];
         [arrFechaEventos addObject:evento];
-        [arrFechaEventos addObject:dateStartString];
         
         // Tipo de Evento
         NSString *eventoString = [[item.title stringByAppendingString:item.summary]uppercaseString];

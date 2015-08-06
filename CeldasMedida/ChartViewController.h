@@ -13,6 +13,6 @@
 @property NSNumber *eco;
 @property NSNumber *intel;
 @property NSNumber *pers;
-- (IBAction)back:(id)sender;
+
 @property (nonatomic, retain) IBOutlet DLPieChart *pieChartView;
 @end
