@@ -12,8 +12,7 @@
 
 @interface MenuViewController ()
 
-@property BOOL loadedNoticias;
-@property BOOL loadedEventos;
+@property BOOL loadedNoticias, loadedEventos;
 
 @end
 
@@ -30,15 +29,14 @@ GlobalCalendar *myCalendar;
     [super viewDidLoad];
     
     self.navigationItem.hidesBackButton = YES;
+    UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(initParser)];
+    self.navigationItem.leftBarButtonItem = reloadButton;
     
     [[UIDevice currentDevice] setValue:
      [NSNumber numberWithInteger: UIInterfaceOrientationPortrait]
                                 forKey:@"orientation"];
     
     myCalendar = [GlobalCalendar sharedSingleton];
-    // Inicializo boleana que indica si ya se cargaron los datos necesarios.
-    _loadedNoticias = NO;
-    _loadedEventos = NO;
     
     // Escribir el dia de hoy en el icono de calendario.
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -51,6 +49,27 @@ GlobalCalendar *myCalendar;
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterShortStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    // Inicializar el Parser.
+    [self initParser];
+}
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)initParser
+{
+    // Inicializo boleana que indica si ya se cargaron los datos necesarios.
+    _loadedNoticias = NO;
+    _loadedEventos = NO;
+    [_actNoticias startAnimating];
+    [_actEventos startAnimating];
+    
+    // Prepararse para el Parser.
     parsedItems = [[NSMutableArray alloc] init];
     myCalendar.itemsToDisplay = [NSArray array];
     
@@ -61,13 +80,6 @@ GlobalCalendar *myCalendar;
     feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
     feedParser.connectionType = ConnectionTypeAsynchronously;
     [feedParser parse];
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -320,7 +332,7 @@ GlobalCalendar *myCalendar;
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
-    // Termino de cargar el Calendario.
+    // Termine de cargar el Calendario.
     [_actEventos stopAnimating];
     _loadedEventos = YES;
     
@@ -330,7 +342,7 @@ GlobalCalendar *myCalendar;
     [self loadNewsImages];
     NSLog(@"Finalizo el Parser costum CVC.");
     
-    // Termino de cargar Noticias.
+    // Termine de cargar Noticias.
     [_actNoticias stopAnimating];
     _loadedNoticias = YES;
 }

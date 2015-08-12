@@ -349,11 +349,12 @@
 		parsingComplete = YES;
 		
 		// Create error
-		NSError *error = [NSError errorWithDomain:MWErrorDomain 
+		/*NSError *error = [NSError errorWithDomain:MWErrorDomain
 											 code:code 
 										 userInfo:[NSDictionary dictionaryWithObject:description
 																			  forKey:NSLocalizedDescriptionKey]];
-		MWLog(@"%@", error);
+		MWLog(@"%@", error);*/
+        NSLog(@"Error, parser aborted!");
 		
 		// Abort parsing
 		if (feedParser) {
@@ -365,8 +366,8 @@
 		[self reset];
 		
 		// Inform delegate
-		if ([delegate respondsToSelector:@selector(feedParser:didFailWithError:)])
-			[delegate feedParser:self didFailWithError:error];
+		/*if ([delegate respondsToSelector:@selector(feedParser:didFailWithError:)])
+			[delegate feedParser:self didFailWithError:error];*/
 		
 	}
 	

@@ -354,13 +354,13 @@
 				B8206D1D1AEDDC6B00FE4B3C /* Contacto.png */,
 				B8E9BE2D1B7AF490007835D8 /* Social.png */,
 				B8E9BE2C1B7AF490007835D8 /* Logout.png */,
+				B8595BA41B7B281200D3889D /* pagTec.png */,
+				B8595BA61B7B299F00D3889D /* cvcLogoBlanco.png */,
 				B8206D131AEDD0E200FE4B3C /* facebook.png */,
 				B8206D141AEDD0E200FE4B3C /* google+.png */,
 				B8206D151AEDD0E200FE4B3C /* linkedin.jpg */,
 				B8206D161AEDD0E200FE4B3C /* twitter.png */,
 				B8206D171AEDD0E200FE4B3C /* youtube.png */,
-				B8595BA61B7B299F00D3889D /* cvcLogoBlanco.png */,
-				B8595BA41B7B281200D3889D /* pagTec.png */,
 			);
 			name = "Iconos Inicio";
 			path = iconos;
@@ -503,8 +503,6 @@
 			isa = PBXGroup;
 			children = (
 				B8E9728B1B73E106002101EC /* 1act.png */,
-				B8E9728C1B73E106002101EC /* 10act.png */,
-				B8E9728D1B73E106002101EC /* 11act.png */,
 				B8E9728E1B73E106002101EC /* 2act.png */,
 				B8E9728F1B73E106002101EC /* 3act.png */,
 				B8E972901B73E106002101EC /* 4act.png */,
@@ -513,6 +511,8 @@
 				B8E972931B73E106002101EC /* 7act.png */,
 				B8E972941B73E106002101EC /* 8act.png */,
 				B8E972951B73E106002101EC /* 9act.png */,
+				B8E9728C1B73E106002101EC /* 10act.png */,
+				B8E9728D1B73E106002101EC /* 11act.png */,
 			);
 			name = ActividadesSemestre;
 			path = ..;
