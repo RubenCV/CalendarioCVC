@@ -18,11 +18,6 @@
 
 - (IBAction)eventos:(id)sender;
 - (IBAction)noticias:(id)sender;
-- (IBAction)facebook:(id)sender;
-- (IBAction)google:(id)sender;
-- (IBAction)linkedin:(id)sender;
-- (IBAction)twitter:(id)sender;
-- (IBAction)youtube:(id)sender;
 
 - (IBAction)logout:(id)sender;
 

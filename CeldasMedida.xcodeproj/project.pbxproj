@@ -41,13 +41,14 @@
 		B844B1E21B6994BC00DEE115 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B844B1DD1B6994BC00DEE115 /* ChartViewController.m */; };
 		B84AF3DF1AEBECBB00E31131 /* NoticiaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */; };
 		B84C2C9D1AE6D80100CF063B /* EventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C2C9C1AE6D80100CF063B /* EventoViewController.m */; };
+		B8595BA51B7B281200D3889D /* pagTec.png in Resources */ = {isa = PBXBuildFile; fileRef = B8595BA41B7B281200D3889D /* pagTec.png */; };
+		B8595BA71B7B299F00D3889D /* cvcLogoBlanco.png in Resources */ = {isa = PBXBuildFile; fileRef = B8595BA61B7B299F00D3889D /* cvcLogoBlanco.png */; };
+		B8595BA91B7B2C8C00D3889D /* logoTecBlanco.png in Resources */ = {isa = PBXBuildFile; fileRef = B8595BA81B7B2C8C00D3889D /* logoTecBlanco.png */; };
 		B861FC391AEA91F60037ACE9 /* NoticiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */; };
 		B861FC3C1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */; };
-		B8BED6671B69C163007F142A /* logoNuevoTec.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8BED6661B69C163007F142A /* logoNuevoTec.gif */; };
 		B8C86EAD1B698DD4005AF0FC /* arbol_ind.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C86EA01B698DD4005AF0FC /* arbol_ind.png */; };
 		B8C86EB21B698DD4005AF0FC /* eliminar.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C86EA51B698DD4005AF0FC /* eliminar.png */; };
 		B8C86EB71B698DD4005AF0FC /* piechartbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C86EAA1B698DD4005AF0FC /* piechartbutton.png */; };
-		B8C86EBA1B698DEB005AF0FC /* logotecno.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C86EB91B698DEB005AF0FC /* logotecno.png */; };
 		B8C86EBC1B698DFA005AF0FC /* PVC.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C86EBB1B698DFA005AF0FC /* PVC.png */; };
 		B8E972541B73DB11002101EC /* n1.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E972491B73DB11002101EC /* n1.png */; };
 		B8E972551B73DB11002101EC /* n2.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E9724A1B73DB11002101EC /* n2.png */; };
@@ -90,6 +91,8 @@
 		B8E9729F1B73E106002101EC /* 8act.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E972941B73E106002101EC /* 8act.png */; };
 		B8E972A01B73E106002101EC /* 9act.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E972951B73E106002101EC /* 9act.png */; };
 		B8E972A41B73E179002101EC /* PVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E972A31B73E179002101EC /* PVCViewController.m */; };
+		B8E9BE2E1B7AF490007835D8 /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E9BE2C1B7AF490007835D8 /* Logout.png */; };
+		B8E9BE2F1B7AF490007835D8 /* Social.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E9BE2D1B7AF490007835D8 /* Social.png */; };
 		FB18007E1ADF29BC0074C6CB /* Property List DesProVinc.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */; };
 		FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */; };
 		FB1800821ADF2C250074C6CB /* Property List ExpProf.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */; };
@@ -171,15 +174,16 @@
 		B84AF3DE1AEBECBB00E31131 /* NoticiaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaTableViewCell.m; sourceTree = "<group>"; };
 		B84C2C9B1AE6D80100CF063B /* EventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventoViewController.h; sourceTree = "<group>"; };
 		B84C2C9C1AE6D80100CF063B /* EventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventoViewController.m; sourceTree = "<group>"; };
+		B8595BA41B7B281200D3889D /* pagTec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pagTec.png; sourceTree = "<group>"; };
+		B8595BA61B7B299F00D3889D /* cvcLogoBlanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cvcLogoBlanco.png; path = ../cvcLogoBlanco.png; sourceTree = "<group>"; };
+		B8595BA81B7B2C8C00D3889D /* logoTecBlanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoTecBlanco.png; sourceTree = "<group>"; };
 		B861FC371AEA91F60037ACE9 /* NoticiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiaViewController.h; sourceTree = "<group>"; };
 		B861FC381AEA91F60037ACE9 /* NoticiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiaViewController.m; sourceTree = "<group>"; };
 		B861FC3A1AEA9D2E0037ACE9 /* NoticiarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiarioTableViewController.h; sourceTree = "<group>"; };
 		B861FC3B1AEA9D2E0037ACE9 /* NoticiarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiarioTableViewController.m; sourceTree = "<group>"; };
-		B8BED6661B69C163007F142A /* logoNuevoTec.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logoNuevoTec.gif; sourceTree = "<group>"; };
 		B8C86EA01B698DD4005AF0FC /* arbol_ind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbol_ind.png; sourceTree = "<group>"; };
 		B8C86EA51B698DD4005AF0FC /* eliminar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eliminar.png; sourceTree = "<group>"; };
 		B8C86EAA1B698DD4005AF0FC /* piechartbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piechartbutton.png; sourceTree = "<group>"; };
-		B8C86EB91B698DEB005AF0FC /* logotecno.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logotecno.png; sourceTree = "<group>"; };
 		B8C86EBB1B698DFA005AF0FC /* PVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PVC.png; sourceTree = "<group>"; };
 		B8E972491B73DB11002101EC /* n1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = n1.png; sourceTree = "<group>"; };
 		B8E9724A1B73DB11002101EC /* n2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = n2.png; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 		B8E972951B73E106002101EC /* 9act.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9act.png; sourceTree = "<group>"; };
 		B8E972A21B73E179002101EC /* PVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVCViewController.h; sourceTree = "<group>"; };
 		B8E972A31B73E179002101EC /* PVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVCViewController.m; sourceTree = "<group>"; };
+		B8E9BE2C1B7AF490007835D8 /* Logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logout.png; path = ../Logout.png; sourceTree = "<group>"; };
+		B8E9BE2D1B7AF490007835D8 /* Social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Social.png; path = ../Social.png; sourceTree = "<group>"; };
 		FB18007D1ADF29BC0074C6CB /* Property List DesProVinc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List DesProVinc.plist"; sourceTree = "<group>"; };
 		FB18007F1ADF2B6F0074C6CB /* Property List EvaRetro.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List EvaRetro.plist"; sourceTree = "<group>"; };
 		FB1800811ADF2C250074C6CB /* Property List ExpProf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List ExpProf.plist"; sourceTree = "<group>"; };
@@ -290,8 +296,6 @@
 				B8C86E841B698C2E005AF0FC /* PlanDeVida */,
 				B8E9728A1B73E0B5002101EC /* BotonesSemestres */,
 				B8E972A11B73E10C002101EC /* ActividadesSemestre */,
-				B806B1651AE60A7D00AF96F0 /* ContactoFondo.png */,
-				B8BED6661B69C163007F142A /* logoNuevoTec.gif */,
 				B8E9725F1B73DB17002101EC /* Tips */,
 			);
 			name = Imagenes;
@@ -348,11 +352,15 @@
 				B8206D211AEDE19200FE4B3C /* Calendario.jpg */,
 				B8206D1F1AEDDF0000FE4B3C /* Noticias.png */,
 				B8206D1D1AEDDC6B00FE4B3C /* Contacto.png */,
+				B8E9BE2D1B7AF490007835D8 /* Social.png */,
+				B8E9BE2C1B7AF490007835D8 /* Logout.png */,
 				B8206D131AEDD0E200FE4B3C /* facebook.png */,
 				B8206D141AEDD0E200FE4B3C /* google+.png */,
 				B8206D151AEDD0E200FE4B3C /* linkedin.jpg */,
 				B8206D161AEDD0E200FE4B3C /* twitter.png */,
 				B8206D171AEDD0E200FE4B3C /* youtube.png */,
+				B8595BA61B7B299F00D3889D /* cvcLogoBlanco.png */,
+				B8595BA41B7B281200D3889D /* pagTec.png */,
 			);
 			name = "Iconos Inicio";
 			path = iconos;
@@ -415,8 +423,9 @@
 				B8C86EA01B698DD4005AF0FC /* arbol_ind.png */,
 				B8C86EA51B698DD4005AF0FC /* eliminar.png */,
 				B8C86EBB1B698DFA005AF0FC /* PVC.png */,
-				B8C86EB91B698DEB005AF0FC /* logotecno.png */,
 				B8C86EAA1B698DD4005AF0FC /* piechartbutton.png */,
+				B8595BA81B7B2C8C00D3889D /* logoTecBlanco.png */,
+				B806B1651AE60A7D00AF96F0 /* ContactoFondo.png */,
 			);
 			name = PlanDeVida;
 			sourceTree = "<group>";
@@ -692,24 +701,26 @@
 				B808E3421AC4EC09003872A2 /* DSLCalendarMonthSelectorView.xib in Resources */,
 				B8206D201AEDDF0000FE4B3C /* Noticias.png in Resources */,
 				B8C86EBC1B698DFA005AF0FC /* PVC.png in Resources */,
+				B8595BA51B7B281200D3889D /* pagTec.png in Resources */,
 				B8C86EB21B698DD4005AF0FC /* eliminar.png in Resources */,
 				B8E972541B73DB11002101EC /* n1.png in Resources */,
 				B8E972811B73E0A0002101EC /* 147.png in Resources */,
 				B8E972981B73E106002101EC /* 11act.png in Resources */,
 				B8E972961B73E106002101EC /* 1act.png in Resources */,
+				B8E9BE2E1B7AF490007835D8 /* Logout.png in Resources */,
 				B8C86EAD1B698DD4005AF0FC /* arbol_ind.png in Resources */,
 				B8E972A01B73E106002101EC /* 9act.png in Resources */,
 				B80951211AF7B87F003C8A0D /* diaEvento3.png in Resources */,
 				B8206D181AEDD0E200FE4B3C /* facebook.png in Resources */,
 				B8E972571B73DB11002101EC /* n4.png in Resources */,
 				FB91AE751AA8D46E00BA5A35 /* Main.storyboard in Resources */,
-				B8C86EBA1B698DEB005AF0FC /* logotecno.png in Resources */,
 				B8E972831B73E0A0002101EC /* deportivas.png in Resources */,
 				B8E9729A1B73E106002101EC /* 3act.png in Resources */,
 				B8E972841B73E0A0002101EC /* idiomas.png in Resources */,
 				B8E9725A1B73DB11002101EC /* n7.png in Resources */,
 				B8206D1A1AEDD0E200FE4B3C /* linkedin.jpg in Resources */,
 				B8E972881B73E0A0002101EC /* ssc.png in Resources */,
+				B8595BA91B7B2C8C00D3889D /* logoTecBlanco.png in Resources */,
 				B80951121AF7B1D5003C8A0D /* flechaIzquierda.png in Resources */,
 				B8E9729D1B73E106002101EC /* 6act.png in Resources */,
 				B80951281AF7B985003C8A0D /* icn_diaEvento2.png in Resources */,
@@ -726,6 +737,7 @@
 				B80951221AF7B87F003C8A0D /* diaSeleccionado.png in Resources */,
 				B8206D1E1AEDDC6B00FE4B3C /* Contacto.png in Resources */,
 				B8E9729C1B73E106002101EC /* 5act.png in Resources */,
+				B8595BA71B7B299F00D3889D /* cvcLogoBlanco.png in Resources */,
 				FB1800801ADF2B6F0074C6CB /* Property List EvaRetro.plist in Resources */,
 				B8E9729B1B73E106002101EC /* 4act.png in Resources */,
 				B8E972891B73E0A0002101EC /* ssp.png in Resources */,
@@ -751,10 +763,10 @@
 				B8E9729F1B73E106002101EC /* 8act.png in Resources */,
 				B8E972821B73E0A0002101EC /* concentracion.png in Resources */,
 				8DEF901A1AC78A7D00CA2E78 /* Property List AdmDir.plist in Resources */,
+				B8E9BE2F1B7AF490007835D8 /* Social.png in Resources */,
 				B8E972631B73DB68002101EC /* TipsEntrevista.plist in Resources */,
 				B8E972721B73DD3F002101EC /* TipsCurriculum.plist in Resources */,
 				B8E9725C1B73DB11002101EC /* n9.png in Resources */,
-				B8BED6671B69C163007F142A /* logoNuevoTec.gif in Resources */,
 				B8206D1B1AEDD0E200FE4B3C /* twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

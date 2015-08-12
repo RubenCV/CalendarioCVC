@@ -12,7 +12,8 @@
 
 @interface MenuViewController ()
 
-@property BOOL loaded;
+@property BOOL loadedNoticias;
+@property BOOL loadedEventos;
 
 @end
 
@@ -36,7 +37,8 @@ GlobalCalendar *myCalendar;
     
     myCalendar = [GlobalCalendar sharedSingleton];
     // Inicializo boleana que indica si ya se cargaron los datos necesarios.
-    _loaded = NO;
+    _loadedNoticias = NO;
+    _loadedEventos = NO;
     
     // Escribir el dia de hoy en el icono de calendario.
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -318,16 +320,19 @@ GlobalCalendar *myCalendar;
     myCalendar.itemsToDisplay =[parsedItems sortedArrayUsingDescriptors:
                                 [NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date"
                                                                                      ascending:NO]]];
+    // Termino de cargar el Calendario.
+    [_actEventos stopAnimating];
+    _loadedEventos = YES;
+    
     // Hacer el feed de los dias de evento, de las imagenes y encabezados de las noticias.
     [self loadEventDays];
     [self loadNewsID];
     [self loadNewsImages];
     NSLog(@"Finalizo el Parser costum CVC.");
     
-    // Detener los activity, y permitir al usuario hacer clic en esas opciones.
-    [_actEventos stopAnimating];
+    // Termino de cargar Noticias.
     [_actNoticias stopAnimating];
-    _loaded = YES;
+    _loadedNoticias = YES;
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error
@@ -352,41 +357,17 @@ GlobalCalendar *myCalendar;
 // Boton eventos
 - (IBAction)eventos:(id)sender
 {
-    if (_loaded)
+    if (_loadedEventos)
         [self performSegueWithIdentifier:@"Calendario" sender:self];
 }
 
 // Boton noticias
 - (IBAction)noticias:(id)sender
 {
-    if (_loaded)
+    if (_loadedNoticias)
         [self performSegueWithIdentifier:@"Noticias" sender:self];
 }
 
-// Boton facebook
-- (IBAction)facebook:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/cvcmonterrey"]];
-}
-
-// Boton google+
-- (IBAction)google:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://plus.google.com/112361602358516849606/posts"]];
-}
-
-// Boton linkedin
-- (IBAction)linkedin:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.linkedin.com/groups/ITESM-Centro-Vida-Carrera-3737527?mostPopular=&gid=3737527"]];
-}
-
-// Boton twitter
-- (IBAction)twitter:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/CVC_Monterrey"]];
-}
-
-// Boton youtube
-- (IBAction)youtube:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/user/TecnologicoMonterrey"]];
-}
 
 - (IBAction)logout:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
