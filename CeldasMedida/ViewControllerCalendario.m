@@ -40,7 +40,7 @@ GlobalCalendar *myCalendar;
     [dateFormat setDateFormat:@"dd"];
     self.lbDay.text = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
     // Mes
-    [dateFormat setDateFormat:@"MMMM"];
+    [dateFormat setDateFormat:@"MMM"];
     self.lbMonth.text = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
     // Año
     [dateFormat setDateFormat:@"yyyy"];

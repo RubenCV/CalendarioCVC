@@ -612,7 +612,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         actividad.origin.y = posY;
     
         UIView *viewActividad = [[UIView alloc] initWithFrame:actividad];
-        //viewActividad.backgroundColor = [UIColor colorWithRed:(214.0/255) green:(214.0/255) blue:(214.0/255) alpha:1];
+        viewActividad.backgroundColor = [UIColor colorWithRed:(255.0/255) green:(0.0/255) blue:(0.0/255) alpha:1];
         viewActividad.backgroundColor = [UIColor colorWithRed:(109.0/255) green:(218.0/255) blue:(255.0/255) alpha:1];
         
         NSDictionary *datosActividad = [actividades objectAtIndex:i];
@@ -642,18 +642,26 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         
         //Se agrega a cada actividad su boton de eliminar
         UIButton *botonEliminar = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        [botonEliminar setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+        [botonEliminar setImage:[UIImage imageNamed:@"eliminar.png"] forState:UIControlStateNormal];
         botonEliminar.tag = i;
-        botonEliminar.hidden = YES;
         [botonEliminar addTarget:self action:@selector(eliminarActividad:) forControlEvents:UIControlEventTouchUpInside];
-
-        botonEliminar.frame = CGRectMake(3,3, 8, 8);
-        
+        botonEliminar.frame = CGRectMake(250, 5, 20, 20);
         [botonesBorrar addObject:botonEliminar];
+        
+        //Se agrega a cada actividad su boton de mas informacion
+        UIButton *botonInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
+        //[botonInfo setImage:[UIImage imageNamed:@"IMAGEN.png"] forState:UIControlStateNormal];
+        botonInfo.tag = i;
+        
+        NSLog(@"%li",(long)i);
+        NSLog(@"%li",(long)semester);
+        
+        botonInfo.frame = CGRectMake(250, 33, 20, 20);
+        [botonesBorrar addObject:botonInfo];
         
         //Se agregan los componentes a la view
         [viewActividad addSubview:botonEliminar];
+        [viewActividad addSubview:botonInfo];
         [viewActividad addSubview:thumbnail];
         [viewActividad addSubview:tituloActividad];
         [viewActividad addSubview:subtituloActividad];

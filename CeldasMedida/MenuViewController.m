@@ -150,18 +150,30 @@ GlobalCalendar *myCalendar;
         {
             dateStartString = [dateStartString substringWithRange:NSMakeRange(4, dateStartString.length-5)];
         }
-        // Spanish
+        // iOS Español
         dateStartString = [dateStartString stringByReplacingOccurrencesOfString:@" de "
                                                                      withString:@"-"];
-        // English
+        // iOS English
         dateStartString = [dateStartString stringByReplacingOccurrencesOfString:@" "
                                                                      withString:@"-"];
+        // Borrar basura del final del String.
         if (dateStartString.length > 12)
             dateStartString = [dateStartString substringWithRange:NSMakeRange(0, 10)];
         
-        NSDate *evento = [ddMMMyyyy dateFromString: dateStartString];
+        // Hot Fix: Sept -> Sep
+        dateStartString = [dateStartString stringByReplacingOccurrencesOfString:@"Sept"
+                                                                     withString:@"Sep"];
         
-        if (evento == nil) evento = [NSDate date];
+        NSDate *evento = [ddMMMyyyy dateFromString: dateStartString];
+
+        // Si no es valido o es nulo.
+        if (evento == nil)
+        {
+            evento = [NSDate date];
+            NSLog(@"Warning! Hay eventos nulos!");
+        }
+        
+        // Agregar a lista de eventos.
         [arrFechaEventos addObject:evento];
         
         // Tipo de Evento
