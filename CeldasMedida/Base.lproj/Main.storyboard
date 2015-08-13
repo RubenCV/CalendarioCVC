@@ -297,7 +297,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D14-6y-pnL">
-                                <rect key="frame" x="16" y="81" width="288" height="154"/>
+                                <rect key="frame" x="43" y="136" width="288" height="154"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGs-hK-CNx">
                                         <rect key="frame" x="40" y="19" width="82" height="25"/>
@@ -348,7 +348,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-IG-wYg" customClass="DSLCalendarView">
-                                <rect key="frame" x="16" y="234" width="288" height="319"/>
+                                <rect key="frame" x="43" y="289" width="288" height="319"/>
                                 <color key="backgroundColor" red="0.90881470963131317" green="0.90881470963131317" blue="0.90881470963131317" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -382,7 +382,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HN-s8-xSx">
-                                <rect key="frame" x="16" y="80" width="288" height="83"/>
+                                <rect key="frame" x="43" y="135" width="288" height="83"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del evento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-e1-Xk4">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="83"/>
@@ -394,7 +394,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FW-Cw-lef">
-                                <rect key="frame" x="16" y="154" width="288" height="397"/>
+                                <rect key="frame" x="43" y="209" width="288" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJr-gE-Ydh">
                                         <rect key="frame" x="26" y="22" width="72" height="18"/>
@@ -519,7 +519,7 @@
         <!--Redes Sociales-->
         <scene sceneID="BWN-8G-YdK">
             <objects>
-                <viewController title="Redes Sociales" id="pBC-vA-o5v" sceneMemberID="viewController">
+                <viewController title="Redes Sociales" id="pBC-vA-o5v" customClass="RedesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zQo-UH-Cuw"/>
                         <viewControllerLayoutGuide type="bottom" id="1Bz-Dn-DN0"/>
@@ -534,6 +534,9 @@
                                 <state key="normal" image="youtube.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="youtube:" destination="pBC-vA-o5v" eventType="touchUpInside" id="Zbo-Zc-1Ne"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-s2-DsQ">
                                 <rect key="frame" x="247" y="89" width="103" height="103"/>
@@ -541,6 +544,9 @@
                                 <state key="normal" image="google+.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="google:" destination="pBC-vA-o5v" eventType="touchUpInside" id="9bL-bz-vHo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTz-zu-gaf">
                                 <rect key="frame" x="24" y="89" width="215" height="215"/>
@@ -548,6 +554,9 @@
                                 <state key="normal" image="facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebook:" destination="pBC-vA-o5v" eventType="touchUpInside" id="DlS-NX-pen"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9W-JZ-YNd">
                                 <rect key="frame" x="135" y="312" width="215" height="215"/>
@@ -555,6 +564,9 @@
                                 <state key="normal" image="twitter.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="twitter:" destination="pBC-vA-o5v" eventType="touchUpInside" id="tzd-Ix-qPO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hr8-zD-hHo">
                                 <rect key="frame" x="24" y="535" width="326" height="106"/>
@@ -562,6 +574,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cvc:" destination="pBC-vA-o5v" eventType="touchUpInside" id="nsN-3P-9Ac"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbi-bx-pQy">
                                 <rect key="frame" x="24" y="424" width="103" height="103"/>
@@ -569,17 +584,23 @@
                                 <state key="normal" image="pagTec.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tec:" destination="pBC-vA-o5v" eventType="touchUpInside" id="0N5-nI-81c"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cvcLogoBlanco.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-5A-ZQ0">
-                                <rect key="frame" x="88" y="543" width="199" height="89"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUk-RN-gaL">
                                 <rect key="frame" x="247" y="201" width="103" height="103"/>
                                 <color key="backgroundColor" red="0.056136131329999998" green="0.45652389799999998" blue="0.63679905670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="linkedin.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="linkedin:" destination="pBC-vA-o5v" eventType="touchUpInside" id="ZnF-JL-Gy1"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cvcLogoBlanco.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-5A-ZQ0">
+                                <rect key="frame" x="88" y="543" width="199" height="89"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -753,7 +774,7 @@
                                 <rect key="frame" x="182" y="91" width="163" height="242"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
@@ -980,12 +1001,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m54-6I-OLf">
-                                <rect key="frame" x="16" y="95" width="288" height="60"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcL-sC-387">
                                 <rect key="frame" x="16" y="163" width="288" height="385"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -994,6 +1009,12 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m54-6I-OLf">
+                                <rect key="frame" x="16" y="95" width="288" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176469999999" green="0.28235294119999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -1186,6 +1207,15 @@
                                     <constraint firstAttribute="width" constant="94" id="Y6v-Qc-W01"/>
                                 </constraints>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krh-xc-PhD">
+                                <rect key="frame" x="64" y="70" width="25" height="26"/>
+                                <state key="normal" image="piechartbutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eQO-Lj-tRP" kind="show" id="Lvq-fy-bbu"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNU-yg-JHe">
                                 <rect key="frame" x="0.0" y="101" width="375" height="476"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.42745098040000001" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1199,19 +1229,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="BZf-cT-sjg" appends="YES" id="OQ1-9Q-e6o"/>
                                     <outletCollection property="gestureRecognizers" destination="xsB-0W-aXL" appends="YES" id="PCs-R4-4SV"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krh-xc-PhD">
-                                <rect key="frame" x="64" y="70" width="25" height="26"/>
-                                <state key="normal" image="piechartbutton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="eQO-Lj-tRP" kind="show" id="Lvq-fy-bbu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176469999999" green="0.28235294119999998" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1244,14 +1264,10 @@
                         <outlet property="pageControl" destination="Oif-17-dCa" id="ubC-GA-1aj"/>
                         <outlet property="scrollView" destination="WOx-IO-6cM" id="KHt-Qy-4Lg"/>
                         <outlet property="semestreScrollView" destination="FNU-yg-JHe" id="nQV-Vx-LBH"/>
+                        <segue destination="ixm-Qj-s5c" kind="show" identifier="Detalle" id="Lph-y5-K1P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zu-pT-bV9" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="BZf-cT-sjg">
-                    <connections>
-                        <action selector="handleLongPress:" destination="pzV-6n-0XE" id="A9W-eS-uxg"/>
-                    </connections>
-                </pongPressGestureRecognizer>
                 <tapGestureRecognizer id="xsB-0W-aXL">
                     <connections>
                         <action selector="handleSinglePress:" destination="pzV-6n-0XE" id="fp5-aX-YMb"/>
@@ -1264,6 +1280,24 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2799.5" y="1402.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HWx-w9-znW">
+            <objects>
+                <viewController id="ixm-Qj-s5c" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zAU-WA-B7r"/>
+                        <viewControllerLayoutGuide type="bottom" id="UTZ-eH-Hds"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7EP-O4-dg9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnG-gt-j1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799.5" y="2184.5"/>
         </scene>
     </scenes>
     <resources>

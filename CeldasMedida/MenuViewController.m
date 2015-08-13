@@ -28,15 +28,12 @@ GlobalCalendar *myCalendar;
 {
     [super viewDidLoad];
     
+    // Esconder el boton de back.
     self.navigationItem.hidesBackButton = YES;
+    
+    // Agregar el boton de reload, y cuando se oprima mandar llamar la funcion initParser.
     UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(initParser)];
     self.navigationItem.leftBarButtonItem = reloadButton;
-    
-    [[UIDevice currentDevice] setValue:
-     [NSNumber numberWithInteger: UIInterfaceOrientationPortrait]
-                                forKey:@"orientation"];
-    
-    myCalendar = [GlobalCalendar sharedSingleton];
     
     // Escribir el dia de hoy en el icono de calendario.
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -46,11 +43,7 @@ GlobalCalendar *myCalendar;
     NSString *dateString = [[dateFormat stringFromDate:[NSDate date]] uppercaseString];
     self.lbDia.text = dateString;
     
-    formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    
-    // Inicializar el Parser.
+    // Inicializar el FeedParser.
     [self initParser];
 }
 
@@ -63,11 +56,19 @@ GlobalCalendar *myCalendar;
 
 - (void)initParser
 {
+    // Iniciar el Singleton.
+    myCalendar = [GlobalCalendar sharedSingleton];
+    
     // Inicializo boleana que indica si ya se cargaron los datos necesarios.
     _loadedNoticias = NO;
     _loadedEventos = NO;
     [_actNoticias startAnimating];
     [_actEventos startAnimating];
+    
+    // Preparar el DateFormatter que se utilizara en el parser.
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
     
     // Prepararse para el Parser.
     parsedItems = [[NSMutableArray alloc] init];
@@ -77,7 +78,7 @@ GlobalCalendar *myCalendar;
     NSURL *feedURL = [NSURL URLWithString:@"https://www.google.com/calendar/feeds/b3ap19ompkd8filsmib6i6svbg%40group.calendar.google.com/public/basic"];
     feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
     feedParser.delegate = self;
-    feedParser.feedParseType = ParseTypeFull; // Parse feed info and all items
+    feedParser.feedParseType = ParseTypeFull;
     feedParser.connectionType = ConnectionTypeAsynchronously;
     [feedParser parse];
 }
@@ -380,7 +381,7 @@ GlobalCalendar *myCalendar;
         [self performSegueWithIdentifier:@"Noticias" sender:self];
 }
 
-
+// Boton de salir
 - (IBAction)logout:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -393,10 +394,10 @@ GlobalCalendar *myCalendar;
 
 -(BOOL)shouldAutorotate
 {
-    if([self.visibleViewController isMemberOfClass:NSClassFromString(@"MenuViewController")])
+    /*if([self.visibleViewController isMemberOfClass:NSClassFromString(@"MenuViewController")])
     {
         return UIInterfaceOrientationMaskPortrait;
-    }
+    }*/
     return NO;
 }
 

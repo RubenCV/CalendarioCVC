@@ -36,6 +36,7 @@
 		B8206D1E1AEDDC6B00FE4B3C /* Contacto.png in Resources */ = {isa = PBXBuildFile; fileRef = B8206D1D1AEDDC6B00FE4B3C /* Contacto.png */; };
 		B8206D201AEDDF0000FE4B3C /* Noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = B8206D1F1AEDDF0000FE4B3C /* Noticias.png */; };
 		B8206D221AEDE19200FE4B3C /* Calendario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8206D211AEDE19200FE4B3C /* Calendario.jpg */; };
+		B82799EE1B7BC4CB00BBE17C /* RedesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82799ED1B7BC4CB00BBE17C /* RedesViewController.m */; };
 		B84173D41AEDAA4100629E0A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84173D31AEDAA4100629E0A /* MenuViewController.m */; };
 		B844B1E01B6994BC00DEE115 /* DLPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = B844B1D91B6994BC00DEE115 /* DLPieChart.m */; };
 		B844B1E21B6994BC00DEE115 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B844B1DD1B6994BC00DEE115 /* ChartViewController.m */; };
@@ -163,6 +164,8 @@
 		B8206D1D1AEDDC6B00FE4B3C /* Contacto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Contacto.png; path = ../Contacto.png; sourceTree = "<group>"; };
 		B8206D1F1AEDDF0000FE4B3C /* Noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Noticias.png; path = ../Noticias.png; sourceTree = "<group>"; };
 		B8206D211AEDE19200FE4B3C /* Calendario.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Calendario.jpg; path = ../Calendario.jpg; sourceTree = "<group>"; };
+		B82799EC1B7BC4CB00BBE17C /* RedesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedesViewController.h; sourceTree = "<group>"; };
+		B82799ED1B7BC4CB00BBE17C /* RedesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedesViewController.m; sourceTree = "<group>"; };
 		B837E6941ADF75A8004DCF03 /* MWFeedParser_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Prefix.pch; sourceTree = "<group>"; };
 		B84173D21AEDAA4100629E0A /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		B84173D31AEDAA4100629E0A /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -366,6 +369,15 @@
 			path = iconos;
 			sourceTree = "<group>";
 		};
+		B82799EF1B7BC77900BBE17C /* RedesSociales */ = {
+			isa = PBXGroup;
+			children = (
+				B82799EC1B7BC4CB00BBE17C /* RedesViewController.h */,
+				B82799ED1B7BC4CB00BBE17C /* RedesViewController.m */,
+			);
+			name = RedesSociales;
+			sourceTree = "<group>";
+		};
 		B853B92F1AF6AD0500D101CF /* Calendario */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +451,7 @@
 				B844B1DD1B6994BC00DEE115 /* ChartViewController.m */,
 				B844B1D81B6994BC00DEE115 /* DLPieChart.h */,
 				B844B1D91B6994BC00DEE115 /* DLPieChart.m */,
+				B8E972731B73DD9E002101EC /* Tips */,
 			);
 			name = PlanDeVida;
 			sourceTree = "<group>";
@@ -540,11 +553,11 @@
 			isa = PBXGroup;
 			children = (
 				B853B9321AF6ADA200D101CF /* Inicio */,
+				B8C86EBD1B698E24005AF0FC /* PlanDeVida */,
 				B853B92F1AF6AD0500D101CF /* Calendario */,
 				B853B9311AF6AD6D00D101CF /* Noticias */,
-				B8C86EBD1B698E24005AF0FC /* PlanDeVida */,
 				B853B9301AF6AD3B00D101CF /* Contactos */,
-				B8E972731B73DD9E002101EC /* Tips */,
+				B82799EF1B7BC77900BBE17C /* RedesSociales */,
 				B808E3141AC4E9F7003872A2 /* Imagenes */,
 				FB91AE661AA8D46E00BA5A35 /* Supporting Files */,
 				FB91AE731AA8D46E00BA5A35 /* Main.storyboard */,
@@ -799,6 +812,7 @@
 				FB91AE6C1AA8D46E00BA5A35 /* AppDelegate.m in Sources */,
 				FBE53C8B1ADF567800AC8DE7 /* NSString+XMLEntities.m in Sources */,
 				B808E31D1AC4EB9D003872A2 /* ViewControllerCalendario.m in Sources */,
+				B82799EE1B7BC4CB00BBE17C /* RedesViewController.m in Sources */,
 				B808E3401AC4EC09003872A2 /* DSLCalendarDayView.m in Sources */,
 				B8E9726A1B73DBE6002101EC /* CustomTableViewCell.m in Sources */,
 				FBE53C8A1ADF567800AC8DE7 /* NSString+HTML.m in Sources */,

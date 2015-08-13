@@ -645,19 +645,14 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         [botonEliminar setImage:[UIImage imageNamed:@"eliminar.png"] forState:UIControlStateNormal];
         botonEliminar.tag = i;
         [botonEliminar addTarget:self action:@selector(eliminarActividad:) forControlEvents:UIControlEventTouchUpInside];
-        botonEliminar.frame = CGRectMake(250, 5, 20, 20);
-        [botonesBorrar addObject:botonEliminar];
+        botonEliminar.frame = CGRectMake(253, 5, 20, 20);
         
         //Se agrega a cada actividad su boton de mas informacion
-        UIButton *botonInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
-        //[botonInfo setImage:[UIImage imageNamed:@"IMAGEN.png"] forState:UIControlStateNormal];
+        UIButton *botonInfo = [UIButton buttonWithType:UIButtonTypeCustom];
+        [botonInfo setImage:[UIImage imageNamed:@"1act.png"] forState:UIControlStateNormal];
         botonInfo.tag = i;
-        
-        NSLog(@"%li",(long)i);
-        NSLog(@"%li",(long)semester);
-        
-        botonInfo.frame = CGRectMake(250, 33, 20, 20);
-        [botonesBorrar addObject:botonInfo];
+        [botonInfo addTarget:self action:@selector(irDetalle:) forControlEvents:UIControlEventTouchUpInside];
+        botonInfo.frame = CGRectMake(253, 33, 20, 20);
         
         //Se agregan los componentes a la view
         [viewActividad addSubview:botonEliminar];
@@ -789,22 +784,18 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     [actividadesSemestre writeToFile:fileName atomically:YES];
 }
 
-- (void)aplicacionBackground:(NSNotification *)notification {
-    [self guardarArchivo];
+- (void)irDetalle:(UIButton *)sender{
+    NSInteger actividad;
+    NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
+    actividad = sender.tag;
+    NSLog(@"Semestre: %li Actividad: %li", (long)semestreActual, (long)actividad);
+    
+    [self performSegueWithIdentifier:@"Detalle" sender:self];
+
 }
 
-- (IBAction) handleLongPress: (UILongPressGestureRecognizer *) sender {
-    NSInteger cantBotonesBorrar = [botonesBorrar count];
-        
-    for (NSInteger i = 0; i < cantBotonesBorrar; i++) {
-        UIButton *actual = [botonesBorrar objectAtIndex:i];
-            
-        actual.hidden = NO;
-            
-        [botonesBorrar replaceObjectAtIndex:i withObject:actual];
-    }
-    
-    editarActividadActivado = YES;
+- (void)aplicacionBackground:(NSNotification *)notification {
+    [self guardarArchivo];
 }
 
 - (IBAction) handleSinglePress: (UITapGestureRecognizer *) sender {
