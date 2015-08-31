@@ -7,6 +7,8 @@
 //
 
 #import "PVCViewController.h"
+#import "PVCDetailViewController.h"
+#import "ChartViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface PVCViewController ()
@@ -20,7 +22,8 @@ NSMutableArray *botonesBorrar;
 
 bool editarActividadActivado;
 
-NSInteger pageCount;
+NSInteger pageCount, semestreActual;
+NSString *nombActActual, *tipoActActual;
 NSMutableArray *pageViews;
 NSMutableArray *semesterPages;
 
@@ -28,10 +31,27 @@ NSInteger semestres;
 NSInteger numeroSemestre = 1;
 NSInteger paginasBotones = 3;
 
+NSInteger extCu = 0, esc = 0, serSoc = 0, aca = 0;
+
 NSMutableArray *actividadesSemestre; //Array de actividades, el index representa el semestre, cada objeto será un array de actividades
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Create ImageButton
+    UIImage *graBtnIcon = [UIImage imageNamed:@"Grafica.png"];
+    
+    UIButton *graButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [graButton setFrame:CGRectMake(0, 0, graBtnIcon.size.width*.40, graBtnIcon.size.height*.40)];
+    [graButton setBackgroundImage:graBtnIcon forState:UIControlStateNormal];
+    
+    [graButton addTarget:self action:@selector(genericSegue) forControlEvents:UIControlEventTouchUpInside];
+    
+    //Create BarButton using ImageButton
+    UIBarButtonItem *graBarBtn = [[UIBarButtonItem alloc] initWithCustomView:graButton];
+    
+    //Add BarButton to NavigationBar
+    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:graBarBtn, nil];
     
     //Cosas relacionadas a la edicion de actividades
     botonesBorrar = [[NSMutableArray alloc] init];
@@ -79,6 +99,43 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     for (NSInteger i = 0; i < semestres; i++) {
         [semesterPages addObject:[NSNull null]];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self cargarCont];
+}
+
+- (void)cargarCont {
+    extCu = 0, esc = 0, serSoc = 0, aca = 0;
+    NSArray *actividades = [actividadesSemestre objectAtIndex:[self.labelSemestre.text integerValue]-1];
+    NSInteger cantActividades = actividades.count;
+    
+    for (NSInteger i = 0; i < cantActividades; i++) {
+        
+        NSDictionary *datosActividad = [actividades objectAtIndex:i];
+        
+        // Se crean titulos, subtitulos y se agrega la imagen correspondiente a la actividad
+        NSString *tipo = [datosActividad objectForKey:@"tipoActividad"];
+        
+        // Contadores para la grafica.
+        switch (tipo.integerValue)
+        {
+            case 1: case 7: case 11:
+                aca++;
+                break;
+            case 2: case 3: case 8:
+                esc++;
+                break;
+            case 4: case 5: case 6:
+                extCu++;
+                break;
+            case 9: case 10:
+                serSoc++;
+                break;
+        }
+    }
+    
 }
 
 - (void) inicializacionBotones {
@@ -419,6 +476,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 - (IBAction)eliminarActividad:(UIButton *)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"¿Eliminar?" message:@"¿Estas seguro que deseas borrar la actividad seleccionada?" delegate:self cancelButtonTitle: @"Cancelar" otherButtonTitles:@"Eliminar", nil];
     
+    [self cargarCont];
     alert.tag = sender.tag + 1000;
     [alert show];
 }
@@ -617,10 +675,11 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         
         NSDictionary *datosActividad = [actividades objectAtIndex:i];
         
-        //Se crean titulos, subtitulos y se agrega la imagen correspondiente a la actividad
-        //Imagen
+        // Se crean titulos, subtitulos y se agrega la imagen correspondiente a la actividad
+        // Imagen
         NSString *nombreImagen = [datosActividad objectForKey:@"tipoActividad"];
         nombreImagen = [nombreImagen stringByAppendingString:@"act.png"];
+        
         UIImageView *thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 50, 50)];;
         thumbnail.image = [UIImage imageNamed:nombreImagen];
         
@@ -645,14 +704,14 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         [botonEliminar setImage:[UIImage imageNamed:@"eliminar.png"] forState:UIControlStateNormal];
         botonEliminar.tag = i;
         [botonEliminar addTarget:self action:@selector(eliminarActividad:) forControlEvents:UIControlEventTouchUpInside];
-        botonEliminar.frame = CGRectMake(253, 5, 20, 20);
+        botonEliminar.frame = CGRectMake(253, 9, 15, 15);
         
         //Se agrega a cada actividad su boton de mas informacion
         UIButton *botonInfo = [UIButton buttonWithType:UIButtonTypeCustom];
-        [botonInfo setImage:[UIImage imageNamed:@"1act.png"] forState:UIControlStateNormal];
+        [botonInfo setImage:[UIImage imageNamed:@"editar.png"] forState:UIControlStateNormal];
         botonInfo.tag = i;
         [botonInfo addTarget:self action:@selector(irDetalle:) forControlEvents:UIControlEventTouchUpInside];
-        botonInfo.frame = CGRectMake(253, 33, 20, 20);
+        botonInfo.frame = CGRectMake(253, 33, 15, 15);
         
         //Se agregan los componentes a la view
         [viewActividad addSubview:botonEliminar];
@@ -670,6 +729,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 
         posY = posY + alto + 20;
     }
+    [self cargarCont];
 }
 
 - (void)refreshPage:(NSInteger) page {
@@ -732,6 +792,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
         case 9:
             tituloActividad = @"¿Servicio Social Ciudadano a Realizar?";
             mensajeActividad = @"Nombre de actividad de servicio social ciudadano a realizar";
+            serSoc++;
             break;
         case 10:
             tituloActividad = @"¿Servicio Social Profesional a Realizar?";
@@ -743,6 +804,7 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             break;
     }
     
+    [self cargarCont];
     alertaNuevaActividad.tag = idActividad;
     [alertaNuevaActividad setTitle:tituloActividad];
     [alertaNuevaActividad setMessage:mensajeActividad];
@@ -785,13 +847,39 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
 }
 
 - (void)irDetalle:(UIButton *)sender{
-    NSInteger actividad;
-    NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
-    actividad = sender.tag;
-    NSLog(@"Semestre: %li Actividad: %li", (long)semestreActual, (long)actividad);
+    semestreActual = [self.labelSemestre.text integerValue] - 1;
+    
+    NSArray *actividades = [actividadesSemestre objectAtIndex:semestreActual];
+    NSDictionary *datosActividad = [actividades objectAtIndex:sender.tag];
+    
+    tipoActActual = [datosActividad objectForKey:@"nombre"];
+    nombActActual = [datosActividad objectForKey:@"descripcion"];
+    
     
     [self performSegueWithIdentifier:@"Detalle" sender:self];
 
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"Detalle"]) {
+        PVCDetailViewController *pvcd = [segue destinationViewController];
+        pvcd.semestre = semestreActual;
+        pvcd.nombActividad = nombActActual;
+        pvcd.tipoActividad = tipoActActual;
+    }
+    if ([[segue identifier] isEqualToString:@"Grafica"]) {
+        ChartViewController *cvc = [segue destinationViewController];
+        cvc.aca = [NSNumber numberWithInteger:aca];
+        cvc.esc = [NSNumber numberWithInteger:esc];
+        cvc.serSoc = [NSNumber numberWithInteger:serSoc];
+        cvc.extCu = [NSNumber numberWithInteger:extCu];
+    }
+}
+
+- (void)genericSegue
+{
+    [self performSegueWithIdentifier:@"Grafica" sender:self];
 }
 
 - (void)aplicacionBackground:(NSNotification *)notification {

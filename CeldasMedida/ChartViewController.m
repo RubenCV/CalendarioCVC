@@ -25,17 +25,10 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super didReceiveMemoryWarning];
     NSMutableArray *dataArray = [NSMutableArray arrayWithCapacity:4];
-    //[dataArray addObject:self.profe];
-    //[dataArray addObject:self.eco];
-    //[dataArray addObject:self.pers];
-    //[dataArray addObject:self.intel];
-    
-    NSNumber *n = [NSNumber numberWithInt:6];
-    
-    [dataArray addObject:n];
-    [dataArray addObject:n];
-    [dataArray addObject:n];
-    [dataArray addObject:n];
+    [dataArray addObject:self.aca];
+    [dataArray addObject:self.esc];
+    [dataArray addObject:self.extCu];
+    [dataArray addObject:self.serSoc];
     
     [self.pieChartView clearsContextBeforeDrawing];
     [self.pieChartView renderInLayer:self.pieChartView dataArray:dataArray];

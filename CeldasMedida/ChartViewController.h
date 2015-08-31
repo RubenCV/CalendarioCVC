@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "DLPieChart.h"
 @interface ChartViewController : UIViewController
-@property NSNumber *profe;
-@property NSNumber *eco;
-@property NSNumber *intel;
-@property NSNumber *pers;
+@property NSNumber *extCu;
+@property NSNumber *esc;
+@property NSNumber *aca;
+@property NSNumber *serSoc;
 
 @property (nonatomic, retain) IBOutlet DLPieChart *pieChartView;
 @end

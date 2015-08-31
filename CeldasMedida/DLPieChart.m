@@ -698,11 +698,12 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     
     //[self.pieChartLeft setStartPieAngle:M_PI_2];
     [layerHostingView setAnimationSpeed:1.0];
-    [layerHostingView setPieRadius:((MIN(layerHostingView.frame.size.width, layerHostingView.frame.size.height) - OFFSET*2))/2];
+    //[layerHostingView setPieRadius:((MIN(layerHostingView.frame.size.width, layerHostingView.frame.size.height) - OFFSET*2))/2];
+    [layerHostingView setPieRadius:110];
     [layerHostingView setLabelFont:[UIFont fontWithName:@"DBLCDTempBlack" size:(24-DLDataArray.count/2)]];
     [layerHostingView setShowPercentage:NO];
     [layerHostingView setPieBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1]];
-    [layerHostingView setPieCenter:CGPointMake(layerHostingView.pieRadius+OFFSET, layerHostingView.pieRadius+OFFSET)];
+    [layerHostingView setPieCenter:CGPointMake(150, layerHostingView.pieRadius+OFFSET)];
     [layerHostingView setLabelRadius:(layerHostingView.pieRadius*0.65)];
     [layerHostingView setUserInteractionEnabled:YES];
     [layerHostingView setLabelShadowColor:[UIColor blackColor]];
@@ -740,17 +741,20 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     CGFloat legendX,legendY,legendWidth, legendHeight;
     
     NSLog(@"hosting:%@ centre:%@ radius:%f",NSStringFromCGRect(layerHostingView.frame),NSStringFromCGPoint(layerHostingView.pieCenter),(layerHostingView.pieRadius));
-    legendX = layerHostingView.pieCenter.x+layerHostingView.pieRadius+OFFSET*2;
+    //legendX = layerHostingView.pieCenter.x+layerHostingView.pieRadius+OFFSET*2;
+    legendX = OFFSET*3;
     legendY = OFFSET*2;
-    legendWidth = layerHostingView.frame.size.width - OFFSET*4 - (layerHostingView.pieRadius*2);
-    legendHeight = layerHostingView.pieRadius * 2 - OFFSET;
+    legendWidth = 600;
+    legendHeight = 600;
+    //legendWidth = layerHostingView.frame.size.width - OFFSET*4 - (layerHostingView.pieRadius*2);
+    //legendHeight = layerHostingView.pieRadius * 2 - OFFSET;
     
     legendsView.frame = CGRectMake(legendX, legendY, legendWidth, legendHeight);
     legendsScrollView.frame = CGRectMake(0, 0, legendsView.frame.size.width, legendsView.frame.size.height);
     
     //labels
-    int y = 5;
-    NSArray *arr=[[NSArray alloc] initWithObjects:@"Profesional",@"Economico",@"Personal",@"Intelectual", nil];
+    int y = 220;
+    NSArray *arr=[[NSArray alloc] initWithObjects:@"Académico",@"Escolar",@"Extracurricular",@"Servicio Social",nil];
     for (int i=0;i<dataArray.count;i++)
     {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -760,7 +764,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
         btn.backgroundColor = [DLColorsArray objectAtIndex:i];
         [legendsScrollView addSubview:btn];
         
-        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(40, y, 100, 25)];
+        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(40, y, 200, 25)];
         lbl.text = [NSString stringWithFormat:@"%@",[arr objectAtIndex:i]];
         lbl.backgroundColor = [UIColor clearColor];
         [lbl setAdjustsFontSizeToFitWidth:NO];
