@@ -78,25 +78,25 @@ NSString *path;
     NSMutableDictionary *savedValue;
     
     //Inicializar Duracion
-    _value = [NSString stringWithFormat:@"%@Sem%ldDur", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldDur%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tfDuracion.text = [savedValue objectForKey:_value];
     
     //Inicializar Meta
-    _value = [NSString stringWithFormat:@"%@Sem%ldMet", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldMet%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tfMeta.text = [savedValue objectForKey:_value];
     
     //Inicializar Descripcion
-    _value = [NSString stringWithFormat:@"%@Sem%ldDes", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldDes%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tvDescripcion.text = [savedValue objectForKey:_value];
     
     //Inicializar Indicador
-    _value = [NSString stringWithFormat:@"%@Sem%ldInd", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldInd%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tvIndicador.text = [savedValue objectForKey:_value];
@@ -105,22 +105,22 @@ NSString *path;
 - (void)guardar
 {
     //Guardar Duracion
-    _value = [NSString stringWithFormat:@"%@Sem%ldDur", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldDur%@", _nombActividad, (long)_semestre, _tipoActividad];
     [data setObject: _tfDuracion.text forKey:_value];
     [data writeToFile:path atomically:YES];
     
     //Guardar Meta
-    _value = [NSString stringWithFormat:@"%@Sem%ldMet", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldMet%@", _nombActividad, (long)_semestre, _tipoActividad];
     [data setObject: _tfMeta.text forKey:_value];
     [data writeToFile:path atomically:YES];
     
     //Guardar Descripcion
-    _value = [NSString stringWithFormat:@"%@Sem%ldDes", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldDes%@", _nombActividad, (long)_semestre, _tipoActividad];
     [data setObject: _tvDescripcion.text forKey:_value];
     [data writeToFile:path atomically:YES];
     
     //Guardar Indicador
-    _value = [NSString stringWithFormat:@"%@Sem%ldInd", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldInd%@", _nombActividad, (long)_semestre, _tipoActividad];
     [data setObject: _tvIndicador.text forKey:_value];
     [data writeToFile:path atomically:YES];
     

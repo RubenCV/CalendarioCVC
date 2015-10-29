@@ -213,7 +213,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBx-D3-CrC">
                                 <rect key="frame" x="24" y="89" width="327" height="193"/>
-                                <color key="backgroundColor" red="0.4431372549" green="0.74509803919999995" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.70980392160000005" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -388,11 +388,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HN-s8-xSx">
-                                <rect key="frame" x="43" y="135" width="288" height="83"/>
+                                <rect key="frame" x="24" y="89" width="326" height="83"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del evento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-e1-Xk4">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="83"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del evento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-e1-Xk4">
+                                        <rect key="frame" x="27" y="0.0" width="272" height="83"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -400,75 +400,75 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view alpha="0.84999999999999987" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0FW-Cw-lef">
-                                <rect key="frame" x="43" y="209" width="288" height="397"/>
+                                <rect key="frame" x="24" y="162" width="326" height="480"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJr-gE-Ydh">
-                                        <rect key="frame" x="26" y="22" width="72" height="18"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="26" y="20" width="72" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fechas." translatesAutoresizingMaskIntoConstraints="NO" id="79x-qJ-n83">
-                                        <rect key="frame" x="26" y="34" width="232" height="53"/>
+                                        <rect key="frame" x="26" y="34" width="269" height="53"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugar:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-ZT-Zz6">
-                                        <rect key="frame" x="26" y="95" width="48" height="17"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="26" y="109" width="65" height="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="ITESM" translatesAutoresizingMaskIntoConstraints="NO" id="vOt-Yh-fbn">
-                                        <rect key="frame" x="26" y="106" width="232" height="26"/>
+                                        <rect key="frame" x="26" y="124" width="269" height="31"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8He-fz-Z1w">
-                                        <rect key="frame" x="26" y="140" width="99" height="18"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="26" y="168" width="99" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRI-9q-mni">
-                                        <rect key="frame" x="26" y="151" width="232" height="135"/>
+                                        <rect key="frame" x="26" y="183" width="269" height="165"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlA-ds-xsX">
-                                        <rect key="frame" x="26" y="290" width="79" height="19"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <rect key="frame" x="26" y="356" width="79" height="19"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.45476246840000001" green="0.45476246840000001" blue="0.45476246840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Informes." translatesAutoresizingMaskIntoConstraints="NO" id="qX6-Xj-5jI">
-                                        <rect key="frame" x="28" y="302" width="232" height="65"/>
+                                        <rect key="frame" x="27" y="369" width="267" height="70"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aH-ZD-3n2">
-                                        <rect key="frame" x="182" y="359" width="76" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Enviar mail">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="mail:" destination="mqx-UX-z8a" eventType="touchUpInside" id="byG-eZ-GO0"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W82-EE-9wn">
-                                        <rect key="frame" x="94" y="72" width="166" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="124" y="86" width="185" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Agregar a mi Calendario">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="agregarCal:" destination="mqx-UX-z8a" eventType="touchUpInside" id="pIX-2s-HNk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aH-ZD-3n2">
+                                        <rect key="frame" x="224" y="442" width="85" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Enviar mail">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mail:" destination="mqx-UX-z8a" eventType="touchUpInside" id="byG-eZ-GO0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -554,16 +554,6 @@
                                     <action selector="google:" destination="pBC-vA-o5v" eventType="touchUpInside" id="9bL-bz-vHo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTz-zu-gaf">
-                                <rect key="frame" x="24" y="89" width="215" height="215"/>
-                                <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="facebook.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebook:" destination="pBC-vA-o5v" eventType="touchUpInside" id="DlS-NX-pen"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9W-JZ-YNd">
                                 <rect key="frame" x="135" y="312" width="215" height="215"/>
                                 <color key="backgroundColor" red="0.081950208270000005" green="0.6664554117" blue="0.92962970700000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -607,6 +597,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cvcLogoBlanco.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fnx-5A-ZQ0">
                                 <rect key="frame" x="88" y="543" width="199" height="89"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTz-zu-gaf">
+                                <rect key="frame" x="24" y="89" width="215" height="215"/>
+                                <color key="backgroundColor" red="0.065291144159999995" green="0.3153860772" blue="0.63192889370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebook:" destination="pBC-vA-o5v" eventType="touchUpInside" id="DlS-NX-pen"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -908,175 +908,6 @@
             </objects>
             <point key="canvasLocation" x="1832" y="-172"/>
         </scene>
-        <!--Tips Entrevista Table View Controller-->
-        <scene sceneID="w9G-Gp-mkf">
-            <objects>
-                <tableViewController id="BSZ-hf-t73" customClass="TipsEntrevistaTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="zKg-4j-ok3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="116" id="my0-GF-sI5" customClass="CustomTableViewCell">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="my0-GF-sI5" id="a4j-fC-2k5">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1NE-4y-hJt">
-                                            <rect key="frame" x="8" y="8" width="96" height="99"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rci-Zv-EH7">
-                                            <rect key="frame" x="133" y="24" width="173" height="66"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.27450980390000002" green="0.5450980392" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="lbTip" destination="rci-Zv-EH7" id="bMP-ez-Ara"/>
-                                    <outlet property="uiImage" destination="1NE-4y-hJt" id="X8d-Lq-13m"/>
-                                    <segue destination="hKB-OT-9FS" kind="show" identifier="showDetailEntrevista" id="obu-TF-kaN"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BSZ-hf-t73" id="Oos-LN-i5R"/>
-                            <outlet property="delegate" destination="BSZ-hf-t73" id="wJi-EU-cUn"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G9a-td-0pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2302.5" y="614.5"/>
-        </scene>
-        <!--Detail Entrevista View Controller-->
-        <scene sceneID="eLZ-BG-6Ey">
-            <objects>
-                <viewController id="hKB-OT-9FS" customClass="DetailEntrevistaViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NwT-hG-nS4"/>
-                        <viewControllerLayoutGuide type="bottom" id="f4m-WS-q1A"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zHr-Du-yD7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-rx-DX6">
-                                <rect key="frame" x="16" y="160" width="288" height="383"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.72549019607843135" green="0.92941176470588238" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qr-Yh-Q66">
-                                <rect key="frame" x="16" y="93" width="288" height="59"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.28235294119999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="lbNombre" destination="3Qr-Yh-Q66" id="7y2-mV-HIR"/>
-                        <outlet property="txtDescription" destination="qbX-rx-DX6" id="HbY-cG-mdj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="58Z-H3-X87" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2302.5" y="1402.5"/>
-        </scene>
-        <!--Detail Curriculum View Controller-->
-        <scene sceneID="SxZ-AJ-CIq">
-            <objects>
-                <viewController id="Djf-tk-PPB" customClass="DetailCurriculumViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Vf-E7-T0Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="pZK-xX-Hes"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FXo-UX-3zQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcL-sC-387">
-                                <rect key="frame" x="16" y="163" width="288" height="385"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m54-6I-OLf">
-                                <rect key="frame" x="16" y="95" width="288" height="60"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.28235294119999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="lbNombre" destination="m54-6I-OLf" id="8B4-AU-S7Z"/>
-                        <outlet property="txtDescription" destination="QcL-sC-387" id="6aP-4c-SjX"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UfO-sT-Air" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1831.5" y="1402.5"/>
-        </scene>
-        <!--Tips Curriculum Table View Controller-->
-        <scene sceneID="Jts-pS-mJj">
-            <objects>
-                <tableViewController id="MhN-hD-hm1" customClass="TipsCurriculumTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="FzW-Bi-Pq4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="116" id="QjE-xJ-qhP" customClass="CustomTableViewCell">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QjE-xJ-qhP" id="IMm-A8-DPs">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chn-Ss-utS">
-                                            <rect key="frame" x="8" y="6" width="96" height="101"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrv-fM-fc4">
-                                            <rect key="frame" x="133" y="21" width="172" height="66"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.72549019609999998" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.27450980390000002" green="0.5450980392" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="lbTip" destination="Vrv-fM-fc4" id="Y9H-YG-Ivh"/>
-                                    <outlet property="uiImage" destination="chn-Ss-utS" id="ly3-bq-tR3"/>
-                                    <segue destination="Djf-tk-PPB" kind="show" identifier="showDetailCurriculum" id="ltm-eg-fFH"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="MhN-hD-hm1" id="NKd-zZ-5D2"/>
-                            <outlet property="delegate" destination="MhN-hD-hm1" id="hIc-cL-3jQ"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vdu-bA-TzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1831.5" y="614.5"/>
-        </scene>
         <!--Plan de Vida y Carrera-->
         <scene sceneID="Tb9-Oz-enO">
             <objects>
@@ -1090,8 +921,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT0-Nz-Bag">
-                                <rect key="frame" x="23" y="89" width="327" height="266"/>
-                                <color key="backgroundColor" red="0.4431372549" green="0.74509803919999995" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="23" y="89" width="327" height="201"/>
+                                <color key="backgroundColor" red="0.76862752440000004" green="0.050980396570000003" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1101,57 +932,106 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plan de Vida y Carrera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDJ-Gj-2Ws">
-                                <rect key="frame" x="46" y="270" width="280" height="54"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
+                                <rect key="frame" x="47" y="227" width="280" height="54"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlanDeVida.png" translatesAutoresizingMaskIntoConstraints="NO" id="toL-q6-7kG">
-                                <rect key="frame" x="61" y="122" width="250" height="146"/>
+                                <rect key="frame" x="102" y="109" width="168" height="116"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egb-Tp-vrm">
-                                <rect key="frame" x="23" y="363" width="327" height="135"/>
-                                <color key="backgroundColor" red="0.048627550300000003" green="0.2348933004" blue="0.47064811719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="23" y="376" width="160" height="187"/>
+                                <color key="backgroundColor" red="0.34465919379999999" green="0.63804056190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BSZ-hf-t73" kind="show" id="eLy-LC-Jag"/>
+                                    <segue destination="y62-Tm-DFS" kind="show" id="gUc-e8-G97"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Entrevista.png" translatesAutoresizingMaskIntoConstraints="NO" id="bW7-Oc-v2u">
-                                <rect key="frame" x="33" y="387" width="110" height="88"/>
+                                <rect key="frame" x="49" y="391" width="104" height="92"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips Entrevista" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-Ck-juC">
-                                <rect key="frame" x="151" y="397" width="175" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips Entrevista" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-Ck-juC">
+                                <rect key="frame" x="41" y="479" width="121" height="68"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTr-jg-tLH">
-                                <rect key="frame" x="23" y="506" width="327" height="135"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="190" y="376" width="160" height="187"/>
+                                <color key="backgroundColor" red="1" green="0.38056090300000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MhN-hD-hm1" kind="show" id="Qsj-te-swf"/>
+                                    <segue destination="7IX-Sj-DFH" kind="show" id="Bnb-76-wZ9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7S-gB-bAw">
+                                <rect key="frame" x="23" y="298" width="327" height="71"/>
+                                <color key="backgroundColor" red="0.63237847219999999" green="0.0" blue="0.470175911" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rSv-f2-qra" kind="show" id="60w-ng-Sfi"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Curriculum.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-Wi-s0M">
-                                <rect key="frame" x="46" y="528" width="84" height="92"/>
+                                <rect key="frame" x="229" y="384" width="82" height="106"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips Curriculum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m0-Zc-YAr">
-                                <rect key="frame" x="147" y="540" width="182" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips Curriculum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m0-Zc-YAr">
+                                <rect key="frame" x="204" y="479" width="132" height="68"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tips Curriculum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8N-x4-i40">
+                                <rect key="frame" x="143" y="568" width="132" height="68"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNI-3Q-0tn">
+                                <rect key="frame" x="24" y="571" width="327" height="71"/>
+                                <color key="backgroundColor" red="0.095640513319999995" green="0.37599017880000002" blue="0.63237847219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mcr-Ar-7nW" kind="show" id="1l3-I5-wTQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Curriculum.png" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-Rz-lbV">
+                                <rect key="frame" x="41" y="576" width="47" height="59"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Curriculum.png" translatesAutoresizingMaskIntoConstraints="NO" id="LDu-yX-AHo">
+                                <rect key="frame" x="41" y="305" width="47" height="59"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Experiencia Profesional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-Gp-aHS">
+                                <rect key="frame" x="105" y="307" width="231" height="57"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imagen Profesional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-LR-IUb">
+                                <rect key="frame" x="105" y="578" width="231" height="57"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.73021025129999995" green="0.84640020979999997" blue="0.87930082070000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Plan de Vida y Carrera" id="obe-Mj-wbZ">
+                        <barButtonItem key="backBarButtonItem" title="Menú" id="iwH-nZ-igO"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ju-yL-UVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1496,6 +1376,398 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wte-Wh-jos" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3283.5" y="2184.5"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="QFC-sn-pTL">
+            <objects>
+                <viewController id="y62-Tm-DFS" customClass="TipsEntrevistaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L9b-12-KwT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eWV-Ni-edm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ULz-h8-o9a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edH-sA-N9n">
+                                <rect key="frame" x="86" y="72" width="202" height="38"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Entrevista">
+                                        <attributes>
+                                            <color key="NSColor" red="0.34465919379999999" green="0.63804056190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="35" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-nn-Sp9">
+                                <rect key="frame" x="16" y="118" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Antes"/>
+                                    <segment title="Durante"/>
+                                    <segment title="Despúes"/>
+                                </segments>
+                                <color key="tintColor" red="0.34465919379999999" green="0.63804056190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="seccion:" destination="y62-Tm-DFS" eventType="valueChanged" id="kHf-ba-HT2"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5B-ff-dJs">
+                                <rect key="frame" x="16" y="164" width="343" height="408"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">+ Investiga a la empresa.
+ + Anticipa preguntas (preparate para responder  preguntas tipicas)
+ + Prepara tus respuestas.
+ + Prepara, actualiza y repasa tu curriculo.</string>
+                                <color key="textColor" red="0.58879830180000003" green="0.55910075370000001" blue="0.59246764519999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA4-Cb-NEF">
+                                <rect key="frame" x="0.0" y="604" width="375" height="43"/>
+                                <color key="backgroundColor" red="0.34465919379999999" green="0.63804056190000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TIPS PARA TU EXPERIENCIA PROFESIONAL">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="Georgia"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tips" id="iNF-bz-2Wz">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="lOw-fq-tk8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barra" destination="rA4-Cb-NEF" id="u5w-kt-COD"/>
+                        <outlet property="lTitulo" destination="edH-sA-N9n" id="3lg-ou-21Y"/>
+                        <outlet property="seg" destination="AmN-nn-Sp9" id="Dl5-um-1x1"/>
+                        <outlet property="texto" destination="u5B-ff-dJs" id="Yrg-j9-9LC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nku-U1-UrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302.5" y="606.5"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="ptS-h5-Th4">
+            <objects>
+                <viewController id="7IX-Sj-DFH" customClass="TipsCurriculumViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KIK-3C-KkN"/>
+                        <viewControllerLayoutGuide type="bottom" id="2mc-5J-GhN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oe6-HN-dvO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="53c-66-CNx">
+                                <rect key="frame" x="16" y="118" width="343" height="29"/>
+                                <segments>
+                                    <segment title="General"/>
+                                    <segment title="Experiencia"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.38056090300000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="seccion:" destination="7IX-Sj-DFH" eventType="valueChanged" id="E0N-YT-Yo8"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gc-OV-L9M">
+                                <rect key="frame" x="86" y="72" width="202" height="38"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Curriculum">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.38056090296529232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="35" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vyw-XM-toA">
+                                <rect key="frame" x="16" y="164" width="343" height="408"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">+ Datos personales completos y actualizados  + La formacion Academica se anexa a partir de la carrera profesional.  + Revisar la ortografia y redaccion.</string>
+                                <color key="textColor" red="0.58879830180000003" green="0.55910075370000001" blue="0.59246764519999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-sU-ncl">
+                                <rect key="frame" x="0.0" y="604" width="375" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.38056090300000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TIPS PARA TU EXPERIENCIA PROFESIONAL">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="Georgia"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tips" id="pZa-br-06n">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="Hjj-wp-CpB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barra" destination="YOk-sU-ncl" id="J7P-lW-uG3"/>
+                        <outlet property="lTitulo" destination="0gc-OV-L9M" id="mIa-It-SF8"/>
+                        <outlet property="seg" destination="53c-66-CNx" id="wOu-2W-s3R"/>
+                        <outlet property="texto" destination="Vyw-XM-toA" id="oVF-xR-ve8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1u8-c9-itE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302.5" y="1402.5"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="ORC-Md-phE">
+            <objects>
+                <viewController id="mcr-Ar-7nW" customClass="TipsProfesionalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u4p-Oc-25L"/>
+                        <viewControllerLayoutGuide type="bottom" id="KJG-UE-iss"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fDL-FQ-N08">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGN-7v-0VJ">
+                                <rect key="frame" x="21" y="72" width="333" height="43"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Imagen Profesional">
+                                        <attributes>
+                                            <color key="NSColor" red="0.095640513316098061" green="0.37599017877550855" blue="0.63237847222222221" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="35" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-CB-P9V">
+                                <rect key="frame" x="16" y="118" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Definicion"/>
+                                    <segment title="Factores"/>
+                                    <segment title="Caracteristicas"/>
+                                </segments>
+                                <color key="tintColor" red="0.095640513319999995" green="0.37599017880000002" blue="0.63237847219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="seccion:" destination="mcr-Ar-7nW" eventType="valueChanged" id="ep0-PK-Hhy"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKa-Kn-zlO">
+                                <rect key="frame" x="16" y="164" width="343" height="408"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">+ Va mas alla de un conocimiento tecnico  + Se relaciona con la pulcritud.  + Es un reflejo cuidadoso de vestimenta e higiene personal.  + Educacion y buena cultura general.</string>
+                                <color key="textColor" red="0.58879830180000003" green="0.55910075370000001" blue="0.59246764519999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTv-eG-K2a">
+                                <rect key="frame" x="0.0" y="604" width="375" height="43"/>
+                                <color key="backgroundColor" red="0.095640513319999995" green="0.37599017880000002" blue="0.63237847219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TIPS PARA TU EXPERIENCIA PROFESIONAL">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="Georgia"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tips" id="aoS-eK-lw5">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="r2y-sh-bba"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barra" destination="mTv-eG-K2a" id="u9b-tK-O4l"/>
+                        <outlet property="lTitulo" destination="HGN-7v-0VJ" id="sNU-hc-bcu"/>
+                        <outlet property="seg" destination="fOx-CB-P9V" id="ayE-Jb-pqd"/>
+                        <outlet property="texto" destination="AKa-Kn-zlO" id="YQ9-hg-GWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlG-8d-ZAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.5" y="606.5"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="Mhq-Z5-F2n">
+            <objects>
+                <viewController id="rSv-f2-qra" customClass="TipsProfesionalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m7o-WF-nvC"/>
+                        <viewControllerLayoutGuide type="bottom" id="5mj-dc-iFn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HUb-Wo-B5h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5O-lL-jrj">
+                                <rect key="frame" x="21" y="72" width="333" height="38"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Experiencia Profesional">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63237847222222221" green="0.0" blue="0.47017591101288775" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-Eu-c9o">
+                                <rect key="frame" x="16" y="126" width="343" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Elige">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63137254901960782" green="0.0" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Tu carrera">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <font key="NSOriginalFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" y aquello a lo que planeas dedicarte (conocete, responsabilizate, investiga, selecciona, compara, escucha y preparate).  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Confirma y planea">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63137254901960782" green="0.0" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ¿Donde te ves en un futuro?, observa, pregunta y aprende.  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Explora">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63137254901960782" green="0.0" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Toma decisiones importantes respecto a tu futuro, profundiza en las opciones que mas te interesan.  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Afina">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63137254901960782" green="0.0" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Realizar un ejercicio de introspeccion para evaluar tu desarrollo profesional mediante la experiencia Tec.  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Practica">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63137254901960782" green="0.0" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Si tienes claras tus fortalezas y competencias podrás orientarlas.  ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Proyéctate">
+                                        <attributes>
+                                            <color key="NSColor" red="0.63137254901960782" green="0.0" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Recopila evidencias de tu talento y trascuelas en experiencias laborales y propuestas de negocio en función de donde quieras proyectarte.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.58823529411764708" green="0.5607843137254902" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="25" name="Georgia-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXI-JV-I4x">
+                                <rect key="frame" x="0.0" y="604" width="375" height="43"/>
+                                <color key="backgroundColor" red="0.63237847219999999" green="0.0" blue="0.470175911" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TIPS PARA TU EXPERIENCIA PROFESIONAL">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="Georgia"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tips" id="2Xb-cK-ieW">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="0hY-vp-XWc"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barra" destination="IXI-JV-I4x" id="9R9-dx-KD6"/>
+                        <outlet property="lTitulo" destination="f5O-lL-jrj" id="dlc-rz-Ryr"/>
+                        <outlet property="texto" destination="cqx-Eu-c9o" id="ptH-1l-yIm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WQ-Da-RVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.5" y="1402.5"/>
         </scene>
     </scenes>
     <resources>

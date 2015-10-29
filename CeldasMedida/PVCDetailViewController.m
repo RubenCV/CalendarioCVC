@@ -20,7 +20,7 @@ NSString *path;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _value = [NSString stringWithFormat:@"%@Sem%ld", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ld%@", _nombActividad, (long)_semestre, _tipoActividad];
     _lbTitulo.text = _nombActividad;
     _lbTipo.text = _tipoActividad;
     
@@ -65,25 +65,25 @@ NSString *path;
     NSMutableDictionary *savedValue;
     
     //Inicializar Duracion
-    _value = [NSString stringWithFormat:@"%@Sem%ldDur", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldDur%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tvDuracion.text = [savedValue objectForKey:_value];
     
     //Inicializar Meta
-    _value = [NSString stringWithFormat:@"%@Sem%ldMet", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldMet%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tvMeta.text = [savedValue objectForKey:_value];
     
     //Inicializar Descripcion
-    _value = [NSString stringWithFormat:@"%@Sem%ldDes", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldDes%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tvDescripcion.text = [savedValue objectForKey:_value];
     
     //Inicializar Indicador
-    _value = [NSString stringWithFormat:@"%@Sem%ldInd", _nombActividad, (long)_semestre];
+    _value = [NSString stringWithFormat:@"%@Sem%ldInd%@", _nombActividad, (long)_semestre, _tipoActividad];
     savedValue = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
     if ([savedValue objectForKey:_value])
         _tvIndicador.text = [savedValue objectForKey:_value];

@@ -17,6 +17,9 @@
 
 @implementation PVCViewController
 
+NSMutableDictionary *dataDesc;
+NSString *pathDesc;
+
 NSArray *buttons;
 NSMutableArray *botonesBorrar;
 
@@ -99,6 +102,33 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     for (NSInteger i = 0; i < semestres; i++) {
         [semesterPages addObject:[NSNull null]];
     }
+    
+    /// Apartir de aqui trata sobre la informacion / descripcion de cada actividad, esto me servira para borrarla / buscarla.
+    
+    //Get the documents directory path
+    NSArray *pathsDesc = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryDesc = [pathsDesc objectAtIndex:0];
+    
+    /*
+     AQUI DEBERIA RECIBIR LA MATRICULA DEL ALUMNO PARA QUE SEA UNICA PARA EL
+     NSString pathString = _matricula + .plist
+     */
+    
+    pathDesc = [documentsDirectoryDesc stringByAppendingPathComponent:@"matricula.plist"];
+    NSFileManager *fileManagerDesc = [NSFileManager defaultManager];
+    
+    if (![fileManagerDesc fileExistsAtPath: pathDesc]) {
+        pathDesc = [documentsDirectoryDesc stringByAppendingPathComponent: [NSString stringWithFormat:@"matricula.plist"] ];
+    }
+    
+    if ([fileManagerDesc fileExistsAtPath: pathDesc]) {
+        dataDesc = [[NSMutableDictionary alloc] initWithContentsOfFile: pathDesc];
+    }
+    else {
+        // If the file doesn’t exist, create an empty dictionary
+        dataDesc = [[NSMutableDictionary alloc] init];
+    }
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -478,6 +508,14 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     
     [self cargarCont];
     alert.tag = sender.tag + 1000;
+    
+    NSArray *actividades = [actividadesSemestre objectAtIndex:semestreActual];
+    NSDictionary *datosActividad = [actividades objectAtIndex:sender.tag];
+    
+    semestreActual = [self.labelSemestre.text integerValue] - 1;
+    tipoActActual = [datosActividad objectForKey:@"nombre"];
+    nombActActual = [datosActividad objectForKey:@"descripcion"];
+    
     [alert show];
 }
 
@@ -553,16 +591,28 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
                 descripcionActividad = [prefijo stringByAppendingString:[alertView textFieldAtIndex:0].text];
             
                 NSString *tipo = [[NSString alloc] initWithFormat:@"%ld", (long)alertView.tag];
-            
+                
                 //Se crea el objeto con los detalles
                 NSDictionary *nuevaActividad = [[NSDictionary alloc] initWithObjectsAndKeys:nombreActividad, @"nombre", descripcionActividad, @"descripcion", tipo, @"tipoActividad", nil];
-        
-                [actividades addObject:nuevaActividad];
-        
-                [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
-        
-                //Se redibuja para apreciar el cambio (?)
-                [self refreshPage:semestreActual];
+
+                    
+                if (![actividades containsObject: nuevaActividad]){
+                    [actividades addObject:nuevaActividad];
+                    [actividadesSemestre replaceObjectAtIndex:semestreActual withObject:actividades];
+                    //Se redibuja para apreciar el cambio (?)
+                    [self refreshPage:semestreActual];
+                }
+                
+                else {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                    message:@"Esta actividad ya existe en el semestre actual."
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                    [alert show];
+                }
+                
+
             }
         }
     }
@@ -611,6 +661,29 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
     //Hay que restarle 1000 al tag
     else {
         if (buttonIndex == 1){
+            /// Eliminar la descripcion de dicha actividad.
+            NSString *valueDur = [NSString stringWithFormat:@"%@Sem%ldDur%@", nombActActual, (long)semestreActual, tipoActActual];
+            NSString *valueMet = [NSString stringWithFormat:@"%@Sem%ldMet%@", nombActActual, (long)semestreActual, tipoActActual];
+            NSString *valueDes = [NSString stringWithFormat:@"%@Sem%ldDes%@", nombActActual, (long)semestreActual, tipoActActual];
+            NSString *valueInd = [NSString stringWithFormat:@"%@Sem%ldInd%@", nombActActual, (long)semestreActual, tipoActActual];
+            
+            //Eliminar Duracion
+            [dataDesc removeObjectForKey:valueDur];
+            [dataDesc writeToFile:pathDesc atomically:YES];
+            
+            //Eliminar Meta
+            [dataDesc removeObjectForKey:valueMet];
+            [dataDesc writeToFile:pathDesc atomically:YES];
+            
+            //Eliminar Descripcion
+            [dataDesc removeObjectForKey:valueDes];
+            [dataDesc writeToFile:pathDesc atomically:YES];
+            
+            //Eliminar Indicador
+            [dataDesc removeObjectForKey:valueInd];
+            [dataDesc writeToFile:pathDesc atomically:YES];
+            
+            // Cont.
             NSInteger semestreActual = [self.labelSemestre.text integerValue] - 1;
             NSInteger actividadActual = alertView.tag - 1000;
             
@@ -803,6 +876,8 @@ NSMutableArray *actividadesSemestre; //Array de actividades, el index representa
             mensajeActividad = @"Nombre del requisito de graduación a cumplir";
             break;
     }
+    
+    
     
     [self cargarCont];
     alertaNuevaActividad.tag = idActividad;
