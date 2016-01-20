@@ -28,7 +28,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.5065950474228359" green="0.7749057672311348" blue="0.19516777106965671" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.50659504740000005" green="0.77490576720000004" blue="0.1951677711" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="SmN-Ql-Sft" kind="show" id="Dbb-cv-qkE"/>
                                 </connections>

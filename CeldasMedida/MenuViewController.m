@@ -45,6 +45,16 @@ GlobalCalendar *myCalendar;
     
     // Inicializar el FeedParser.
     [self initParser];
+    
+    // Hacer el feed de los dias de evento, de las imagenes y encabezados de las noticias.
+    [self loadEventDays];
+    [self loadNewsID];
+    [self loadNewsImages];
+    NSLog(@"Finalizo el Parser costum CVC.");
+    
+    // Termine de cargar Noticias.
+    [_actNoticias stopAnimating];
+    _loadedNoticias = YES;
 }
 
 
@@ -336,16 +346,6 @@ GlobalCalendar *myCalendar;
     // Termine de cargar el Calendario.
     [_actEventos stopAnimating];
     _loadedEventos = YES;
-    
-    // Hacer el feed de los dias de evento, de las imagenes y encabezados de las noticias.
-    [self loadEventDays];
-    [self loadNewsID];
-    [self loadNewsImages];
-    NSLog(@"Finalizo el Parser costum CVC.");
-    
-    // Termine de cargar Noticias.
-    [_actNoticias stopAnimating];
-    _loadedNoticias = YES;
 }
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error

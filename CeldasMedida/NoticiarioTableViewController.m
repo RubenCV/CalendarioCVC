@@ -23,6 +23,7 @@ GlobalCalendar *myCalendar;
 {
     [super viewDidLoad];
     myCalendar = [GlobalCalendar sharedSingleton];
+    [[UITableViewCell appearance] setBackgroundColor:[UIColor colorWithRed: 186.0/255 green:216.0/255 blue:224.0/255 alpha:1.0]];
 }
 
 - (void)didReceiveMemoryWarning

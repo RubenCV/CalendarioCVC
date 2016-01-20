@@ -73,15 +73,15 @@ GlobalCalendar *myCalendar;
         dayString = [NSString stringWithFormat:@"%ld-%ld-%ld", (long)range.startDay.day, (long)range.startDay.month, (long) range.startDay.year];
         
         NSDate *dia = [ddMMyyyy dateFromString: dayString];
-        
-        
         NSDate *event;
+        
         // Checar si el dia que seleccionado pertenece a un evento.
         for(int i = 0; i < myCalendar.eventDayList.count; i++)
         {
-        
-        event = [[myCalendar eventDayList] objectAtIndex:i];
-        if(event == dia)
+            event = [[myCalendar eventDayList] objectAtIndex:i];
+            NSString *diaEvento = [ddMMyyyy stringFromDate:event];
+            NSString *diaSeleccionado = [ddMMyyyy stringFromDate:dia];
+            if([diaEvento isEqualToString:diaSeleccionado])
             {
                 _eventIndex = (int)(i);
                 _diaString = dayString;

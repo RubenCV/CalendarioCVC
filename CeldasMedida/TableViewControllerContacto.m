@@ -91,6 +91,7 @@
         [arrTmpInnovPlan addObject:tmp];
     }
     
+    [[UITableViewCell appearance] setBackgroundColor:[UIColor colorWithRed: 129.0/255 green:198.0/255 blue:50.0/255 alpha:1.0]];
     
     NSDictionary *section1 = [NSDictionary dictionaryWithObjectsAndKeys:
                               sectionTitle1,@"nombre",
